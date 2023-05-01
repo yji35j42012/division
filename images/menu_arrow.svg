@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>menu_arrow</title>
+    <g id="dummy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.1_搜尋檢索" transform="translate(-218.000000, -188.000000)" fill-rule="nonzero">
+            <g id="menu_arrow" transform="translate(218.000000, 188.000000)">
+                <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="16" height="16"></rect>
+                <path d="M4.35492187,13.6402344 C4.05804687,13.9315469 4.05804687,14.4310625 4.35492187,14.733 C4.65078125,15.0400156 5.14523437,15.0400156 5.45223437,14.733 L11.6329062,8.55234375 C11.946,8.24482812 11.946,7.75089063 11.6329062,7.44895312 L5.45223437,1.26317187 C5.14523437,0.961234375 4.65078125,0.961234375 4.35492187,1.26317187 C4.05804687,1.5706875 4.05804687,2.05348438 4.35492187,2.3605 L9.9970625,7.992 L4.35492187,13.6402344 Z" id="路径" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

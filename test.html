@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="my-component"></div>
+    <script>
+
+        // 創建組件元素
+        const component = document.createElement('div');
+        component.classList.add('my-component');
+        // 創建標題元素
+        const title = document.createElement('h2');
+        title.textContent = '我的組件';
+        component.appendChild(title);
+        // 創建內容元素
+        const content = document.createElement('p');
+        content.textContent = '這是一個簡單的組件範例';
+        component.appendChild(content);
+        // 添加到頁面中
+        const container = document.querySelector('#my-component');
+        container.appendChild(component);
+
+        // 可以透過以下方式動態更新內容
+        title.textContent = '更新後的標題';
+        content.textContent = '更新後的內容';
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_file_add</title>
+    <g id="dummy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.2_技術摘要文件" transform="translate(-830.000000, -213.000000)" fill-rule="nonzero">
+            <g id="编组-2备份" transform="translate(820.000000, 204.000000)">
+                <g id="icon_file_add" transform="translate(10.000000, 9.000000)">
+                    <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                    <polygon id="路径" stroke="#556FF6" stroke-width="0.5" fill="#6D82EE" points="20.343 23.166 1.9215 23.166 1.9215 2.2635 13.452 2.2635 20.343 7.653"></polygon>
+                    <path d="M21.9375,21.618 L3.516,21.618 L3.516,0.7155 L16.548,0.7155 L21.939,6.0165 L21.939,21.618 L21.9375,21.618 Z M16.629,2.871 L16.629,6.246 L20.004,6.246 L16.629,2.871 Z" id="形状" stroke="#556FF6" stroke-width="0.5" fill="#FFFFFF"></path>
+                    <g id="add-fill" transform="translate(7.428571, 7.857143)">
+                        <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="9.14285714" height="9.14285714"></rect>
+                        <path d="M4.57142857,0 C7.09620356,0 9.14285714,2.04665358 9.14285714,4.57142857 C9.14285714,7.09620356 7.09620356,9.14285714 4.57142857,9.14285714 C2.04665358,9.14285714 0,7.09620356 0,4.57142857 C0,2.04665358 2.04665358,0 4.57142857,0 Z M4.98701299,2.07792208 L4.15584416,2.07792208 L4.15584416,4.15557143 L2.07792208,4.15584416 L2.07792208,4.98701299 L4.15584416,4.98674026 L4.15584416,7.06493506 L4.98701299,7.06493506 L4.98701299,4.98701299 L7.06493506,4.98701299 L7.06493506,4.15584416 L4.98701299,4.15584416 L4.98701299,2.07792208 Z" id="形状" fill="#6D82EE"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

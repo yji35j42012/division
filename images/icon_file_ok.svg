@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_file_ok</title>
+    <defs>
+        <polygon id="path-1" points="91.7625 99.525 15.00625 99.525 15.00625 12.43125 63.05 12.43125 91.7625 34.8875"></polygon>
+        <filter x="-9.1%" y="-8.0%" width="123.5%" height="120.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="2" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.197852928 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M98.40625,93.075 L21.65,93.075 L21.65,5.98125 L75.95,5.98125 L98.4125,28.06875 L98.4125,93.075 L98.40625,93.075 Z M76.2875,14.9625 L76.2875,29.025 L90.35,29.025 L76.2875,14.9625 Z" id="path-3"></path>
+        <filter x="-23.4%" y="-9.2%" width="133.9%" height="135.6%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="-5" dy="10" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.0468129478   0 0 0 0 0.035965016   0 0 0 0 0.432999321  0 0 0 0.202059659 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="dummy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.3.4.2_建立完成、發送" transform="translate(-785.000000, -323.000000)" fill-rule="nonzero">
+            <g id="icon_file_ok" transform="translate(785.000000, 323.000000)">
+                <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="120" height="120"></rect>
+                <g id="路径">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use stroke="#556FF6" stroke-width="1" fill="#6D82EE" xlink:href="#path-1"></use>
+                </g>
+                <g id="形状">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use stroke="#556FF6" stroke-width="1" fill="#FFFFFF" xlink:href="#path-3"></use>
+                </g>
+                <polygon id="路径" fill="#556FF6" points="66.0375 23.96875 32.93125 23.96875 32.93125 29.63125 66.0375 29.63125"></polygon>
+                <polygon id="路径" fill="#556FF6" points="87.225 40.08125 32.83125 40.08125 32.83125 45.74375 87.225 45.74375 87.225 40.08125"></polygon>
+                <polygon id="路径" fill="#556FF6" points="87.225 56.68125 32.83125 56.68125 32.83125 62.34375 87.225 62.34375 87.225 56.68125"></polygon>
+                <polygon id="路径" fill="#556FF6" points="87.225 72.8 32.83125 72.8 32.83125 78.4625 87.225 78.4625 87.225 72.8"></polygon>
+                <g id="对号" transform="translate(59.000000, 56.000000)">
+                    <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="56" height="56"></rect>
+                    <path d="M28.5,4 C14.969,4 4,14.969 4,28.5 C4,42.031 14.969,53 28.5,53 C42.031,53 53,42.031 53,28.5 C53,14.969 42.031,4 28.5,4 Z" id="形状" fill="#5BDD72"></path>
+                    <path d="M41.2384817,22.6333781 L28.2540229,36.1884201 C28.2488637,36.1938908 28.2440701,36.199616 28.2388702,36.2050444 C27.7311135,36.7351137 27.065574,37 26.4000345,37 C25.7345357,37 25.0689962,36.7351137 24.5611989,36.2050444 C24.555999,36.199616 24.5512054,36.1938908 24.5460462,36.1884201 L16.7615132,28.0617223 C15.7461623,27.0017533 15.7461623,25.2832582 16.7615132,24.2232892 C17.7768235,23.1633626 19.4230211,23.1633626 20.4383721,24.2232892 L26.4000752,30.4470131 L37.5616635,18.794945 C38.5770144,17.7350183 40.2231715,17.7350183 41.2385224,18.794945 C42.2538326,19.854914 42.2538326,21.5734514 41.2384817,22.6333781 Z" id="路径" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

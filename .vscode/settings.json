@@ -1,0 +1,18 @@
+{
+    "liveSassCompile.settings.formats":[
+		// This is Default.
+		{
+			"format": "expanded",
+			"extensionName": ".css",
+			"savePath": "~../css/"
+		},
+		{
+			"format": "compressed",
+			"extensionName": ".min.css", //正式版副檔名為min.css
+			"savePath": "~../css/"
+		},
+
+
+	],
+	"liveServer.settings.port": 5508,
+}

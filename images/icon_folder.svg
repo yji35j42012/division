@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_folder</title>
+    <defs>
+        <path d="M5.775,8.1375 L36.225,8.1375 C37.625,8.1375 38.325,8.8375 38.325,10.2375 L38.325,29.1375 C38.325,30.5375 37.625,31.2375 36.225,31.2375 L5.775,31.2375 C4.375,31.2375 3.675,30.5375 3.675,29.1375 L3.675,10.2375 C3.675,8.8375 4.375,8.1375 5.775,8.1375 Z" id="path-1"></path>
+        <filter x="-8.7%" y="-13.0%" width="117.3%" height="126.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.396798514 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M7.34363636,11.9175 L34.6563636,11.9175 C35.9121212,11.9175 36.54,12.6175 36.54,14.0175 L36.54,32.9175 C36.54,34.3175 35.9121212,35.0175 34.6563636,35.0175 L7.34363636,35.0175 C6.08787879,35.0175 5.46,34.3175 5.46,32.9175 L5.46,14.0175 C5.46,12.6175 6.08787879,11.9175 7.34363636,11.9175 Z" id="path-3"></path>
+        <filter x="-9.7%" y="-13.0%" width="119.3%" height="126.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.396798514 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="dummy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.1_潛力技術文件管理" transform="translate(-286.000000, -121.000000)" fill-rule="nonzero">
+            <g id="编组-2" transform="translate(270.000000, 110.000000)">
+                <g id="文件类型-标准图-文件夹" transform="translate(16.000000, 11.000000)">
+                    <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="42" height="42"></rect>
+                    <path d="M0,5.25 C0,4.09020203 0.940202025,3.15 2.1,3.15 L16.4653125,3.15 C17.3053944,3.15 18.0646271,3.65070306 18.3955078,4.42287891 L19.425,6.825 L39.9,6.825 C41.059798,6.825 42,7.76520203 42,8.925 L42,30.975 C42,32.134798 41.059798,33.075 39.9,33.075 L2.1,33.075 C0.940202025,33.075 0,32.134798 0,30.975 L0,5.25 Z" id="路径" fill="#1D18CF"></path>
+                    <g id="路径">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="路径备份">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <use fill="#FFFFFF" xlink:href="#path-3"></use>
+                    </g>
+                    <path d="M2.1,15.75 L39.9,15.75 C41.3,15.75 42,16.3916667 42,17.675 L42,36.925 C42,38.2083333 41.3,38.85 39.9,38.85 L2.1,38.85 C0.7,38.85 0,38.2083333 0,36.925 L0,17.675 C0,16.3916667 0.7,15.75 2.1,15.75 Z" id="路径" fill="#556FF6"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

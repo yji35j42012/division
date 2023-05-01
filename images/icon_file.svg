@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_file</title>
+    <g id="dummy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.1_潛力技術文件管理" transform="translate(-556.000000, -121.000000)" fill-rule="nonzero">
+            <g id="编组-2备份-2" transform="translate(540.000000, 110.000000)">
+                <g id="icon_file" transform="translate(16.000000, 11.000000)">
+                    <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="42" height="42"></rect>
+                    <polygon id="路径" stroke="#556FF6" stroke-width="0.5" fill="#6D82EE" points="35.60025 40.5405 3.362625 40.5405 3.362625 3.961125 23.541 3.961125 35.60025 13.39275"></polygon>
+                    <path d="M38.390625,37.8315 L6.153,37.8315 L6.153,1.252125 L28.959,1.252125 L38.39325,10.528875 L38.39325,37.8315 L38.390625,37.8315 Z M29.10075,5.02425 L29.10075,10.9305 L35.007,10.9305 L29.10075,5.02425 Z" id="形状" stroke="#556FF6" stroke-width="0.5" fill="#FFFFFF"></path>
+                    <polygon id="路径" fill="#556FF6" points="24.79575 8.806875 10.891125 8.806875 10.891125 11.185125 24.79575 11.185125"></polygon>
+                    <polygon id="路径" fill="#556FF6" points="33.6945 15.574125 10.849125 15.574125 10.849125 17.952375 33.6945 17.952375 33.6945 15.574125"></polygon>
+                    <polygon id="路径" fill="#556FF6" points="33.6945 22.546125 10.849125 22.546125 10.849125 24.924375 33.6945 24.924375 33.6945 22.546125"></polygon>
+                    <polygon id="路径" fill="#556FF6" points="33.6945 29.316 10.849125 29.316 10.849125 31.69425 33.6945 31.69425 33.6945 29.316"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

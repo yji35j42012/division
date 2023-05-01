@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_file_save</title>
+    <defs>
+        <polygon id="path-1" points="91.7625 99.525 15.00625 99.525 15.00625 12.43125 63.05 12.43125 91.7625 34.8875"></polygon>
+        <filter x="-9.1%" y="-8.0%" width="123.5%" height="120.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="2" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.197852928 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M98.40625,93.075 L21.65,93.075 L21.65,5.98125 L75.95,5.98125 L98.4125,28.06875 L98.4125,93.075 L98.40625,93.075 Z M76.2875,14.9625 L76.2875,29.025 L90.35,29.025 L76.2875,14.9625 Z" id="path-3"></path>
+        <filter x="-23.4%" y="-9.2%" width="133.9%" height="135.6%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="-5" dy="10" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.0468129478   0 0 0 0 0.035965016   0 0 0 0 0.432999321  0 0 0 0.202059659 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="dummy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.3.5_建立技術摘要文件_儲存" transform="translate(-658.000000, -271.000000)" fill-rule="nonzero">
+            <g id="modal" transform="translate(370.000000, 201.000000)">
+                <g id="icon_file_save" transform="translate(288.000000, 70.000000)">
+                    <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="120" height="120"></rect>
+                    <g id="路径">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use stroke="#556FF6" stroke-width="1" fill="#6D82EE" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="形状">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <use stroke="#556FF6" stroke-width="1" fill="#FFFFFF" xlink:href="#path-3"></use>
+                    </g>
+                    <polygon id="路径" fill="#556FF6" points="66.0375 23.96875 32.93125 23.96875 32.93125 29.63125 66.0375 29.63125"></polygon>
+                    <polygon id="路径" fill="#556FF6" points="87.225 40.08125 32.83125 40.08125 32.83125 45.74375 87.225 45.74375 87.225 40.08125"></polygon>
+                    <polygon id="路径" fill="#556FF6" points="87.225 56.68125 32.83125 56.68125 32.83125 62.34375 87.225 62.34375 87.225 56.68125"></polygon>
+                    <polygon id="路径" fill="#556FF6" points="87.225 72.8 32.83125 72.8 32.83125 78.4625 87.225 78.4625 87.225 72.8"></polygon>
+                    <g id="对号" transform="translate(59.000000, 56.000000)">
+                        <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="56" height="56"></rect>
+                        <path d="M28.5,4 C14.969,4 4,14.969 4,28.5 C4,42.031 14.969,53 28.5,53 C42.031,53 53,42.031 53,28.5 C53,14.969 42.031,4 28.5,4 Z" id="形状" fill="#EFAB63"></path>
+                        <path d="M41.1840759,20.6840759 L36.3159241,15.8159241 C35.7935043,15.2935005 35.0849498,15 34.3461339,15 L18.7857143,15 C17.2471875,15 16,16.2471875 16,17.7857143 L16,38.2142857 C16,39.7528125 17.2471875,41 18.7857143,41 L39.2142857,41 C40.7528125,41 42,39.7528125 42,38.2142857 L42,22.6538661 C42,21.9150502 41.7064995,21.2064957 41.1840759,20.6840759 Z M31.7857143,17.7857143 L31.7857143,22.4285714 L24.3571429,22.4285714 L24.3571429,17.7857143 L31.7857143,17.7857143 Z M38.8660714,38.2142857 L19.1339286,38.2142857 C18.9416151,38.2142857 18.7857143,38.0583849 18.7857143,37.8660714 L18.7857143,18.1339286 C18.7857143,17.9416151 18.9416151,17.7857143 19.1339286,17.7857143 L21.5714286,17.7857143 L21.5714286,23.8214286 C21.5714286,24.590692 22.1950223,25.2142857 22.9642857,25.2142857 L33.1785714,25.2142857 C33.9478348,25.2142857 34.5714286,24.590692 34.5714286,23.8214286 L34.5714286,18.0110089 L39.112317,22.5518973 C39.1776173,22.6172087 39.2142857,22.7057865 39.2142857,22.7981429 L39.2142857,37.8660714 C39.2142857,38.0583849 39.0583849,38.2142857 38.8660714,38.2142857 Z M29,26.6071429 C26.183933,26.6071429 23.8928571,28.8982187 23.8928571,31.7142857 C23.8928571,34.5303527 26.183933,36.8214286 29,36.8214286 C31.816067,36.8214286 34.1071429,34.5303527 34.1071429,31.7142857 C34.1071429,28.8982187 31.816067,26.6071429 29,26.6071429 Z M29,34.0357143 C27.7199643,34.0357143 26.6785714,32.9943214 26.6785714,31.7142857 C26.6785714,30.43425 27.7199643,29.3928571 29,29.3928571 C30.2800357,29.3928571 31.3214286,30.43425 31.3214286,31.7142857 C31.3214286,32.9943214 30.2800357,34.0357143 29,34.0357143 Z" id="形状" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
