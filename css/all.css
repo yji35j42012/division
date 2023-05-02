@@ -22,6 +22,14 @@ h1 {
   min-width: 1120px;
 }
 
+.mt10px {
+  margin-top: 10px;
+}
+
+.mt14px {
+  margin-top: 14px;
+}
+
 .normal_btn {
   min-width: 136px;
   height: 35px;
@@ -220,6 +228,7 @@ h1 {
       -ms-flex-align: stretch;
           align-items: stretch;
   height: 100%;
+  background-color: #f7f8fa;
 }
 
 .nav {
@@ -966,11 +975,28 @@ input:checked + .filter_check_span:before {
   max-width: 136px;
 }
 
+.detail .technology_item_info {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  max-width: 100%;
+}
+
+.detail .technology_item_info div:not(.technology_item_name) {
+  width: 100%;
+  margin-left: 60px;
+}
+
 .technology_item_info .normal_btn + .normal_btn {
   margin-top: 14px;
 }
 
 .technology_item_name {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -994,6 +1020,8 @@ input:checked + .filter_check_span:before {
   height: 38px;
   margin-right: 10px;
   background: url("../images/icon_tercher.svg") no-repeat center/contain;
+  -webkit-filter: invert(47%) sepia(97%) saturate(3236%) hue-rotate(215deg) brightness(97%) contrast(99%);
+          filter: invert(47%) sepia(97%) saturate(3236%) hue-rotate(215deg) brightness(97%) contrast(99%);
 }
 
 .technology_item_detail {
@@ -1010,6 +1038,11 @@ input:checked + .filter_check_span:before {
       flex-wrap: wrap;
   width: calc(100% - 136px);
   padding-left: 30px;
+}
+
+.detail .technology_item_detail {
+  padding-top: 44px;
+  padding-left: 20px;
 }
 
 .technology_item_list {
@@ -1056,5 +1089,90 @@ input:checked + .filter_check_span:before {
 
 .technology_item_list + .technology_item_list:not(:nth-child(2)) {
   margin-top: 10px;
+}
+
+.resume {
+  margin-top: 17px;
+  padding: 15px 20px;
+  border-top: 1px solid #dce0eb;
+}
+
+.resume_title {
+  font-size: 20px;
+}
+
+.resume_info {
+  margin-top: 14px;
+  padding: 14px 18px;
+  border: solid 1px #e0e2e8;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.same {
+  margin-top: 14px;
+  padding: 14px 20px 0;
+  border-top: 1px solid #dce0eb;
+}
+
+.same_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-top: 10px;
+}
+
+.same_item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% / 3);
+  padding: 14px 10px 14px 14px;
+  border-radius: 8px;
+  border: solid 1px #e0e2e8;
+  background-color: #fff;
+}
+
+.same_item + .same_item {
+  margin-left: 10px;
+}
+
+.same_item::before {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 38px;
+  margin-right: 14px;
+  background: url("../images/icon_tercher.svg") no-repeat center/contain;
+  -webkit-filter: invert(55%) sepia(6%) saturate(801%) hue-rotate(177deg) brightness(94%) contrast(87%);
+          filter: invert(55%) sepia(6%) saturate(801%) hue-rotate(177deg) brightness(94%) contrast(87%);
+}
+
+.same_item_name {
+  font-size: 16px;
+}
+
+.same_item_now {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.same_item_now::before {
+  content: attr(data-title);
+  color: #8990a5;
 }
 /*# sourceMappingURL=all.css.map */
