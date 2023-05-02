@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="./css/font.css">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/all.min.css">
+	<title>科展系統-搜尋</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<nav class="nav">
+			<div class="nav_title">科產系統平台</div>
+			<div class="nav_menu">
+				<a class="nav_menu_item">
+					<i class="icon _dashboard">
+						<img src="./images/menu/icon_dashboard_normal.svg" alt="">
+					</i>
+					Dashboard
+				</a>
+				<a class="nav_menu_item on">
+					<i class="icon _search">
+						<img src="./images/menu/icon_search_normal.svg" alt="">
+					</i>
+					搜尋技術與發明人
+					<i class="icon _arr_right">
+						<img src="./images/icon_arr_right.svg" alt="">
+					</i>
+				</a>
+				<a class="nav_menu_item">
+					<i class="icon _company">
+						<img src="./images/menu/icon_company_normal.svg" alt="">
+					</i>
+					企業資訊檢索
+				</a>
+				<a class="nav_menu_item">
+					<i class="icon _folder">
+						<img src="./images/menu/icon_folder_normal.svg" alt="">
+					</i>
+					技術摘要文件管理
+				</a>
+				<a class="nav_menu_item">
+					<i class="icon _connect">
+						<img src="./images/menu/icon_connect_normal.svg" alt="">
+					</i>
+					訪談準備
+				</a>
+				<a class="nav_menu_item">
+					<i class="icon _convert">
+						<img src="./images/menu/icon_convert_normal.svg" alt="">
+					</i>
+					商轉技術探勘
+				</a>
+				<a class="nav_menu_item">
+					<i class="icon _cooperate">
+						<img src="./images/menu/icon_cooperate_normal.svg" alt="">
+					</i>
+					產學合作案例
+				</a>
+				<a class="nav_menu_item">
+					<i class="icon _service">
+						<img src="./images/menu/icon_service_normal.svg" alt="">
+					</i>
+					聯繫客服
+				</a>
+			</div>
+		</nav>
+
+		<div class="content">
+			<div class="container _min1120px">
+				<div class="header">
+					<h1>搜尋技術與發明人</h1>
+					<div class="header_info">
+						<i class="icon _notification" data-num="12">
+							<img src="./images/icon_notification_s.svg" alt="">
+						</i>
+						<div class="header_member">
+							<i class="icon _member">
+								<img src="./images/icon_user.svg" alt="">
+							</i>
+							<span class="header_member_name">Vincent Howard</span>
+							<i class="icon _trangle_bottom">
+								<img src="./images/icon_user_arrow.svg" alt="">
+							</i>
+						</div>
+					</div>
+				</div>
+				<ul class="breadcrumb">
+					<li class="breadcrumb_item">
+						科產系統
+					</li>
+					<li class="breadcrumb_item">
+						搜尋技術與發明人
+					</li>
+				</ul>
+				<div class="filter">
+					<ul class="tab">
+						<li class="tab_item on">搜尋技術與發明人</li>
+						<li class="tab_item">搜尋技術文獻</li>
+					</ul>
+					<div class="filter_inpBox">
+						<label class="filter_input">
+							<i class="icon _search">
+								<img src="./images/icon_search_normal.svg" alt="">
+							</i>
+							<input type="text" placeholder="請輸入姓名、現職單位、職級、合作專長、IPC(如：G06K)、技術名">
+						</label>
+						<i class="icon _add">
+							<img src="./images/icon_add_normal.svg" alt="">
+						</i>
+					</div>
+					<div class="filter_inpBox">
+						<ul class="tab">
+							<li class="tab_item on">and</li>
+							<li class="tab_item">or</li>
+						</ul>
+						<label class="filter_input">
+							<i class="icon _search">
+								<img src="./images/icon_search_normal.svg" alt="">
+							</i>
+							<input type="text" placeholder="請輸入姓名、現職單位、職級、合作專長、IPC(如：G06K)、技術名">
+						</label>
+						<i class="icon _minus">
+							<img src="./images/icon_minus_normal.svg" alt="">
+						</i>
+					</div>
+					<div class="filter_radioBox">
+						<label class="filter_radio">
+							<input type="radio" name="filter_radio" checked>
+							<span class="filter_radio_span"></span>
+							檢視全區人才
+						</label>
+						<label class="filter_radio">
+							<input type="radio" name="filter_radio">
+							<span class="filter_radio_span"></span>
+							檢視本校人才
+						</label>
+						<label class="filter_radio">
+							<input type="radio" name="filter_radio">
+							<span class="filter_radio_span"></span>
+							檢視盟校人才
+						</label>
+					</div>
+					<div class="filter_checkBox">
+						商化意願：
+						<label class="filter_check">
+							<input type="checkbox">
+							<span class="filter_check_span"></span>
+							全選
+						</label>
+						<div class="filter_check_group">
+							<label class="filter_check">
+								<input type="checkbox">
+								<span class="filter_check_span"></span>
+								帶領實驗室投入創業(自行創業)
+							</label>
+							<label class="filter_check">
+								<input type="checkbox">
+								<span class="filter_check_span"></span>
+								技術由他人運用創業
+							</label>
+							<label class="filter_check">
+								<input type="checkbox">
+								<span class="filter_check_span"></span>
+								需要創業專家共同投入創業
+							</label>
+							<label class="filter_check">
+								<input type="checkbox">
+								<span class="filter_check_span"></span>
+								需要創業諮詢/輔導
+							</label>
+							<label class="filter_check">
+								<input type="checkbox">
+								<span class="filter_check_span"></span>
+								需要廠商協助創新技術進行
+							</label>
+							<label class="filter_check">
+								<input type="checkbox">
+								<span class="filter_check_span"></span>
+								解決廠商技術瓶頸
+							</label>
+							<label class="filter_check">
+								<input type="checkbox">
+								<span class="filter_check_span"></span>
+								與廠商共同研提合作計畫
+							</label>
+							<label class="filter_check">
+								<input type="checkbox">
+								<span class="filter_check_span"></span>
+								技術移轉他人
+							</label>
+							<label class="filter_check">
+								<input type="checkbox">
+								<span class="filter_check_span"></span>
+								其他
+							</label>
+						</div>
+					</div>
+					<div class="filter_btnBox">
+						<button class="filter_btn _clear">清除</button>
+						<button class="filter_btn _search">搜尋</button>
+					</div>
+				</div>
+				<div class="technology">
+					<div class="technology_group">
+						<div class="technology_item">
+							<div class="technology_item_info">
+								<div class="technology_item_name">
+									蕭銘華
+								</div>
+								<div class="btnBox">
+									<button class="normal_btn _addfile">建立技術摘要文件</button>
+									<button class="normal_btn _addinterview">建立約訪</button>
+								</div>
+							</div>
+							<ul class="technology_item_detail">
+								<li class="technology_item_list" data-title="職級：">專任助理教授</li>
+								<li class="technology_item_list" data-title="所屬服務單位：">康寧學校財團法人康寧大學</li>
+								<li class="technology_item_list" data-title="現職：">國研院儀器科技研究中心生醫平台與育成組</li>
+								<li class="technology_item_list" data-title="合作專長：">
+									電機及電子工程、金半場效電晶體、耗竭型假晶式高電子遷移率電晶體、加強型假晶式高電子遷移率電晶體、相位移光罩、手機、石英晶片 、材料科學</li>
+								<li class="technology_item_list _btnBox" data-title="商化意願：">
+									<button class="normal_btn _list" data-num="3">帶領實驗室投入創業(自行創業)</button>
+									<button class="normal_btn _list" data-num="2">需要廠商協助創新技術進行</button>
+									<button class="normal_btn _list" data-num="3">與廠商共同研提合作計畫</button>
+								</li>
+							</ul>
+						</div>
+						<div class="technology_item">
+							<div class="technology_item_info">
+								<div class="technology_item_name">
+									蕭銘華
+								</div>
+								<div class="btnBox">
+									<button class="normal_btn _addfile">建立技術摘要文件</button>
+									<button class="normal_btn _addinterview">建立約訪</button>
+								</div>
+							</div>
+							<ul class="technology_item_detail">
+								<li class="technology_item_list" data-title="職級：">專任助理教授</li>
+								<li class="technology_item_list" data-title="所屬服務單位：">康寧學校財團法人康寧大學</li>
+								<li class="technology_item_list" data-title="現職：">國研院儀器科技研究中心生醫平台與育成組</li>
+								<li class="technology_item_list" data-title="合作專長：">
+									電機及電子工程、金半場效電晶體、耗竭型假晶式高電子遷移率電晶體、加強型假晶式高電子遷移率電晶體、相位移光罩、手機、石英晶片 、材料科學</li>
+								<li class="technology_item_list _btnBox" data-title="商化意願：">
+									<button class="normal_btn _list" data-num="3">帶領實驗室投入創業(自行創業)</button>
+									<button class="normal_btn _list" data-num="2">需要廠商協助創新技術進行</button>
+									<button class="normal_btn _list" data-num="3">與廠商共同研提合作計畫</button>
+								</li>
+							</ul>
+						</div>
+						<div class="technology_item">
+							<div class="technology_item_info">
+								<div class="technology_item_name">
+									蕭銘華
+								</div>
+								<div class="btnBox">
+									<button class="normal_btn _addfile">建立技術摘要文件</button>
+									<button class="normal_btn _addinterview">建立約訪</button>
+								</div>
+							</div>
+							<ul class="technology_item_detail">
+								<li class="technology_item_list" data-title="職級：">專任助理教授</li>
+								<li class="technology_item_list" data-title="所屬服務單位：">康寧學校財團法人康寧大學</li>
+								<li class="technology_item_list" data-title="現職：">國研院儀器科技研究中心生醫平台與育成組</li>
+								<li class="technology_item_list" data-title="合作專長：">
+									電機及電子工程、金半場效電晶體、耗竭型假晶式高電子遷移率電晶體、加強型假晶式高電子遷移率電晶體、相位移光罩、手機、石英晶片 、材料科學</li>
+								<li class="technology_item_list _btnBox" data-title="商化意願：">
+									<button class="normal_btn _list" data-num="3">帶領實驗室投入創業(自行創業)</button>
+									<button class="normal_btn _list" data-num="2">需要廠商協助創新技術進行</button>
+									<button class="normal_btn _list" data-num="3">與廠商共同研提合作計畫</button>
+								</li>
+							</ul>
+						</div>
+						<div class="technology_item">
+							<div class="technology_item_info">
+								<div class="technology_item_name">
+									蕭銘華
+								</div>
+								<div class="btnBox">
+									<button class="normal_btn _addfile">建立技術摘要文件</button>
+									<button class="normal_btn _addinterview">建立約訪</button>
+								</div>
+							</div>
+							<ul class="technology_item_detail">
+								<li class="technology_item_list" data-title="職級：">專任助理教授</li>
+								<li class="technology_item_list" data-title="所屬服務單位：">康寧學校財團法人康寧大學</li>
+								<li class="technology_item_list" data-title="現職：">國研院儀器科技研究中心生醫平台與育成組</li>
+								<li class="technology_item_list" data-title="合作專長：">
+									電機及電子工程、金半場效電晶體、耗竭型假晶式高電子遷移率電晶體、加強型假晶式高電子遷移率電晶體、相位移光罩、手機、石英晶片 、材料科學</li>
+								<li class="technology_item_list _btnBox" data-title="商化意願：">
+									<button class="normal_btn _list" data-num="3">帶領實驗室投入創業(自行創業)</button>
+									<button class="normal_btn _list" data-num="2">需要廠商協助創新技術進行</button>
+									<button class="normal_btn _list" data-num="3">與廠商共同研提合作計畫</button>
+								</li>
+							</ul>
+						</div>
+						<div class="technology_item">
+							<div class="technology_item_info">
+								<div class="technology_item_name">
+									蕭銘華
+								</div>
+								<div class="btnBox">
+									<button class="normal_btn _addfile">建立技術摘要文件</button>
+									<button class="normal_btn _addinterview">建立約訪</button>
+								</div>
+							</div>
+							<ul class="technology_item_detail">
+								<li class="technology_item_list" data-title="職級：">專任助理教授</li>
+								<li class="technology_item_list" data-title="所屬服務單位：">康寧學校財團法人康寧大學</li>
+								<li class="technology_item_list" data-title="現職：">國研院儀器科技研究中心生醫平台與育成組</li>
+								<li class="technology_item_list" data-title="合作專長：">
+									電機及電子工程、金半場效電晶體、耗竭型假晶式高電子遷移率電晶體、加強型假晶式高電子遷移率電晶體、相位移光罩、手機、石英晶片 、材料科學</li>
+								<li class="technology_item_list _btnBox" data-title="商化意願：">
+									<button class="normal_btn _list" data-num="3">帶領實驗室投入創業(自行創業)</button>
+									<button class="normal_btn _list" data-num="2">需要廠商協助創新技術進行</button>
+									<button class="normal_btn _list" data-num="3">與廠商共同研提合作計畫</button>
+								</li>
+							</ul>
+						</div>
+						<div class="technology_item">
+							<div class="technology_item_info">
+								<div class="technology_item_name">
+									蕭銘華
+								</div>
+								<div class="btnBox">
+									<button class="normal_btn _addfile">建立技術摘要文件</button>
+									<button class="normal_btn _addinterview">建立約訪</button>
+								</div>
+							</div>
+							<ul class="technology_item_detail">
+								<li class="technology_item_list" data-title="職級：">專任助理教授</li>
+								<li class="technology_item_list" data-title="所屬服務單位：">康寧學校財團法人康寧大學</li>
+								<li class="technology_item_list" data-title="現職：">國研院儀器科技研究中心生醫平台與育成組</li>
+								<li class="technology_item_list" data-title="合作專長：">
+									電機及電子工程、金半場效電晶體、耗竭型假晶式高電子遷移率電晶體、加強型假晶式高電子遷移率電晶體、相位移光罩、手機、石英晶片 、材料科學</li>
+								<li class="technology_item_list _btnBox" data-title="商化意願：">
+									<button class="normal_btn _list" data-num="3">帶領實驗室投入創業(自行創業)</button>
+									<button class="normal_btn _list" data-num="2">需要廠商協助創新技術進行</button>
+									<button class="normal_btn _list" data-num="3">與廠商共同研提合作計畫</button>
+								</li>
+							</ul>
+						</div>
+						<div class="technology_item">
+							<div class="technology_item_info">
+								<div class="technology_item_name">
+									蕭銘華
+								</div>
+								<div class="btnBox">
+									<button class="normal_btn _addfile">建立技術摘要文件</button>
+									<button class="normal_btn _addinterview">建立約訪</button>
+								</div>
+							</div>
+							<ul class="technology_item_detail">
+								<li class="technology_item_list" data-title="職級：">專任助理教授</li>
+								<li class="technology_item_list" data-title="所屬服務單位：">康寧學校財團法人康寧大學</li>
+								<li class="technology_item_list" data-title="現職：">國研院儀器科技研究中心生醫平台與育成組</li>
+								<li class="technology_item_list" data-title="合作專長：">
+									電機及電子工程、金半場效電晶體、耗竭型假晶式高電子遷移率電晶體、加強型假晶式高電子遷移率電晶體、相位移光罩、手機、石英晶片 、材料科學</li>
+								<li class="technology_item_list _btnBox" data-title="商化意願：">
+									<button class="normal_btn _list" data-num="3">帶領實驗室投入創業(自行創業)</button>
+									<button class="normal_btn _list" data-num="2">需要廠商協助創新技術進行</button>
+									<button class="normal_btn _list" data-num="3">與廠商共同研提合作計畫</button>
+								</li>
+							</ul>
+						</div>
+						<div class="technology_item">
+							<div class="technology_item_info">
+								<div class="technology_item_name">
+									蕭銘華
+								</div>
+								<div class="btnBox">
+									<button class="normal_btn _addfile">建立技術摘要文件</button>
+									<button class="normal_btn _addinterview">建立約訪</button>
+								</div>
+							</div>
+							<ul class="technology_item_detail">
+								<li class="technology_item_list" data-title="職級：">專任助理教授</li>
+								<li class="technology_item_list" data-title="所屬服務單位：">康寧學校財團法人康寧大學</li>
+								<li class="technology_item_list" data-title="現職：">國研院儀器科技研究中心生醫平台與育成組</li>
+								<li class="technology_item_list" data-title="合作專長：">
+									電機及電子工程、金半場效電晶體、耗竭型假晶式高電子遷移率電晶體、加強型假晶式高電子遷移率電晶體、相位移光罩、手機、石英晶片 、材料科學</li>
+								<li class="technology_item_list _btnBox" data-title="商化意願：">
+									<button class="normal_btn _list" data-num="3">帶領實驗室投入創業(自行創業)</button>
+									<button class="normal_btn _list" data-num="2">需要廠商協助創新技術進行</button>
+									<button class="normal_btn _list" data-num="3">與廠商共同研提合作計畫</button>
+								</li>
+							</ul>
+						</div>
+						<div class="technology_item">
+							<div class="technology_item_info">
+								<div class="technology_item_name">
+									蕭銘華
+								</div>
+								<div class="btnBox">
+									<button class="normal_btn _addfile">建立技術摘要文件</button>
+									<button class="normal_btn _addinterview">建立約訪</button>
+								</div>
+							</div>
+							<ul class="technology_item_detail">
+								<li class="technology_item_list" data-title="職級：">專任助理教授</li>
+								<li class="technology_item_list" data-title="所屬服務單位：">康寧學校財團法人康寧大學</li>
+								<li class="technology_item_list" data-title="現職：">國研院儀器科技研究中心生醫平台與育成組</li>
+								<li class="technology_item_list" data-title="合作專長：">
+									電機及電子工程、金半場效電晶體、耗竭型假晶式高電子遷移率電晶體、加強型假晶式高電子遷移率電晶體、相位移光罩、手機、石英晶片 、材料科學</li>
+								<li class="technology_item_list _btnBox" data-title="商化意願：">
+									<button class="normal_btn _list" data-num="3">帶領實驗室投入創業(自行創業)</button>
+									<button class="normal_btn _list" data-num="2">需要廠商協助創新技術進行</button>
+									<button class="normal_btn _list" data-num="3">與廠商共同研提合作計畫</button>
+								</li>
+							</ul>
+						</div>
+						<div class="technology_item">
+							<div class="technology_item_info">
+								<div class="technology_item_name">
+									蕭銘華
+								</div>
+								<div class="btnBox">
+									<button class="normal_btn _addfile">建立技術摘要文件</button>
+									<button class="normal_btn _addinterview">建立約訪</button>
+								</div>
+							</div>
+							<ul class="technology_item_detail">
+								<li class="technology_item_list" data-title="職級：">專任助理教授</li>
+								<li class="technology_item_list" data-title="所屬服務單位：">康寧學校財團法人康寧大學</li>
+								<li class="technology_item_list" data-title="現職：">國研院儀器科技研究中心生醫平台與育成組</li>
+								<li class="technology_item_list" data-title="合作專長：">
+									電機及電子工程、金半場效電晶體、耗竭型假晶式高電子遷移率電晶體、加強型假晶式高電子遷移率電晶體、相位移光罩、手機、石英晶片 、材料科學</li>
+								<li class="technology_item_list _btnBox" data-title="商化意願：">
+									<button class="normal_btn _list" data-num="3">帶領實驗室投入創業(自行創業)</button>
+									<button class="normal_btn _list" data-num="2">需要廠商協助創新技術進行</button>
+									<button class="normal_btn _list" data-num="3">與廠商共同研提合作計畫</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="page">
+					<li class="page_item _prev">«</li>
+					<li class="page_item on">1</li>
+					<li class="page_item">2</li>
+					<li class="page_item">3</li>
+					<li class="page_item _next">»</li>
+				</ul>
+			</div>
+		</div>
+
+
+
+		<div class="gototop">
+			<i class="icon _gototop">
+				<img src="./images/icon_back_top.svg" alt="">
+			</i>
+		</div>
+	</div>
+</body>
+
+</html>
