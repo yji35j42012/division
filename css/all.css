@@ -1,12 +1,12 @@
 @charset "UTF-8";
 .normal_btn, .page_item, .page_item:not(:last-child):after, .gototop, .nav_menu_item, .nav_menu_item i, .tab_item, .otherTab_item, .filter_inpBox ._add,
-.filter_inpBox ._minus, .filter_btn, .technology_item {
+.filter_inpBox ._minus, .filter_btn, .filter_select_li, .technology_item, .technology_technical_list {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
 
 .normal_btn, .page_item, .gototop, .nav_menu_item, .tab_item, .otherTab_item, .filter_inpBox ._add,
-.filter_inpBox ._minus, .filter_radio, .filter_check_span, .filter_btn {
+.filter_inpBox ._minus, .filter_radio, .filter_check_span, .filter_btn, .filter_select, .filter_select_li {
   cursor: pointer;
 }
 
@@ -145,6 +145,10 @@ h1 {
   color: #fff;
 }
 
+.normal_btn._company + .normal_btn._company {
+  margin-left: 10px;
+}
+
 @media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
   .normal_btn._company:hover {
     background-color: #5138e1;
@@ -162,6 +166,44 @@ h1 {
   font-size: 14px;
   border-radius: 10px;
   background-color: #556ff6;
+}
+
+.normal_btn._download {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 110px;
+  height: 28px;
+  margin-left: auto;
+  margin-bottom: 10px;
+  border-radius: 14px;
+  background-color: #556ff6;
+  color: #fff;
+}
+
+.normal_btn._download::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  background: url("../images/icon_download.svg") no-repeat center/contain;
+}
+
+@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+  .normal_btn._download:hover {
+    background-color: #2949f2;
+  }
+}
+
+.normal_btn._download:active {
+  background-color: #2949f2;
 }
 
 .page {
@@ -678,8 +720,8 @@ h1 {
 }
 
 .otherTab_item:nth-child(4)::before {
-  -webkit-filter: invert(66%) sepia(81%) saturate(366%) hue-rotate(184deg) brightness(99%) contrast(96%);
-          filter: invert(66%) sepia(81%) saturate(366%) hue-rotate(184deg) brightness(99%) contrast(96%);
+  -webkit-filter: invert(53%) sepia(95%) saturate(388%) hue-rotate(201deg) brightness(98%) contrast(97%);
+          filter: invert(53%) sepia(95%) saturate(388%) hue-rotate(201deg) brightness(98%) contrast(97%);
 }
 
 @media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
@@ -698,6 +740,32 @@ h1 {
 
 .otherTab_item.on::before {
   display: block;
+}
+
+.nodata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 0;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #a9b0c7;
+}
+
+.nodata .icon._search {
+  width: 40px;
+  height: 36px;
+  margin-right: 5px;
 }
 
 .icon {
@@ -776,6 +844,24 @@ h1 {
   padding: 30px 0;
 }
 
+.filter_inpGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-top: 16px;
+}
+
 .filter_inpBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -788,7 +874,6 @@ h1 {
           align-items: center;
   width: 100%;
   max-width: 836px;
-  margin-top: 16px;
 }
 
 .filter_inpBox + .filter_inpBox {
@@ -1093,7 +1178,91 @@ input:checked + .filter_check_span:before {
   margin-left: 30px;
 }
 
+.filter_select {
+  position: relative;
+  display: block;
+  min-width: 146px;
+  height: 42px;
+  margin-right: 10px;
+}
+
+.filter_select_txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  border: solid 1px #e0e2e8;
+  background-color: #fff;
+}
+
+.filter_select_txt::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  display: block;
+  width: 20px;
+  height: 8px;
+  margin: auto;
+  background: url("../images/icon_user_arrow.svg") no-repeat center/contain;
+}
+
+.filter_select_ul {
+  position: absolute;
+  top: calc(100% + 5px);
+  display: none;
+  width: 100%;
+  border-radius: 6px;
+  border: solid 1px #e0e2e8;
+  background-color: #fff;
+}
+
+.on .filter_select_ul {
+  display: block;
+}
+
+.filter_select_li {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+}
+
+@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+  .filter_select_li:hover {
+    background-color: #e2e9ff;
+  }
+}
+
+.filter_select_li:active {
+  background-color: #e2e9ff;
+}
+
 .technology {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 0 20px;
 }
 
@@ -1234,9 +1403,9 @@ input:checked + .filter_check_span:before {
   -webkit-box-pack: none;
       -ms-flex-pack: none;
           justify-content: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
   font-size: 16px;
   line-height: 22px;
@@ -1272,11 +1441,77 @@ input:checked + .filter_check_span:before {
           align-items: flex-start;
 }
 
-.technology_item_list._btnBox .normal_btn + .normal_btn {
-  margin-left: 10px;
+.technology_item_list._btnBox {
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 80px;
+}
+
+.technology_item_list._btnBox .normal_btn {
+  margin-bottom: 14px;
+  margin-right: 10px;
+}
+
+.technology_item_list._btnBox::before {
+  position: absolute;
+  left: 0;
 }
 
 .technology_item_list + .technology_item_list:not(:nth-child(2)) {
+  margin-top: 10px;
+}
+
+.technology_technical {
+  margin-top: 20px;
+}
+
+.technology_technical_list {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 14px 12px 14px 23px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+  .technology_technical_list:hover {
+    background-color: #f1f5fd;
+  }
+}
+
+.technology_technical_list:active {
+  background-color: #f1f5fd;
+}
+
+.technology_technical_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  font-size: 16px;
+}
+
+.technology_technical_item::before {
+  content: attr(data-title);
+  display: block;
+  min-width: 80px;
+  text-align: right;
+  color: #8990a5;
+}
+
+.technology_technical_item:nth-child(odd) {
+  color: #6a6afc;
+}
+
+.technology_technical_item + .technology_technical_item {
   margin-top: 10px;
 }
 
@@ -1289,6 +1524,30 @@ input:checked + .filter_check_span:before {
 
 .resume_title {
   font-size: 20px;
+}
+
+.resume_title._otherStyle {
+  position: relative;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: 18px;
+  background-color: #9dacf8;
+}
+
+.resume_title._otherStyle::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  display: block;
+  width: 16px;
+  height: 5px;
+  margin: auto;
+  background: url("../images/icon_select_arrow.svg") no-repeat center/cover;
+  -webkit-filter: invert(72%) sepia(25%) saturate(5982%) hue-rotate(199deg) brightness(110%) contrast(94%);
+          filter: invert(72%) sepia(25%) saturate(5982%) hue-rotate(199deg) brightness(110%) contrast(94%);
 }
 
 .resume_info {
@@ -1443,6 +1702,13 @@ input:checked + .filter_check_span:before {
 }
 
 .same_list_txt {
+  position: relative;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 10px;
+}
+
+.same_list_txt span {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   /* 用來設定一個元素是水平還是垂直方向排列其內容 */
@@ -1450,10 +1716,20 @@ input:checked + .filter_check_span:before {
   /* 限制指定的行數 */
   overflow: hidden;
   width: 100%;
-  min-height: 48px;
-  margin-top: 10px;
+  height: 100%;
   font-size: 16px;
   line-height: 24px;
+}
+
+.same_list_txt .normal_btn {
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  display: none;
+}
+
+.same_list_txt .showMore + .normal_btn {
+  display: block;
 }
 
 .same_list_weight {
@@ -1502,6 +1778,7 @@ input:checked + .filter_check_span:before {
   border-radius: 10px;
   background-color: #ccf0e6;
   font-size: 26px;
+  font-weight: bold;
 }
 
 .same_list_patent li:before {
@@ -1509,7 +1786,7 @@ input:checked + .filter_check_span:before {
   margin-top: 4px;
   font-size: 16px;
   line-height: 24px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .same_list_patent li:nth-child(2) {

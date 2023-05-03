@@ -102,34 +102,52 @@
 				<div class="filter">
 					<ul class="tab">
 						<li class="tab_item on">搜尋技術與發明人</li>
-						<li class="tab_item">搜尋技術文獻</li>
+						<li class="tab_item"><a href="./technology_technical.html">搜尋技術文獻</a></li>
 					</ul>
-					<div class="filter_inpBox">
-						<label class="filter_input">
-							<i class="icon _search">
-								<img src="./images/icon_search_normal.svg" alt="">
+					<div id="filter_inpGroup" class="filter_inpGroup">
+						<div class="filter_inpBox">
+							<label class="filter_input">
+								<i class="icon _search">
+									<img src="./images/icon_search_normal.svg" alt="">
+								</i>
+								<input type="text" placeholder="請輸入姓名、現職單位、職級、合作專長、IPC(如：G06K)、技術名">
+							</label>
+							<label id="filter_select" class="filter_select">
+								<span id="filter_select_txt" class="filter_select_txt">標題</span>
+								<ul id="filter_select_ul" class="filter_select_ul">
+									<li class="filter_select_li">標題</li>
+									<li class="filter_select_li">摘要及關鍵字</li>
+									<li class="filter_select_li">IPC</li>
+									<li class="filter_select_li">姓名</li>
+									<li class="filter_select_li">現職單位</li>
+									<li class="filter_select_li">職級</li>
+									<li class="filter_select_li">合作專長</li>
+									<li class="filter_select_li">BaseSEQ</li>
+								</ul>
+							</label>
+							<i id="addFilter" class="icon _add">
+								<img src="./images/icon_add_normal.svg" alt="">
 							</i>
-							<input type="text" placeholder="請輸入姓名、現職單位、職級、合作專長、IPC(如：G06K)、技術名">
-						</label>
-						<i class="icon _add">
-							<img src="./images/icon_add_normal.svg" alt="">
-						</i>
-					</div>
-					<div class="filter_inpBox">
-						<ul class="tab">
-							<li class="tab_item on">and</li>
-							<li class="tab_item">or</li>
-						</ul>
-						<label class="filter_input">
-							<i class="icon _search">
-								<img src="./images/icon_search_normal.svg" alt="">
+						</div>
+
+						<!-- <div id="clild_inpBox" class="filter_inpBox" style="display: none;">
+							<ul class="tab">
+								<li class="tab_item on">and</li>
+								<li class="tab_item">or</li>
+							</ul>
+							<label class="filter_input">
+								<i class="icon _search">
+									<img src="./images/icon_search_normal.svg" alt="">
+								</i>
+								<input type="text" placeholder="請輸入姓名、現職單位、職級、合作專長、IPC(如：G06K)、技術名">
+							</label>
+							<i class="icon _minus">
+								<img src="./images/icon_minus_normal.svg" alt="">
 							</i>
-							<input type="text" placeholder="請輸入姓名、現職單位、職級、合作專長、IPC(如：G06K)、技術名">
-						</label>
-						<i class="icon _minus">
-							<img src="./images/icon_minus_normal.svg" alt="">
-						</i>
+						</div> -->
 					</div>
+
+
 					<div class="filter_radioBox">
 						<label class="filter_radio">
 							<input type="radio" name="filter_radio" checked>
@@ -204,15 +222,20 @@
 					</div>
 					<div class="filter_btnBox">
 						<button class="filter_btn _clear">清除</button>
-						<button class="filter_btn _search">搜尋</button>
+						<button id="filter_search" class="filter_btn _search">搜尋</button>
 					</div>
 				</div>
-				<div class="technology">
+				<div id="nodata" class="nodata" style="display: none;">
+					<i class="icon _search"><img src="./images/icon_search_normal.svg" alt=""></i>
+					請搜尋技術與發明人或技術文獻
+				</div>
+				<div id="data" class="technology">
+					<button class="normal_btn _download">下載列表</button>
 					<div class="technology_group">
 						<div class="technology_item" name="technology_detail">
 							<div class="technology_item_info">
 								<div class="technology_item_name">
-									蕭銘華
+									葉秩光
 								</div>
 								<div class="btnBox">
 									<button class="normal_btn _addfile">建立技術摘要文件</button>
@@ -227,8 +250,11 @@
 									電機及電子工程、金半場效電晶體、耗竭型假晶式高電子遷移率電晶體、加強型假晶式高電子遷移率電晶體、相位移光罩、手機、石英晶片 、材料科學</li>
 								<li class="technology_item_list _btnBox" data-title="商化意願：">
 									<button class="normal_btn _list" data-num="3">帶領實驗室投入創業(自行創業)</button>
-									<button class="normal_btn _list" data-num="2">需要廠商協助創新技術進行</button>
-									<button class="normal_btn _list" data-num="3">與廠商共同研提合作計畫</button>
+									<button class="normal_btn _list" data-num="2">技術由他人運用創業</button>
+									<button class="normal_btn _list" data-num="2">需要創業專家共同投入創業</button>
+									<button class="normal_btn _list" data-num="2">解決廠商技術瓶頸</button>
+									<button class="normal_btn _list" data-num="1">與廠商共同研提合作計畫</button>
+									<button class="normal_btn _list" data-num="3">技術移轉化他人</button>
 								</li>
 							</ul>
 						</div>
@@ -250,8 +276,11 @@
 									電機及電子工程、金半場效電晶體、耗竭型假晶式高電子遷移率電晶體、加強型假晶式高電子遷移率電晶體、相位移光罩、手機、石英晶片 、材料科學</li>
 								<li class="technology_item_list _btnBox" data-title="商化意願：">
 									<button class="normal_btn _list" data-num="3">帶領實驗室投入創業(自行創業)</button>
-									<button class="normal_btn _list" data-num="2">需要廠商協助創新技術進行</button>
-									<button class="normal_btn _list" data-num="3">與廠商共同研提合作計畫</button>
+									<button class="normal_btn _list" data-num="2">技術由他人運用創業</button>
+									<button class="normal_btn _list" data-num="2">需要創業專家共同投入創業</button>
+									<button class="normal_btn _list" data-num="2">解決廠商技術瓶頸</button>
+									<button class="normal_btn _list" data-num="1">與廠商共同研提合作計畫</button>
+									<button class="normal_btn _list" data-num="3">技術移轉化他人</button>
 								</li>
 							</ul>
 						</div>
@@ -440,14 +469,15 @@
 							</ul>
 						</div>
 					</div>
+					<ul class="page">
+						<li class="page_item _prev">«</li>
+						<li class="page_item on">1</li>
+						<li class="page_item">2</li>
+						<li class="page_item">3</li>
+						<li class="page_item _next">»</li>
+					</ul>
+
 				</div>
-				<ul class="page">
-					<li class="page_item _prev">«</li>
-					<li class="page_item on">1</li>
-					<li class="page_item">2</li>
-					<li class="page_item">3</li>
-					<li class="page_item _next">»</li>
-				</ul>
 			</div>
 		</div>
 
