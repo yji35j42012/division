@@ -14,6 +14,7 @@ h1 {
 .mt14px {
 	margin-top: 14px;
 }
+// collect
 .normal_btn {
 	min-width: 136px;
 	height: 35px;
@@ -38,7 +39,6 @@ h1 {
 			color: #fff;
 		}
 	}
-
 	&._list {
 		@include d_f(flex, space-between, center);
 		min-width: 233px;
@@ -55,6 +55,49 @@ h1 {
 		@include hoverHandler {
 			background-color: #1fb57e;
 		}
+	}
+	&._collect {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		min-width: 80px;
+		height: 24px;
+		padding: 2px 0;
+		color: #556ff6;
+		border-radius: 6px;
+		border: solid 1px #556ff6;
+		background-color: #fff;
+		font-size: 14px;
+		@include hoverHandler {
+			background-color: #556ff6;
+			color: #fff;
+		}
+	}
+	&._company {
+		min-width: 80px;
+		height: 24px;
+		margin-top: 10px;
+		margin-left: 30px;
+		padding: 4px 12px 6px;
+		background-color: #817fff;
+		border-radius: 12px;
+		font-size: 14px;
+		line-height: 1;
+		color: #fff;
+		@include hoverHandler {
+			background-color: #5138e1;
+		}
+	}
+	&._more {
+		// position: absolute;
+		// bottom: 14px;
+		// right: 18px;
+		min-width: 52px;
+		height: 20px;
+		color: #fff;
+		font-size: 14px;
+		border-radius: 10px;
+		background-color: #556ff6;
 	}
 }
 .page {
@@ -191,6 +234,9 @@ h1 {
 	width: 100%;
 	padding-top: 14px;
 	padding-bottom: 66px;
+	&._hasFixFooter {
+		padding-bottom: 105px;
+	}
 }
 
 .header {
@@ -387,7 +433,7 @@ h1 {
 		@include hoverHandler {
 			opacity: 1;
 		}
-		&.on{
+		&.on {
 			opacity: 1;
 			&::before {
 				display: block;
@@ -673,6 +719,7 @@ h1 {
 			flex-direction: column;
 			max-width: 136px;
 			.detail & {
+				align-items: flex-start;
 				flex-direction: row;
 				// flex-wrap: wrap;
 				width: 100%;
@@ -694,6 +741,9 @@ h1 {
 			@include d_f(flex, none, center);
 			font-size: 20px;
 			font-weight: bold;
+			.detail & {
+				font-size: 32px;
+			}
 			&::before {
 				content: "";
 				flex: none;
@@ -767,7 +817,9 @@ h1 {
 	}
 	// .resume_info
 	&_info {
+		position: relative;
 		/* 其它瀏覽器降級方式：給定最大高度 */
+		width: 100%;
 		max-height: 184px;
 		margin-top: 14px;
 		padding: 14px 18px;
@@ -775,10 +827,10 @@ h1 {
 		background-color: #fff;
 
 		span {
-			display: -webkit-box;
-			-webkit-box-orient: vertical; /* 用來設定一個元素是水平還是垂直方向排列其內容 */
-			-webkit-line-clamp: 7; /* 限制指定的行數 */
-			overflow: hidden;
+			display: block;
+			// -webkit-box-orient: vertical; /* 用來設定一個元素是水平還是垂直方向排列其內容 */
+			// -webkit-line-clamp: 7; /* 限制指定的行數 */
+			// overflow: hidden;
 			width: 100%;
 			font-size: 16px;
 			line-height: 22px;
@@ -846,5 +898,105 @@ h1 {
 	// .same_head
 	&_head {
 		@include d_f(flex, space-between, center);
+	}
+	// .same_content
+	&_content {
+		@include d_f(flex, space-between);
+		flex-wrap: wrap;
+		margin-top: 20px;
+	}
+	// .same_list
+	&_list {
+		position: relative;
+		@include d_f(flex, none, center);
+		flex-wrap: wrap;
+		width: calc(50% - 10px);
+		margin-bottom: 20px;
+		padding: 15px;
+		border-radius: 8px;
+		box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+		background-color: #fff;
+		// .same_list_title
+		&_title {
+			font-size: 24px;
+			font-weight: bold;
+		}
+		// .same_list_txt
+		&_txt {
+			display: -webkit-box;
+			-webkit-box-orient: vertical; /* 用來設定一個元素是水平還是垂直方向排列其內容 */
+			-webkit-line-clamp: 2; /* 限制指定的行數 */
+			overflow: hidden;
+			width: 100%;
+			min-height: 48px;
+			margin-top: 10px;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		// .same_list_weight
+		&_weight {
+			margin-top: 10px;
+			color: #556ff6;
+			font-size: 16px;
+			&::before {
+				content: attr(data-txt);
+				color: #182b4d;
+				font-size: 16px;
+				line-height: 24px;
+			}
+		}
+		// .same_list_company
+
+		// .same_list_patent
+		&_patent {
+			@include d_f(flex);
+			width: 100%;
+			margin-top: 10px;
+			li {
+				@include d_f(flex, center, center);
+				flex-direction: column;
+				width: 100%;
+				padding: 8px 0 12px;
+				border-radius: 10px;
+				background-color: #ccf0e6;
+				font-size: 26px;
+				&:before {
+					content: attr(data-txt);
+					margin-top: 4px;
+					font-size: 16px;
+					line-height: 24px;
+					font-weight: bold;
+				}
+
+				&:nth-child(2) {
+					background-color: #fde8cf;
+				}
+				&:nth-child(3) {
+					background-color: #c5defa;
+				}
+				&:nth-child(4) {
+					background-color: #cccdf0;
+				}
+			}
+			li + li {
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+.fixFooter {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	@include d_f(flex, center, center);
+	width: calc(100% - 250px);
+	height: 74px;
+	margin: 30px 0 0;
+	padding: 16px 0;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+	background-color: #fff;
+	.normal_btn + .normal_btn {
+		margin-left: 20px;
 	}
 }
