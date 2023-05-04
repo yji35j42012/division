@@ -151,6 +151,45 @@ td.txtc {
 		background-color: #5452b7;
 		color: #fff;
 	}
+
+	&._collectfolder {
+		@include d_f(inline-flex, center, center);
+		height: 42px;
+		margin-left: 20px;
+		font-size: 16px;
+		color: #556ff6;
+		border-radius: 6px;
+		border: solid 1px #556ff6;
+		&::before {
+			content: "";
+			display: block;
+			width: 24px;
+			height: 24px;
+			margin-right: 10px;
+			background: url("../images/icon_add_folder.svg") no-repeat
+				center/contain;
+		}
+		@include hoverHandler {
+			background-color: #e3ecfd;
+			color: #182b4d;
+		}
+	}
+
+	&._clear {
+		background-color: #e8effd;
+		color: #556ff6;
+		@include hoverHandler {
+			background-color: #c4d7fd;
+		}
+	}
+	&._collectcheck {
+		min-width: 120px;
+		background-color: #556ff6;
+		color: #fff;
+		@include hoverHandler {
+			background-color: #2949f2;
+		}
+	}
 }
 // .normal_tb
 .normal_tb {
@@ -168,6 +207,7 @@ td.txtc {
 	}
 	th {
 		height: 50px;
+		padding: 0 5px;
 		color: #8990a5;
 		box-shadow: inset 0 -1px 0 0 #dee2e6;
 		background-color: #fff;
@@ -177,6 +217,7 @@ td.txtc {
 	}
 	td {
 		height: 50px;
+		padding: 0 5px;
 		box-shadow: inset 0 -1px 0 0 #dee2e6;
 		@extend %hand;
 		@extend %transition;
@@ -461,6 +502,11 @@ td.txtc {
 		&.on {
 			background-color: #556ff6;
 			color: #fff;
+		}
+		a {
+			@include d_f(flex, center, center);
+			width: 100%;
+			height: 100%;
 		}
 	}
 }
@@ -783,6 +829,7 @@ td.txtc {
 	&_btnBox {
 		@include d_f(flex, center, center);
 		width: 100%;
+		margin-top: 15px;
 		padding: 0 20px;
 	}
 	// .filter_btn
@@ -1338,6 +1385,41 @@ td.txtc {
 		._government & {
 			margin-top: 0;
 		}
+		.collect_title {
+			position: relative;
+			@include d_f(flex, none, center);
+			font-size: 24px;
+			&::before {
+				position: absolute;
+				top: calc(100% + 2px);
+				content: attr(data-msg);
+				font-size: 14px;
+				color: #8990a5;
+			}
+		}
+	}
+	// .alert_search
+	&_search {
+		@include d_f(flex, none, center);
+		max-width: 264px;
+		height: 42px;
+		margin-top: 42px;
+		padding-left: 11px;
+		border-radius: 6px;
+		border: solid 1px #e0e2e8;
+		background-color: #fff;
+		.icon {
+			width: 19px;
+			height: 19px;
+		}
+		input {
+			width: 100%;
+			height: 100%;
+			padding: 0 10px;
+		}
+		input::placeholder {
+			color: #a9b0c7;
+		}
 	}
 	// .alert_close
 	&_close {
@@ -1382,9 +1464,11 @@ td.txtc {
 		}
 		th {
 			height: 50px;
+			padding: 0 5px;
 			font-size: 16px;
 			color: #8990a5;
 			font-weight: normal;
+			box-shadow: inset 0 -1px 0 0 #dee2e6;
 			&:first-child {
 				padding-left: 30px;
 			}
@@ -1394,6 +1478,7 @@ td.txtc {
 		}
 		td {
 			height: 50px;
+			padding: 0 5px;
 			font-size: 16px;
 			background-color: #fff;
 			box-shadow: inset 0 -1px 0 0 #dee2e6;
@@ -1456,6 +1541,70 @@ td.txtc {
 					line-height: 24px;
 					color: #6a6afc;
 				}
+			}
+		}
+	}
+	// .alert_func
+	&_func {
+		@include d_f(flex, space-around, center);
+		width: 100%;
+		margin-top: 90px;
+	}
+	.folderGroup {
+		@include d_f(flex);
+		flex-wrap: wrap;
+		margin-top: 30px;
+		// .folderGroup_item
+		&_item {
+			@include d_f(flex, none, center);
+			width: calc(100% / 3 - 20px / 3);
+			height: 72px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			padding: 12px;
+			border-radius: 8px;
+			box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+			border: solid 2px transparent;
+			background-color: #fff;
+			@extend %hand;
+			@extend %transition;
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+			&::before {
+				flex: none;
+				content: "";
+				display: block;
+				width: 36px;
+				height: 36px;
+				background: url("../images/icon_folder.svg") no-repeat
+					center/contain;
+			}
+			@include hoverHandler {
+				border-color: #556ff6;
+			}
+			&.on {
+				background-color: #e3ecfd;
+				border-color: #556ff6;
+			}
+			// .folderGroup_item_txt
+			&_txt {
+				width: 100%;
+				margin-left: 10px;
+				font-size: 14px;
+				line-height: 20px;
+				&::before {
+					content: attr(data-name);
+					display: block;
+					font-size: 16px;
+					line-height: 24px;
+				}
+			}
+			// .folderGroup_item_num
+			&_num {
+				font-size: 16px;
+				font-weight: bold;
+				color: #556ff6;
 			}
 		}
 	}

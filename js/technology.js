@@ -2,7 +2,7 @@ var technology_detail = document.querySelectorAll("[name=technology_detail]");
 var moreBtn = null;
 for (let i = 0; i < technology_detail.length; i++) {
 	const element = technology_detail[i];
-	element.onclick = function() {
+	element.onclick = function () {
 		location.href = "./technology_detail.html";
 	};
 }
@@ -86,7 +86,7 @@ if (filter_select) {
 if (filter_select_item) {
 	for (let i = 0; i < filter_select_item.length; i++) {
 		const element = filter_select_item[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			filter_select_txt.innerHTML = element.innerHTML;
 		};
 	}
@@ -97,7 +97,7 @@ var nodata = document.querySelector("#nodata");
 var data = document.querySelector("#data");
 
 if (filter_search) {
-	filter_search.onclick = function(params) {
+	filter_search.onclick = function (params) {
 		if (nodata.style.display == "none") {
 			nodata.style.display = "";
 			data.style.display = "none";
@@ -115,7 +115,7 @@ var filter_inpGroup_items = document.querySelectorAll(
 );
 var icon_minus = null;
 if (addFilter) {
-	addFilter.onclick = function() {
+	addFilter.onclick = function () {
 		console.log("add");
 		let idIndex = "filter_inpBox" + filter_inpGroup_items.length;
 		const div = document.createElement("div");
@@ -203,7 +203,7 @@ if (addFilter) {
 function icon_minusHandler() {
 	for (let i = 0; i < icon_minus.length; i++) {
 		const element = icon_minus[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			let removeDiv = document.querySelector(
 				"#filter_inpBox" + element.getAttribute("data-num")
 			);
@@ -219,7 +219,8 @@ var closeAlert = document.querySelectorAll("[name='alert_close']");
 if (openAlert) {
 	for (let i = 0; i < openAlert.length; i++) {
 		const element = openAlert[i];
-		element.onclick = function() {
+		element.onclick = function () {
+			event.stopPropagation();
 			let showAlert = document.querySelector(
 				"#" + element.getAttribute("data-alertid")
 			);
@@ -230,7 +231,7 @@ if (openAlert) {
 if (closeAlert) {
 	for (let i = 0; i < closeAlert.length; i++) {
 		const element = closeAlert[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			let closeAlert = document.querySelector(
 				"#" + element.getAttribute("data-alertid")
 			);
@@ -248,12 +249,35 @@ var resume_count = 0;
 if (resume_item) {
 	for (let i = 0; i < resume_item.length; i++) {
 		const element = resume_item[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			resume_item[resume_count].classList.remove("on");
 			element.classList.add("on");
 			resume_info[resume_count].style.display = "none";
 			resume_info[i].style.display = "";
 			resume_count = i;
 		};
+	}
+}
+
+
+
+
+var folderGroup = document.querySelectorAll("#folderGroup .folderGroup_item")
+var claarAllFolder = document.querySelector("#claarAllFolder")
+
+if (folderGroup) {
+	for (let i = 0; i < folderGroup.length; i++) {
+		const element = folderGroup[i];
+		element.onclick = function () {
+			element.classList.toggle("on");
+		}
+	}
+}
+if (claarAllFolder) {
+	claarAllFolder.onclick = function () {
+		for (let i = 0; i < folderGroup.length; i++) {
+			const element = folderGroup[i];
+			element.classList.remove("on");
+		}
 	}
 }

@@ -1,7 +1,7 @@
 // 引入nav模組
 const xhr = new XMLHttpRequest();
 xhr.open("GET", "./template/nav.html", true);
-xhr.onload = function() {
+xhr.onload = function () {
 	// 將模板插入到當前頁面中
 	const parser = new DOMParser();
 	const doc = parser.parseFromString(xhr.responseText, "text/html");
@@ -14,10 +14,10 @@ xhr.send();
 var navItem = document.querySelectorAll("[name='navItem']");
 let getUrl = window.location.href;
 function setItem() {
+	console.log('~');
 	for (let i = 0; i < navItem.length; i++) {
 		const element = navItem[i];
-		let h = element.getAttribute("href").split("./")[1];
-
+		let h = element.getAttribute("data-name");
 		if (getUrl.indexOf(h) !== -1) {
 			element.classList.add("on");
 		}
@@ -26,5 +26,5 @@ function setItem() {
 setTimeout(() => {
 	navItem = document.querySelectorAll("[name='navItem']");
 	setItem();
-}, 10);
+}, 100);
 // 引入nav模組
