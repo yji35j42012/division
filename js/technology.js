@@ -1,8 +1,8 @@
 var technology_detail = document.querySelectorAll("[name=technology_detail]");
-
+var moreBtn = null;
 for (let i = 0; i < technology_detail.length; i++) {
 	const element = technology_detail[i];
-	element.onclick = function () {
+	element.onclick = function() {
 		location.href = "./technology_detail.html";
 	};
 }
@@ -18,67 +18,77 @@ function isTextOverflowed(element) {
 function checkOverTxtHadnler() {
 	for (let i = 0; i < checkOverTxt.length; i++) {
 		const element = checkOverTxt[i];
-
 		if (isTextOverflowed(element)) {
-			console.log("Text is overflowed");
-			element.classList.add('showMore');
+			element.classList.add("showMore");
+			// element.setAttribute("data-showNum", "data-showNum" + i);
+			const childSpan = document.createElement("span");
+			childSpan.setAttribute("name", "showmore" + i);
+			childSpan.setAttribute("style", "display:none;");
+			childSpan.innerHTML = element.innerHTML;
+			element.parentElement.append(childSpan);
+
+			document
+				.querySelector('.showMore + [data-more="more_btn"]')
+				.setAttribute("data-showNum", +i);
 		} else {
-			return
+			return;
 		}
 
-
-		console.log("element", element.getAttribute("data-maxline"));
 		var lineNum = element.getAttribute("data-maxline");
 		var lastTxt = element.getAttribute("data-last");
 		var text = element.innerText;
 		var textLen = text.length;
-		console.log("textLen", textLen);
 		var baseWidth = window.getComputedStyle(element).width;
-		console.log("baseWidth", baseWidth);
 		var fontsize = window.getComputedStyle(element).fontSize;
 		var lineWidth = baseWidth.slice(0, -2);
-		console.log("lineWidth", lineWidth);
 		var charCount = Math.floor(lineWidth / fontsize.slice(0, -2)); // 计算一行内可容纳字数
-		console.log("charCount", charCount);
 		var content = "";
 		var totalStrNum = Math.floor(charCount * lineNum); // 多行可容纳总字数
-		console.log("totalStrNum", totalStrNum);
-
 		var lastIndex = totalStrNum - textLen;
 		if (textLen > totalStrNum)
 			content = text.slice(0, lastIndex - lastTxt).concat("...");
 		else content = text;
 
 		element.innerText = content;
-
-		//
-		// console.log("element", element);
-		
 	}
+
+	// moreBtn = document.querySelectorAll("[name='more_btn']");
+	// console.log("moreBtn", moreBtn);
+	// if (moreBtn.length >= 0) {
+	// 	for (let i = 0; i < moreBtn.length; i++) {
+	// 		const element = moreBtn[i];
+	// 		element.onclick = function() {
+	// 			document.querySelector("#alert_summary").style.display = "";
+	// 			// let show = "showmore" + element.getAttribute("data-showNum");
+	// 			// let showInfo = document.querySelector(`[name = ${show}]`);
+	// 			// console.log("showInfo", showInfo.innerHTML);
+	// 		};
+	// 	}
+	// }
 }
 
 if (checkOverTxt) {
 	checkOverTxtHadnler();
 }
 
-
-
 var filter_select = document.querySelector("#filter_select");
 var filter_select_txt = document.querySelector("#filter_select_txt");
 var filter_select_item = document.querySelectorAll("#filter_select_ul > li");
 function selectHandler() {
-	filter_select.classList.contains("on") ? filter_select.classList.remove("on") : filter_select.classList.add("on");
+	filter_select.classList.contains("on")
+		? filter_select.classList.remove("on")
+		: filter_select.classList.add("on");
 }
 if (filter_select) {
-	filter_select.addEventListener('click', selectHandler);
+	filter_select.addEventListener("click", selectHandler);
 }
 
 if (filter_select_item) {
 	for (let i = 0; i < filter_select_item.length; i++) {
 		const element = filter_select_item[i];
-		element.onclick = function () {
-			filter_select_txt.innerHTML = element.innerHTML
-		}
+		element.onclick = function() {
+			filter_select_txt.innerHTML = element.innerHTML;
+		};
 	}
 }
 
@@ -87,27 +97,27 @@ var nodata = document.querySelector("#nodata");
 var data = document.querySelector("#data");
 
 if (filter_search) {
-	filter_search.onclick = function (params) {
-		if (nodata.style.display == 'none') {
-			nodata.style.display = ''
-			data.style.display = 'none'
+	filter_search.onclick = function(params) {
+		if (nodata.style.display == "none") {
+			nodata.style.display = "";
+			data.style.display = "none";
 		} else {
-			nodata.style.display = 'none'
-			data.style.display = ''
+			nodata.style.display = "none";
+			data.style.display = "";
 		}
-	}
+	};
 }
-
 
 var addFilter = document.querySelector("#addFilter");
 var filter_inpGroup = document.querySelector("#filter_inpGroup");
-var filter_inpGroup_items = document.querySelectorAll("#filter_inpGroup > .filter_inpBox");
+var filter_inpGroup_items = document.querySelectorAll(
+	"#filter_inpGroup > .filter_inpBox"
+);
 var icon_minus = null;
-console.log('filter_inpGroup_items', filter_inpGroup_items);
 if (addFilter) {
-	addFilter.onclick = function () {
-		console.log('add');
-		let idIndex = "filter_inpBox" + filter_inpGroup_items.length
+	addFilter.onclick = function() {
+		console.log("add");
+		let idIndex = "filter_inpBox" + filter_inpGroup_items.length;
 		const div = document.createElement("div");
 		div.setAttribute("class", "filter_inpBox");
 		div.setAttribute("id", idIndex);
@@ -116,10 +126,10 @@ if (addFilter) {
 		divChild1.setAttribute("class", "tab");
 		const divChild1_1 = document.createElement("li");
 		divChild1_1.setAttribute("class", "tab_item on");
-		divChild1_1.innerHTML = 'and'
+		divChild1_1.innerHTML = "and";
 		const divChild1_2 = document.createElement("li");
 		divChild1_2.setAttribute("class", "tab_item");
-		divChild1_2.innerHTML = 'or'
+		divChild1_2.innerHTML = "or";
 		divChild1.append(divChild1_1);
 		divChild1.append(divChild1_2);
 
@@ -129,31 +139,39 @@ if (addFilter) {
 		divChild2_1.setAttribute("class", "icon _search");
 		const divChild2_1_img = document.createElement("img");
 		divChild2_1_img.setAttribute("src", "./images/icon_search_normal.svg");
-		divChild2_1.append(divChild2_1_img)
+		divChild2_1.append(divChild2_1_img);
 		const divChild2_1_inp = document.createElement("input");
-		divChild2_1_inp.setAttribute("type", 'text')
-		divChild2_1_inp.setAttribute("placeholder", '請輸入姓名、現職單位、職級、合作專長、IPC(如：G06K)、技術名')
-		divChild2.append(divChild2_1)
-		divChild2.append(divChild2_1_inp)
+		divChild2_1_inp.setAttribute("type", "text");
+		divChild2_1_inp.setAttribute(
+			"placeholder",
+			"請輸入姓名、現職單位、職級、合作專長、IPC(如：G06K)、技術名"
+		);
+		divChild2.append(divChild2_1);
+		divChild2.append(divChild2_1_inp);
 
 		const divChild3 = document.createElement("i");
 		divChild3.setAttribute("class", "icon _minus");
 		divChild3.setAttribute("data-num", filter_inpGroup_items.length);
-		divChild3.setAttribute("name", 'icon_minus');
+		divChild3.setAttribute("name", "icon_minus");
 		const divChild3_1 = document.createElement("img");
 		divChild3_1.setAttribute("src", "./images/icon_minus_normal.svg");
-		divChild3.append(divChild3_1)
-
+		divChild3.append(divChild3_1);
 
 		const divChild4 = document.createElement("label");
 		divChild4.setAttribute("id", "filter_select");
 		divChild4.setAttribute("class", "filter_select");
 		const divChild4_1 = document.createElement("span");
-		divChild4_1.setAttribute("id", "filter_select_txt" + filter_inpGroup_items.length);
+		divChild4_1.setAttribute(
+			"id",
+			"filter_select_txt" + filter_inpGroup_items.length
+		);
 		divChild4_1.setAttribute("class", "filter_select_txt");
-		divChild4_1.innerHTML = '標題';
+		divChild4_1.innerHTML = "標題";
 		const divChild4_2 = document.createElement("ul");
-		divChild4_2.setAttribute("id", "filter_select_ul" + filter_inpGroup_items.length);
+		divChild4_2.setAttribute(
+			"id",
+			"filter_select_ul" + filter_inpGroup_items.length
+		);
 		divChild4_2.setAttribute("class", "filter_select_ul");
 
 		divChild4_2.innerHTML = `<li class="filter_select_li">標題</li>
@@ -165,33 +183,77 @@ if (addFilter) {
 								<li class="filter_select_li">合作專長</li>
 								<li class="filter_select_li">BaseSEQ</li>`;
 
+		divChild4.append(divChild4_1);
+		divChild4.append(divChild4_2);
 
-		divChild4.append(divChild4_1)
-		divChild4.append(divChild4_2)
-
-
-		div.append(divChild1)
-		div.append(divChild2)
-		div.append(divChild4)
-		div.append(divChild3)
+		div.append(divChild1);
+		div.append(divChild2);
+		div.append(divChild4);
+		div.append(divChild3);
 		filter_inpGroup.append(div);
 
-		filter_inpGroup_items = document.querySelectorAll("#filter_inpGroup > .filter_inpBox")
-		icon_minus = document.querySelectorAll("[name=icon_minus]")
-		icon_minusHandler()
-	}
+		filter_inpGroup_items = document.querySelectorAll(
+			"#filter_inpGroup > .filter_inpBox"
+		);
+		icon_minus = document.querySelectorAll("[name=icon_minus]");
+		icon_minusHandler();
+	};
 }
-
 
 function icon_minusHandler() {
 	for (let i = 0; i < icon_minus.length; i++) {
 		const element = icon_minus[i];
-		element.onclick = function () {
-			let removeDiv = document.querySelector("#filter_inpBox" + element.getAttribute("data-num"))
-			// console.log(element.getAttribute("data-num"));
-			console.log('removeDiv', removeDiv);
+		element.onclick = function() {
+			let removeDiv = document.querySelector(
+				"#filter_inpBox" + element.getAttribute("data-num")
+			);
+			filter_inpGroup.removeChild(removeDiv);
+		};
+	}
+}
 
-			filter_inpGroup.removeChild(removeDiv)
-		}
+// 彈窗系列
+var openAlert = document.querySelectorAll("[name='openAlert']");
+var closeAlert = document.querySelectorAll("[name='alert_close']");
+//
+if (openAlert) {
+	for (let i = 0; i < openAlert.length; i++) {
+		const element = openAlert[i];
+		element.onclick = function() {
+			let showAlert = document.querySelector(
+				"#" + element.getAttribute("data-alertid")
+			);
+			showAlert.style.display = "";
+		};
+	}
+}
+if (closeAlert) {
+	for (let i = 0; i < closeAlert.length; i++) {
+		const element = closeAlert[i];
+		element.onclick = function() {
+			let closeAlert = document.querySelector(
+				"#" + element.getAttribute("data-alertid")
+			);
+			closeAlert.style.display = "none";
+		};
+	}
+}
+// 彈窗系列
+
+// resume 頁籤
+var resume_item = document.querySelectorAll("[name='resume_item']");
+var resume_info = document.querySelectorAll("[name='resume_info']");
+
+var resume_count = 0;
+if (resume_item) {
+	for (let i = 0; i < resume_item.length; i++) {
+		const element = resume_item[i];
+		element.onclick = function() {
+			resume_item[resume_count].classList.remove("on");
+			element.classList.add("on");
+			resume_info[resume_count].style.display = "none";
+			resume_info[i].style.display = "";
+			resume_count = i;
+		};
 	}
 }

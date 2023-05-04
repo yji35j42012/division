@@ -114,7 +114,8 @@
 							<button class="normal_btn _list" data-num="2">技術由他人運用創業</button>
 							<button class="normal_btn _list" data-num="2">需要創業專家共同投入創業</button>
 							<button class="normal_btn _list" data-num="2">解決廠商技術瓶頸</button>
-							<button class="normal_btn _list" data-num="1">與廠商共同研提合作計畫</button>
+							<button name="openAlert" data-alertid="each_develop" class="normal_btn _list"
+								data-num="1">與廠商共同研提合作計畫</button>
 							<button class="normal_btn _list" data-num="3">技術移轉化他人</button>
 						</li>
 					</ul>
@@ -125,8 +126,6 @@
 								國立清華大學生醫工程與環境科學系 系主任；科技部工程司醫工學門 召集人；教育部教學實踐研究計畫 執行長；國立清華大學生醫工程與環境科學系
 								特聘教授；工業技術研究院辨識與安全科中心 顧問；訪問研究, UC Davis, USA
 							</span>
-							<!-- <button class="normal_btn _more">more</button> -->
-							<!-- <button class="normal_btn _more">more</button> -->
 						</div>
 					</div>
 					<div class="same">
@@ -160,15 +159,15 @@
 					</div>
 					<div class="same">
 						<div class="same_head">
-							<div class="resume_title _otherStyle">相關技術分類(IPC)</div>
+							<div class="resume_title _otherStyle on" name="resume_item">相關技術分類(IPC)</div>
 							<ul class="otherTab">
-								<li class="otherTab_item on">全部台灣專利</li>
-								<li class="otherTab_item">全部學術文獻</li>
-								<li class="otherTab_item">全部政府補助計畫</li>
-								<li class="otherTab_item">全部全球專利</li>
+								<li class="otherTab_item" name="resume_item">全部台灣專利</li>
+								<li class="otherTab_item" name="resume_item">全部學術文獻</li>
+								<li class="otherTab_item" name="resume_item">全部政府補助計畫</li>
+								<li class="otherTab_item" name="resume_item">全部全球專利</li>
 							</ul>
 						</div>
-						<div class="same_content">
+						<div class="same_content" name="resume_info">
 							<div class="same_list">
 								<button class="normal_btn _collect">加入收藏</button>
 								<div class="same_list_title">A61K</div>
@@ -176,7 +175,8 @@
 									<span name="checkOverTxt" data-maxline="2" data-last="2">
 										醫用，牙科用或梳妝用之配製品（製成特殊物理形態者見A61J；空氣除臭，消毒或滅菌，或者繃帶，敷料，吸收墊或外科用品之化學方面或材料之使用見A61L；化合物本身見C01，C07，C08，C12N；肥皂主目合物見C11D；微生物本身見C12N）
 									</span>
-									<button class="normal_btn _more">more</button>
+									<button class="normal_btn _more" data-more='more_btn' name="openAlert"
+										data-alertid="alert_summary">more</button>
 								</div>
 								<div class="same_list_weight" data-txt="權重：">337.81</div>
 								<button class="normal_btn _company">相關企業</button>
@@ -188,6 +188,59 @@
 									<li data-txt="全球專利">38</li>
 								</ul>
 							</div>
+						</div>
+						<div class="same_content" name="resume_info" style="display: none">
+							全台灣專利
+						</div>
+						<div class="same_content" name="resume_info" style="display: none">
+							全部學術專利
+						</div>
+						<div class="same_content" name="resume_info" style="display: none">
+							<table class="normal_tb _fixed">
+								<tr>
+									<th width="40%">中文研究名稱</th>
+									<th>政府補助金額(千元)</th>
+									<th>計畫年度</th>
+									<th class="txtc">處理狀態</th>
+									<th></th>
+								</tr>
+								<tr name="openAlert" data-alertid="government">
+									<td>功能性超音波成像導引漩渦式聲鉗於血栓溶解</td>
+									<td>5332</td>
+									<td>110</td>
+									<td class="txtc">
+										<button class="normal_btn _progress">處理中</button>
+									</td>
+									<td class="txtc">
+										<button class="normal_btn _collect">加入收藏</button>
+									</td>
+								</tr>
+								<tr>
+									<td>功能性超音波成像導引漩渦式聲鉗於血栓溶解功能性超音波成像導引漩渦式聲鉗於血栓溶解</td>
+									<td>5332</td>
+									<td>110</td>
+									<td class="txtc">
+										<button class="normal_btn _unprocessed">未處理</button>
+									</td>
+									<td class="txtc">
+										<button class="normal_btn _collect">加入收藏</button>
+									</td>
+								</tr>
+								<tr>
+									<td>功能性超音波成像導引漩渦式聲鉗於血栓溶解功能性超音波成像導引漩渦式聲鉗於血栓溶解</td>
+									<td>5332</td>
+									<td>110</td>
+									<td class="txtc">
+										<button class="normal_btn _processed">已處理</button>
+									</td>
+									<td class="txtc">
+										<button class="normal_btn _collect">加入收藏</button>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="same_content" name="resume_info" style="display: none">
+							全部全球專利
 						</div>
 					</div>
 				</div>
@@ -207,7 +260,136 @@
 			</div>
 		</div>
 
+		<!-- 摘要彈窗 -->
+		<div id="alert_summary" class="alert" style="display: none">
+			<div class="alert_box">
+				<button name="alert_close" class="alert_close" data-alertid="alert_summary"></button>
+				<div class="alert_title">A61K摘要內容</div>
+				<div class="alert_info">
+					醫用，牙科用或梳妝用之配製品（製成特殊物理形態者見A61J；空氣除臭，消毒或滅菌，或者繃帶，敷料，吸收墊或外科用品之化學方面或材料之使用見A61L；化合物本身見C01，C07，C08，C12N；肥皂主目合物見C11D；微生物本身見C12N）
+				</div>
+			</div>
+		</div>
+		<!-- 商化意願彈窗 -->
+		<div id="each_develop" class="alert _summary" style="display:none ">
+			<div class="alert_box">
+				<button name="alert_close" class="alert_close" data-alertid="each_develop"></button>
+				<div class="alert_title">
+					有商化意願－<span class="summary_txt">「帶領實驗室投入創業(自行創業)」</span>之專利技術
+				</div>
+				<div class="alert_info">
+					<table class="alert_table">
+						<tr>
+							<th>專利號碼</th>
+							<th>專利名稱</th>
+							<th>公告日</th>
+							<th class="txtc">被引用數</th>
+							<th>提出意願時間</th>
+							<th class="txtc">處理狀態</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td>I741355</td>
+							<td>提升光通量的光聲複合系統</td>
+							<td>2021/10/01</td>
+							<td class="txtc">0</td>
+							<td>2023/02/20</td>
+							<td class="txtc">
+								<button class="normal_btn _unprocessed">未處理</button>
+							</td>
+							<td lass="txtc">
+								<button class="normal_btn _collect">加入收藏</button>
+							</td>
+						</tr>
+						<tr>
+							<td>I720319</td>
+							<td>超音波感應蛋白質以及利用超音波刺激細胞的方法</td>
+							<td>2021/03/01</td>
+							<td class="txtc">0</td>
+							<td>2023/02/20</td>
+							<td class="txtc">
+								<button class="normal_btn _progress">處理中</button>
+							</td>
+							<td lass="txtc">
+								<button class="normal_btn _collect">加入收藏</button>
+							</td>
+						</tr>
+						<tr>
+							<td>I686210</td>
+							<td>用以誘導病變組織血管正常化的套組及其用途</td>
+							<td>2020/03/01</td>
+							<td class="txtc">0</td>
+							<td>2023/02/20</td>
+							<td class="txtc">
+								<button class="normal_btn _processed">已處理</button>
+							</td>
+							<td lass="txtc">
+								<button class="normal_btn _collect">加入收藏</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- 商化意願彈窗 -->
+		<div id="government" class="alert _government" style="display:none ">
+			<div class="alert_box">
+				<button name="alert_close" class="alert_close" data-alertid="government"></button>
 
+				<div class="alert_info">
+					<table class="alert_table">
+						<tr>
+							<th>專利號碼</th>
+							<th>專利名稱</th>
+							<th>公告日</th>
+							<th class="txtc">被引用數</th>
+							<th>提出意願時間</th>
+							<th class="txtc">處理狀態</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td>I741355</td>
+							<td>提升光通量的光聲複合系統</td>
+							<td>2021/10/01</td>
+							<td class="txtc">0</td>
+							<td>2023/02/20</td>
+							<td class="txtc">
+								<button class="normal_btn _unprocessed">未處理</button>
+							</td>
+							<td lass="txtc">
+								<button class="normal_btn _collect">加入收藏</button>
+							</td>
+						</tr>
+						<tr>
+							<td>I720319</td>
+							<td>超音波感應蛋白質以及利用超音波刺激細胞的方法</td>
+							<td>2021/03/01</td>
+							<td class="txtc">0</td>
+							<td>2023/02/20</td>
+							<td class="txtc">
+								<button class="normal_btn _progress">處理中</button>
+							</td>
+							<td lass="txtc">
+								<button class="normal_btn _collect">加入收藏</button>
+							</td>
+						</tr>
+						<tr>
+							<td>I686210</td>
+							<td>用以誘導病變組織血管正常化的套組及其用途</td>
+							<td>2020/03/01</td>
+							<td class="txtc">0</td>
+							<td>2023/02/20</td>
+							<td class="txtc">
+								<button class="normal_btn _processed">已處理</button>
+							</td>
+							<td lass="txtc">
+								<button class="normal_btn _collect">加入收藏</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
 
 		<div class="gototop">
 			<i class="icon _gototop">

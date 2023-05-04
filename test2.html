@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>多餘字以省略符號顯示</title>
+    <style type="text/css">
+        .abc {
+            background-color: #CCC;
+            width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /*文字溢出的部分隱藏並用省略符號代替*/
+            white-space: nowrap;
+            /*文本不自動換行*/
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="abc" title="我是標題，我很長，很長，真的很長，已經長的令人無法接受了。。。">我是標題，我很長，很長，真的很長，已經長的令人無法接受了。。。 </div>
+</body>
+
+</html>
