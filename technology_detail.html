@@ -184,7 +184,7 @@
 								<ul class="same_list_patent">
 									<li data-txt="台灣專利">14</li>
 									<li data-txt="學術文獻">146</li>
-									<li data-txt="政府補助計畫">45</li>
+									<li data-txt="政府補助計畫" name="openAlert" data-alertid="government_include">45</li>
 									<li data-txt="全球專利">38</li>
 								</ul>
 							</div>
@@ -271,7 +271,7 @@
 			</div>
 		</div>
 		<!-- 商化意願彈窗 -->
-		<div id="each_develop" class="alert _summary" style="display:none ">
+		<div id="each_develop" class="alert _summary" style="display:none">
 			<div class="alert_box">
 				<button name="alert_close" class="alert_close" data-alertid="each_develop"></button>
 				<div class="alert_title">
@@ -331,58 +331,133 @@
 				</div>
 			</div>
 		</div>
-		<!-- 商化意願彈窗 -->
-		<div id="government" class="alert _government" style="display:none ">
+		<!-- 全部政府補助計畫 -->
+		<div id="government" class="alert _government" style="display:none">
 			<div class="alert_box">
 				<button name="alert_close" class="alert_close" data-alertid="government"></button>
 
 				<div class="alert_info">
-					<table class="alert_table">
+					<ul class="alert_government">
+						<li class="alert_government_item fz20px" data-title="中文研究名稱：">
+							功能性超音波成像導引漩渦式聲鉗於血栓溶解
+						</li>
+						<li class="alert_government_item fz20px" data-title="英文研究名稱：">
+							Functional Ultrasound Imaging-Guided Acoustic Vortex Tweezers in Thrombolysis
+						</li>
+						<li class="alert_government_item _name fz20px" data-title="發明人資料：">
+							葉秩光
+						</li>
+					</ul>
+					<ul class="alert_government _flex_wrap flex_child">
+						<li class="alert_government_item" data-title="IPC：">
+							A61B 17/22、A61B 17/22、A61B 17/22、A61B 19/00、A61B 17/22、A61B 17/3203、A61B 17/3203、A61N
+							7/00、A61B 17/22、A61M 60/165、A61B 17/3203
+						</li>
+						<li class="alert_government_item _helf" data-title="計畫系統編號：">
+							PB11007-1191
+						</li>
+						<li class="alert_government_item _helf" data-title="計畫編號：">
+							MOST110-2221-E007-019-MY3
+						</li>
+						<li class="alert_government_item _helf" data-title="主管機關：">
+							科技部
+						</li>
+						<li class="alert_government_item _helf" data-title="執行機構：">
+							國立清華大學生醫工程與環境科學系
+						</li>
+						<li class="alert_government_item _helf" data-title="研究經費：">
+							5332仟元
+						</li>
+						<li class="alert_government_item _helf" data-title="研究性質：">
+							基礎研究
+						</li>
+						<li class="alert_government_item _helf" data-title="研究方式：">
+							學術補助
+						</li>
+						<li class="alert_government_item _helf" data-title="研究期間：">
+							110/08～111/07
+						</li>
+						<li class="alert_government_item _helf" data-title="計畫年度：">
+							110
+						</li>
+						<li class="alert_government_item _helf" data-title="研究領域：">
+							資訊科學/軟體
+						</li>
+						<li class="alert_government_item _helf" data-title="研究人員：">
+							葉秩光
+						</li>
+						<li class="alert_government_item _helf" data-title="Base Seq：">
+							44304
+						</li>
+					</ul>
+					<ul class="alert_government _flex_wrap flex_child">
+						<li class="alert_government_item" data-title="中文關鍵字：">
+							漩渦式聲鉗；多功能超音波成像導引；溶栓；穴蝕效應；剪切波
+						</li>
+						<li class="alert_government_item" data-title="英文關鍵字：">
+							acoustic vortex tweezer； functional sonography guided； thrombolysis； cavitation； shear wave
+						</li>
+					</ul>
+					<ul class="alert_government _flex_wrap flex_child">
+						<li class="alert_government_item" data-title="中文摘要：">
+							本計劃執行預計達到之影響包括:
+							(1)超音波相關技術傳承及建立；(2)培育生物技術、醫學工程領域人才；(3)促進國際曝光率及知名度建立；(4)發展建立新超音波醫學影像與治療模式，結合醫學與工程；(5)藉超音波技術之商品化過程，發展先端醫療器材並打入國際市場，同時開發過程中亦將與國內生技產業鏈共同合作，提升生技產業價值，達到共榮目標。
+						</li>
+						<li class="alert_government_item" data-title="英文摘要：">
+							無
+						</li>
+						<li class="alert_government_item _link" data-title="GRB 連結：">
+							<a
+								href="http://grbsearch.stpi.narl.org.tw/search/planDetail2?id=13868416">http://grbsearch.stpi.narl.org.tw/search/planDetail2?id=13868416</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 包含政府補助計畫 -->
+		<div id="government_include" class="alert _include" style="display:none">
+			<div class="alert_box">
+				<button name="alert_close" class="alert_close" data-alertid="government_include"></button>
+				<div class="alert_title">A61K包含之政府補助計畫</div>
+				<div class="alert_info">
+					<table class="alert_table _fixed">
 						<tr>
-							<th>專利號碼</th>
-							<th>專利名稱</th>
-							<th>公告日</th>
-							<th class="txtc">被引用數</th>
-							<th>提出意願時間</th>
+							<th width="40%">中文研究名稱</th>
+							<th>政府補助金額(千元)</th>
+							<th>計畫年度</th>
 							<th class="txtc">處理狀態</th>
 							<th></th>
 						</tr>
 						<tr>
-							<td>I741355</td>
-							<td>提升光通量的光聲複合系統</td>
-							<td>2021/10/01</td>
-							<td class="txtc">0</td>
-							<td>2023/02/20</td>
+							<td class="overTxtHidden">醫學工程學門研究發展規劃與推動計畫</td>
+							<td>5731</td>
+							<td>110</td>
 							<td class="txtc">
 								<button class="normal_btn _unprocessed">未處理</button>
 							</td>
-							<td lass="txtc">
-								<button class="normal_btn _collect">加入收藏</button>
-							</td>
-						</tr>
-						<tr>
-							<td>I720319</td>
-							<td>超音波感應蛋白質以及利用超音波刺激細胞的方法</td>
-							<td>2021/03/01</td>
-							<td class="txtc">0</td>
-							<td>2023/02/20</td>
 							<td class="txtc">
-								<button class="normal_btn _progress">處理中</button>
-							</td>
-							<td lass="txtc">
 								<button class="normal_btn _collect">加入收藏</button>
 							</td>
 						</tr>
 						<tr>
-							<td>I686210</td>
-							<td>用以誘導病變組織血管正常化的套組及其用途</td>
-							<td>2020/03/01</td>
-							<td class="txtc">0</td>
-							<td>2023/02/20</td>
+							<td class="overTxtHidden">醫學工程學門研究發展規劃與推動計畫</td>
+							<td>5731</td>
+							<td>110</td>
 							<td class="txtc">
 								<button class="normal_btn _processed">已處理</button>
 							</td>
-							<td lass="txtc">
+							<td class="txtc">
+								<button class="normal_btn _collect">加入收藏</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="overTxtHidden">醫學工程學門研究發展規劃與推動計畫</td>
+							<td>5731</td>
+							<td>110</td>
+							<td class="txtc">
+								<button class="normal_btn _progress">處理中</button>
+							</td>
+							<td class="txtc">
 								<button class="normal_btn _collect">加入收藏</button>
 							</td>
 						</tr>

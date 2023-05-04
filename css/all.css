@@ -6,7 +6,7 @@
 }
 
 .normal_btn, .normal_tb td, .page_item, .gototop, .nav_menu_item, .tab_item, .otherTab_item, .filter_inpBox ._add,
-.filter_inpBox ._minus, .filter_radio, .filter_check_span, .filter_btn, .filter_select, .filter_select_li, .resume_title._otherStyle, .alert_close {
+.filter_inpBox ._minus, .filter_radio, .filter_check_span, .filter_btn, .filter_select, .filter_select_li, .resume_title._otherStyle, .same_list_patent li, .alert_close {
   cursor: pointer;
 }
 
@@ -274,9 +274,6 @@ td.txtc {
 
 .normal_tb td:first-child {
   padding-left: 30px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   width: 40%;
 }
 
@@ -1969,11 +1966,18 @@ input:checked + .filter_check_span:before {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.alert._government {
+  padding: 45px 20px;
+}
+
 .alert_box {
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
   display: inline-block;
   width: 100%;
   max-width: 1020px;
+  max-height: 90%;
   padding: 20px 70px 50px;
   background-color: #fff;
   border-radius: 4px;
@@ -1984,6 +1988,14 @@ input:checked + .filter_check_span:before {
   max-width: 1280px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+._government .alert_box {
+  padding: 50px 20px 30px;
+}
+
+._include .alert_box {
+  padding: 27px 0 40px;
 }
 
 .alert_title {
@@ -2003,6 +2015,10 @@ input:checked + .filter_check_span:before {
   margin-top: 20px;
   font-size: 16px;
   line-height: 22px;
+}
+
+._government .alert_info {
+  margin-top: 0;
 }
 
 .alert_close {
@@ -2041,11 +2057,8 @@ input:checked + .filter_check_span:before {
   text-align: left;
 }
 
-.alert_table th {
-  height: 50px;
-  font-size: 16px;
-  color: #8990a5;
-  font-weight: normal;
+.alert_table._fixed {
+  table-layout: fixed;
 }
 
 @media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
@@ -2058,12 +2071,35 @@ input:checked + .filter_check_span:before {
   background-color: #f1f5fd;
 }
 
+.alert_table th {
+  height: 50px;
+  font-size: 16px;
+  color: #8990a5;
+  font-weight: normal;
+}
+
+.alert_table th:first-child {
+  padding-left: 30px;
+}
+
+.alert_table th:last-child {
+  padding-right: 20px;
+}
+
 .alert_table td {
   height: 50px;
   font-size: 16px;
   background-color: #fff;
   -webkit-box-shadow: inset 0 -1px 0 0 #dee2e6;
           box-shadow: inset 0 -1px 0 0 #dee2e6;
+}
+
+.alert_table td:first-child {
+  padding-left: 30px;
+}
+
+.alert_table td:last-child {
+  padding-right: 20px;
 }
 
 .alert_table ._collect {
@@ -2073,5 +2109,88 @@ input:checked + .filter_check_span:before {
   min-width: 100px;
   height: 34px;
   font-size: 16px;
+}
+
+.alert_government {
+  padding: 20px 0;
+}
+
+.alert_government._flex_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.alert_government + .alert_government {
+  border-top: 1px solid #dee2e6;
+}
+
+.alert_government_item {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.flex_child .alert_government_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+}
+
+.alert_government_item._helf {
+  width: 50%;
+}
+
+.alert_government_item._name {
+  color: #6a6afc;
+}
+
+.alert_government_item::before {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  content: attr(data-title);
+  display: block;
+  margin-bottom: 2px;
+  color: #8990a5;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.alert_government_item + .alert_government_item {
+  margin-top: 14px;
+}
+
+.alert_government_item._link {
+  margin-top: 40px;
+}
+
+.alert_government_item._link a {
+  line-height: 24px;
+  color: #6a6afc;
+}
+
+.fz20px {
+  font-size: 20px;
+}
+
+.overTxtHidden {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /*# sourceMappingURL=all.css.map */

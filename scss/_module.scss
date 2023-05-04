@@ -182,9 +182,6 @@ td.txtc {
 		@extend %transition;
 		&:first-child {
 			padding-left: 30px;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
 			width: 40%;
 		}
 	}
@@ -1243,6 +1240,7 @@ td.txtc {
 				background-color: #ccf0e6;
 				font-size: 26px;
 				font-weight: bold;
+				@extend %hand;
 				&:before {
 					content: attr(data-txt);
 					margin-top: 4px;
@@ -1292,13 +1290,18 @@ td.txtc {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.7);
-
+	&._government {
+		padding: 45px 20px;
+	}
 	// .alert_box
 	&_box {
+		overflow-x: hidden;
+		overflow-y: auto;
 		position: relative;
 		display: inline-block;
 		width: 100%;
 		max-width: 1020px;
+		max-height: 90%;
 		padding: 20px 70px 50px;
 		background-color: #fff;
 		border-radius: 4px;
@@ -1307,6 +1310,12 @@ td.txtc {
 			max-width: 1280px;
 			padding-left: 20px;
 			padding-right: 20px;
+		}
+		._government & {
+			padding: 50px 20px 30px;
+		}
+		._include & {
+			padding: 27px 0 40px;
 		}
 	}
 	// .alert_title
@@ -1326,6 +1335,9 @@ td.txtc {
 		margin-top: 20px;
 		font-size: 16px;
 		line-height: 22px;
+		._government & {
+			margin-top: 0;
+		}
 	}
 	// .alert_close
 	&_close {
@@ -1354,16 +1366,12 @@ td.txtc {
 			transform: rotate(-45deg);
 		}
 	}
-
 	// .alert_table
 	&_table {
 		width: 100%;
 		text-align: left;
-		th {
-			height: 50px;
-			font-size: 16px;
-			color: #8990a5;
-			font-weight: normal;
+		&._fixed {
+			table-layout: fixed;
 		}
 		tr {
 			@include hoverHandler {
@@ -1372,11 +1380,29 @@ td.txtc {
 				}
 			}
 		}
+		th {
+			height: 50px;
+			font-size: 16px;
+			color: #8990a5;
+			font-weight: normal;
+			&:first-child {
+				padding-left: 30px;
+			}
+			&:last-child {
+				padding-right: 20px;
+			}
+		}
 		td {
 			height: 50px;
 			font-size: 16px;
 			background-color: #fff;
 			box-shadow: inset 0 -1px 0 0 #dee2e6;
+			&:first-child {
+				padding-left: 30px;
+			}
+			&:last-child {
+				padding-right: 20px;
+			}
 		}
 		._collect {
 			position: relative;
@@ -1387,4 +1413,59 @@ td.txtc {
 			font-size: 16px;
 		}
 	}
+
+	// .alert_government
+	&_government {
+		padding: 20px 0;
+		&._flex_wrap {
+			@include d_f(flex);
+			flex-wrap: wrap;
+		}
+		& + & {
+			border-top: 1px solid #dee2e6;
+		}
+		// .alert_government_item
+		&_item {
+			font-size: 16px;
+			line-height: 24px;
+			.flex_child & {
+				@include d_f(flex);
+				width: 100%;
+			}
+			&._helf {
+				width: 50%;
+			}
+			&._name {
+				color: #6a6afc;
+			}
+			&::before {
+				flex: none;
+				content: attr(data-title);
+				display: block;
+				margin-bottom: 2px;
+				color: #8990a5;
+				font-size: 16px;
+				line-height: 24px;
+			}
+			& + & {
+				margin-top: 14px;
+			}
+			&._link {
+				margin-top: 40px;
+				a {
+					line-height: 24px;
+					color: #6a6afc;
+				}
+			}
+		}
+	}
+}
+
+.fz20px {
+	font-size: 20px;
+}
+.overTxtHidden {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
