@@ -72,8 +72,11 @@ if (checkOverTxt) {
 }
 
 var filter_select = document.querySelectorAll("[name='filter_select']");
-var filter_select_txt = document.querySelector("#filter_select_txt");
-var filter_select_item = document.querySelectorAll("#filter_select_ul > li");
+var filter_select_txt = document.querySelectorAll("[name='filter_select_txt']");
+
+var filter_select_item = document.querySelectorAll(
+	"[name='filter_select_ul'] > li"
+);
 var filter_count = null;
 
 function setfilter_select() {
@@ -88,7 +91,7 @@ function setfilter_select() {
 				element.classList.remove("on");
 				filter_count = null;
 			} else {
-				filter_select[i].classList.remove("on");
+				filter_select[filter_count].classList.remove("on");
 				element.classList.add("on");
 				filter_count = i;
 			}
@@ -97,16 +100,17 @@ function setfilter_select() {
 }
 if (filter_select) {
 	setfilter_select();
-	// filter_select.addEventListener("click", selectHandler);
 }
-
-if (filter_select_item) {
+function setfilter_item() {
 	for (let i = 0; i < filter_select_item.length; i++) {
 		const element = filter_select_item[i];
 		element.onclick = function() {
-			filter_select_txt.innerHTML = element.innerHTML;
+			filter_select_txt[filter_count].innerHTML = element.innerHTML;
 		};
 	}
+}
+if (filter_select_item) {
+	setfilter_item();
 }
 
 var filter_search = document.querySelector("#filter_search");
@@ -133,14 +137,15 @@ var filter_inpGroup_items = document.querySelectorAll(
 var icon_minus = null;
 if (addFilter) {
 	addFilter.onclick = function() {
-		console.log("add");
 		let idIndex = "filter_inpBox" + filter_inpGroup_items.length;
+		var clild_tab = "clild_tab" + filter_inpGroup_items.length;
 		const div = document.createElement("div");
 		div.setAttribute("class", "filter_inpBox");
 		div.setAttribute("id", idIndex);
 
 		const divChild1 = document.createElement("ul");
 		divChild1.setAttribute("class", "tab");
+		divChild1.setAttribute("id", clild_tab);
 		const divChild1_1 = document.createElement("li");
 		divChild1_1.setAttribute("class", "tab_item on");
 		divChild1_1.innerHTML = "and";
@@ -149,7 +154,6 @@ if (addFilter) {
 		divChild1_2.innerHTML = "or";
 		divChild1.append(divChild1_1);
 		divChild1.append(divChild1_2);
-
 		const divChild2 = document.createElement("label");
 		divChild2.setAttribute("class", "filter_input");
 		const divChild2_1 = document.createElement("i");
@@ -178,19 +182,12 @@ if (addFilter) {
 		divChild4.setAttribute("name", "filter_select");
 		divChild4.setAttribute("class", "filter_select");
 		const divChild4_1 = document.createElement("span");
-		divChild4_1.setAttribute(
-			"id",
-			"filter_select_txt" + filter_inpGroup_items.length
-		);
+		divChild4_1.setAttribute("name", "filter_select_txt");
 		divChild4_1.setAttribute("class", "filter_select_txt");
 		divChild4_1.innerHTML = "標題";
 		const divChild4_2 = document.createElement("ul");
-		divChild4_2.setAttribute(
-			"id",
-			"filter_select_ul" + filter_inpGroup_items.length
-		);
+		divChild4_2.setAttribute("name", "filter_select_ul");
 		divChild4_2.setAttribute("class", "filter_select_ul");
-
 		divChild4_2.innerHTML = `<li class="filter_select_li">標題</li>
 								<li class="filter_select_li">摘要及關鍵字</li>
 								<li class="filter_select_li">IPC</li>
@@ -216,6 +213,33 @@ if (addFilter) {
 		icon_minusHandler();
 		filter_select = document.querySelectorAll("[name='filter_select']");
 		setfilter_select();
+		filter_select_item = document.querySelectorAll(
+			"[name='filter_select_ul'] > li"
+		);
+		setfilter_item();
+		filter_select_txt = document.querySelectorAll(
+			"[name='filter_select_txt']"
+		);
+		console.log("~~~", document.querySelectorAll("#" + clild_tab + ">li"));
+		// clild_tab
+		for (
+			let i = 0;
+			i < document.querySelectorAll("#" + clild_tab + ">li").length;
+			i++
+		) {
+			const element = document.querySelectorAll("#" + clild_tab + ">li")[i];
+			element.onclick = function() {
+				if (i == 1) {
+					document.querySelectorAll("#" + clild_tab + ">li")[0]
+						.classList.remove("on");
+					element.classList.add("on");
+				} else {
+					document.querySelectorAll("#" + clild_tab + ">li")[1]
+						.classList.remove("on");
+					element.classList.add("on");
+				}
+			};
+		}
 	};
 }
 
@@ -230,6 +254,21 @@ function icon_minusHandler() {
 		};
 	}
 }
+
+// var clild_tab = document.querySelectorAll("#clild_tab1 > li");
+
+// for (let i = 0; i < clild_tab.length; i++) {
+// 	const element = clild_tab[i];
+// 	element.onclick = function(params) {
+// 		if (i == 1) {
+// 			clild_tab[0].classList.remove("on");
+// 			element.classList.add("on");
+// 		} else {
+// 			clild_tab[1].classList.remove("on");
+// 			element.classList.add("on");
+// 		}
+// 	};
+// }
 
 // 彈窗系列
 var openAlert = document.querySelectorAll("[name='openAlert']");
