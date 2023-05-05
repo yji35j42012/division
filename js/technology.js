@@ -2,7 +2,7 @@ var technology_detail = document.querySelectorAll("[name=technology_detail]");
 var moreBtn = null;
 for (let i = 0; i < technology_detail.length; i++) {
 	const element = technology_detail[i];
-	element.onclick = function() {
+	element.onclick = function () {
 		location.href = "./technology_detail.html";
 	};
 }
@@ -71,7 +71,7 @@ var filter_count = null;
 function setfilter_select() {
 	for (let i = 0; i < filter_select.length; i++) {
 		const element = filter_select[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			console.log("filter_select");
 			if (filter_count == null) {
 				element.classList.add("on");
@@ -93,7 +93,7 @@ if (filter_select) {
 function setfilter_item() {
 	for (let i = 0; i < filter_select_item.length; i++) {
 		const element = filter_select_item[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			filter_select_txt[filter_count].innerHTML = element.innerHTML;
 		};
 	}
@@ -107,7 +107,7 @@ var nodata = document.querySelector("#nodata");
 var data = document.querySelector("#data");
 
 if (filter_search) {
-	filter_search.onclick = function(params) {
+	filter_search.onclick = function (params) {
 		if (nodata.style.display == "none") {
 			nodata.style.display = "";
 			data.style.display = "none";
@@ -125,7 +125,7 @@ var filter_inpGroup_items = document.querySelectorAll(
 );
 var icon_minus = null;
 if (addFilter) {
-	addFilter.onclick = function() {
+	addFilter.onclick = function () {
 		let idIndex = "filter_inpBox" + filter_inpGroup_items.length;
 		var clild_tab = "clild_tab" + filter_inpGroup_items.length;
 		const div = document.createElement("div");
@@ -218,7 +218,7 @@ if (addFilter) {
 			const element = document.querySelectorAll("#" + clild_tab + ">li")[
 				i
 			];
-			element.onclick = function() {
+			element.onclick = function () {
 				if (i == 1) {
 					document
 						.querySelectorAll("#" + clild_tab + ">li")[0]
@@ -238,7 +238,7 @@ if (addFilter) {
 function icon_minusHandler() {
 	for (let i = 0; i < icon_minus.length; i++) {
 		const element = icon_minus[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			let removeDiv = document.querySelector(
 				"#filter_inpBox" + element.getAttribute("data-num")
 			);
@@ -248,14 +248,16 @@ function icon_minusHandler() {
 }
 
 // 彈窗系列
+var alert = document.querySelectorAll("[name='alert']");
 var openAlert = document.querySelectorAll("[name='openAlert']");
 var closeAlert = document.querySelectorAll("[name='alert_close']");
-
+var alert_back = document.querySelector("#alert_back");
 if (openAlert) {
 	for (let i = 0; i < openAlert.length; i++) {
 		const element = openAlert[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			event.stopPropagation();
+			closeAlertHandler()
 			let showAlert = document.querySelector(
 				"#" + element.getAttribute("data-alertid")
 			);
@@ -266,20 +268,29 @@ if (openAlert) {
 					`alert ${element.getAttribute("data-alertclass")}`
 				);
 			}
+			if (element.getAttribute("data-alertback")) {
+				// document.querySelector("#" + element.getAttribute("data-alertback")).style.display = 'none';
+				alert_back.setAttribute("data-alertid", element.getAttribute("data-alertback"))
+			}
 		};
 	}
 }
 if (closeAlert) {
 	for (let i = 0; i < closeAlert.length; i++) {
 		const element = closeAlert[i];
-		element.onclick = function() {
-			let closeAlert = document.querySelector(
-				"#" + element.getAttribute("data-alertid")
-			);
-			closeAlert.style.display = "none";
+		element.onclick = function () {
+			closeAlertHandler()
 		};
 	}
 }
+
+function closeAlertHandler() {
+	for (let i = 0; i < alert.length; i++) {
+		const element = alert[i];
+		element.style.display = "none";
+	}
+}
+
 // 彈窗系列
 
 // resume 頁籤
@@ -290,7 +301,7 @@ var resume_count = 0;
 if (resume_item) {
 	for (let i = 0; i < resume_item.length; i++) {
 		const element = resume_item[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			resume_item[resume_count].classList.remove("on");
 			element.classList.add("on");
 			resume_info[resume_count].style.display = "none";
@@ -306,13 +317,13 @@ var claarAllFolder = document.querySelector("#claarAllFolder");
 if (folderGroup) {
 	for (let i = 0; i < folderGroup.length; i++) {
 		const element = folderGroup[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			element.classList.toggle("on");
 		};
 	}
 }
 if (claarAllFolder) {
-	claarAllFolder.onclick = function() {
+	claarAllFolder.onclick = function () {
 		for (let i = 0; i < folderGroup.length; i++) {
 			const element = folderGroup[i];
 			element.classList.remove("on");
@@ -324,7 +335,7 @@ if (claarAllFolder) {
 var alert_collectBtn = document.querySelector("#alert_collectBtn");
 var alert_collect = document.querySelector("#alert_collect");
 if (alert_collectBtn) {
-	alert_collectBtn.onclick = function() {
+	alert_collectBtn.onclick = function () {
 		alert_collect.classList.remove("_collect");
 		alert_collect.classList.add("_collectEdit");
 	};
@@ -332,18 +343,18 @@ if (alert_collectBtn) {
 
 // 商化意願處理中
 
-var alert_progress = document.querySelector("#alert_progress");
-var each_develop = document.querySelector("#each_develop");
-if (alert_progress) {
-	alert_progress.onclick = function() {
-		each_develop.classList.remove("_summary");
-		each_develop.classList.add("_progress");
-	};
-}
-var alert_back_summary = document.querySelector("#alert_back_summary");
-if (alert_back_summary) {
-	alert_back_summary.onclick = function() {
-		each_develop.classList.remove("_progress");
-		each_develop.classList.add("_summary");
-	};
-}
+// var alert_progress = document.querySelector("#alert_progress");
+// var each_develop = document.querySelector("#each_develop");
+// if (alert_progress) {
+// 	alert_progress.onclick = function() {
+// 		each_develop.classList.remove("_summary");
+// 		each_develop.classList.add("_progress");
+// 	};
+// }
+// var alert_back_summary = document.querySelector("#alert_back_summary");
+// if (alert_back_summary) {
+// 	alert_back_summary.onclick = function() {
+// 		each_develop.classList.remove("_progress");
+// 		each_develop.classList.add("_summary");
+// 	};
+// }

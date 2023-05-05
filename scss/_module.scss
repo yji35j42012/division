@@ -147,7 +147,7 @@ td.txtc {
 		background-color: #817fff;
 		color: #fff;
 		@include hoverHandler {
-			background-color: #5138e1;
+			background-color: #5b59ec;
 		}
 	}
 	&._processed {
@@ -156,6 +156,9 @@ td.txtc {
 		border-radius: 17px;
 		background-color: #5452b7;
 		color: #fff;
+		@include hoverHandler {
+			background-color: #242282;
+		}
 	}
 
 	&._collectfolder {
@@ -1706,12 +1709,22 @@ td.txtc {
 	}
 
 	&._summary {
-		.show_develop_progress {
+		.show_develop_progress,
+		.show_develop_processed {
 			display: none;
 		}
 	}
 	&._progress {
-		.show_develop_all {
+		display: flex;
+		.show_develop_all,
+		.show_develop_processed:not(.show_develop_progress) {
+			display: none;
+		}
+	}
+	&._processed {
+		display: flex;
+		.show_develop_all,
+		.show_develop_progress:not(.show_develop_processed) {
 			display: none;
 		}
 	}

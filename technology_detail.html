@@ -55,12 +55,12 @@
 						<li class="technology_item_list mt14px" data-title="合作專長：">
 							細胞和分子生物學 、內科學；超音波學；胸腔醫學；重症醫學；國人肺癌的基因體及轉譯醫學研究、癌症基因體學；癌轉移之分子調控機制；癌之生物標誌及個人化醫療</li>
 						<li class="technology_item_list _btnBox" data-title="商化意願：">
-							<button class="normal_btn _list" data-num="3">帶領實驗室投入創業(自行創業)</button>
+							<button class="normal_btn _list" data-num="3" name="openAlert" data-alertid="each_develop"
+								data-alertclass="_summary">帶領實驗室投入創業(自行創業)</button>
 							<button class="normal_btn _list" data-num="2">技術由他人運用創業</button>
 							<button class="normal_btn _list" data-num="2">需要創業專家共同投入創業</button>
 							<button class="normal_btn _list" data-num="2">解決廠商技術瓶頸</button>
-							<button name="openAlert" data-alertid="each_develop" class="normal_btn _list"
-								data-num="1">與廠商共同研提合作計畫</button>
+							<button class="normal_btn _list" data-num="1">與廠商共同研提合作計畫</button>
 							<button class="normal_btn _list" data-num="3">技術移轉化他人</button>
 						</li>
 					</ul>
@@ -363,7 +363,9 @@
 									<td>4142</td>
 									<td>110</td>
 									<td class="txtc">
-										<button class="normal_btn _processed">已處理</button>
+										<button name="openAlert" data-alertid="each_develop"
+											data-alertclass="_processed _noback"
+											class="normal_btn _processed ">已處理</button>
 									</td>
 									<td class="txtc">
 										<button class="normal_btn _collect">加入收藏</button>
@@ -470,7 +472,7 @@
 		</div>
 
 		<!-- 摘要彈窗 -->
-		<div id="alert_summary" class="alert" style="display: none">
+		<div name="alert" id="alert_summary" class="alert" style="display: none">
 			<div class="alert_box">
 				<button name="alert_close" class="alert_close" data-alertid="alert_summary"></button>
 				<div class="alert_title">A61K摘要內容</div>
@@ -480,15 +482,19 @@
 			</div>
 		</div>
 		<!-- 商化意願彈窗 -->
-		<div id="each_develop" class="alert _progress" style="display: none">
+		<div name="alert" id="each_develop" class="alert _summary" style="display: none">
 			<div class="alert_box">
 				<button name="alert_close" class="alert_close" data-alertid="each_develop"></button>
-				<button id="alert_back_summary" class="alert_back show_develop_progress">返回</button>
+				<button name="openAlert" data-alertid="each_develop" data-alertclass="_summary"
+					class="alert_back show_develop_progress show_develop_processed" id="alert_back">返回</button>
 				<div class="alert_title show_develop_all">
 					有商化意願－<span class="summary_txt">「帶領實驗室投入創業(自行創業)」</span>之專利技術
 				</div>
 				<div class="alert_title show_develop_progress">
 					「提升光通量的光聲複合系統」<br>商化意願處理中人員
+				</div>
+				<div class="alert_title show_develop_processed">
+					「提升光通量的光聲複合系統」<br>商化意願已處理人員
 				</div>
 				<div class="alert_info">
 					<table class="alert_table show_develop_all">
@@ -521,7 +527,8 @@
 							<td class="txtc">0</td>
 							<td>2023/02/20</td>
 							<td class="txtc">
-								<button id="alert_progress" class="normal_btn _progress">處理中</button>
+								<button name="openAlert" data-alertid="each_develop" data-alertclass="_progress"
+									class="normal_btn _progress">處理中</button>
 							</td>
 							<td lass="txtc">
 								<button class="normal_btn _collect">加入收藏</button>
@@ -534,14 +541,15 @@
 							<td class="txtc">0</td>
 							<td>2023/02/20</td>
 							<td class="txtc">
-								<button class="normal_btn _processed">已處理</button>
+								<button name="openAlert" data-alertid="each_develop" data-alertclass="_processed"
+									class="normal_btn _processed">已處理</button>
 							</td>
 							<td lass="txtc">
 								<button class="normal_btn _collect">加入收藏</button>
 							</td>
 						</tr>
 					</table>
-					<table class="alert_table show_develop_progress">
+					<table class="alert_table show_develop_progress show_develop_processed">
 						<tr>
 							<th>姓名</th>
 							<th>單位</th>
@@ -562,7 +570,7 @@
 			</div>
 		</div>
 		<!-- 全部政府補助計畫 -->
-		<div id="government" class="alert _government" style="display:none">
+		<div name="alert" id="government" class="alert _government" style="display:none">
 			<div class="alert_box">
 				<button name="alert_close" class="alert_close" data-alertid="government"></button>
 
@@ -645,7 +653,7 @@
 			</div>
 		</div>
 		<!-- 包含政府補助計畫 -->
-		<div id="government_include" class="alert _include" style="display:none">
+		<div name="alert" id="government_include" class="alert _include" style="display:none">
 			<div class="alert_box">
 				<button name="alert_close" class="alert_close" data-alertid="government_include"></button>
 				<div class="alert_title">A61K包含之政府補助計畫</div>
@@ -663,29 +671,31 @@
 							<td>5731</td>
 							<td>110</td>
 							<td class="txtc">
+								<button name="openAlert" data-alertid="each_develop" data-alertclass="_processed"
+									data-alertback="government_include" class="normal_btn _processed ">已處理</button>
+							</td>
+							<td class="txtc">
+								<button class="normal_btn _collect">加入收藏</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="overTxtHidden">醫學工程學門研究發展規劃與推動計畫</td>
+							<td>5731</td>
+							<td>110</td>
+							<td class="txtc">
+								<button name="openAlert" data-alertid="each_develop" data-alertclass="_progress"
+									data-alertback="government_include" class="normal_btn _progress">處理中</button>
+							</td>
+							<td class="txtc">
+								<button class="normal_btn _collect">加入收藏</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="overTxtHidden">醫學工程學門研究發展規劃與推動計畫</td>
+							<td>5731</td>
+							<td>110</td>
+							<td class="txtc">
 								<button class="normal_btn _unprocessed">未處理</button>
-							</td>
-							<td class="txtc">
-								<button class="normal_btn _collect">加入收藏</button>
-							</td>
-						</tr>
-						<tr>
-							<td class="overTxtHidden">醫學工程學門研究發展規劃與推動計畫</td>
-							<td>5731</td>
-							<td>110</td>
-							<td class="txtc">
-								<button class="normal_btn _processed">已處理</button>
-							</td>
-							<td class="txtc">
-								<button class="normal_btn _collect">加入收藏</button>
-							</td>
-						</tr>
-						<tr>
-							<td class="overTxtHidden">醫學工程學門研究發展規劃與推動計畫</td>
-							<td>5731</td>
-							<td>110</td>
-							<td class="txtc">
-								<button class="normal_btn _progress">處理中</button>
 							</td>
 							<td class="txtc">
 								<button class="normal_btn _collect">加入收藏</button>
@@ -773,7 +783,7 @@
 			</div>
 		</div>
 		<!-- 加入收藏 -->
-		<div id="alert_collect" class="alert _collect" style="display: none">
+		<div name="alert" id="alert_collect" class="alert _collect" style="display: none">
 			<div class="alert_box">
 				<button name="alert_close" class="alert_close" data-alertid="alert_collect"></button>
 				<div class="alert_title show_add">加入收藏</div>
@@ -790,11 +800,11 @@
 						<input type="text" placeholder="請輸入關鍵字">
 					</label>
 					<ul id="folderGroup" class="folderGroup">
-						<li class="folderGroup_item on">
+						<li class="folderGroup_item">
 							<div class="folderGroup_item_txt" data-name="葉秩光">超音波治療</div>
 							<div class="folderGroup_item_num">3</div>
 						</li>
-						<li class="folderGroup_item on">
+						<li class="folderGroup_item">
 							<div class="folderGroup_item_txt" data-name="葉秩光">帶氧微氣泡</div>
 							<div class="folderGroup_item_num">5</div>
 						</li>
