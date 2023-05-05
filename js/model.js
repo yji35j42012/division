@@ -9,6 +9,10 @@ xhr.onload = function () {
 	const clone = document.importNode(template.content, true);
 	const output = document.getElementById("navContent");
 	output.append(clone);
+	setTimeout(() => {
+		navItem = document.querySelectorAll("[name='navItem']");
+		setItem();
+	}, 100);
 };
 xhr.send();
 var navItem = document.querySelectorAll("[name='navItem']");
