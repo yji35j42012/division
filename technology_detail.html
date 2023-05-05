@@ -328,8 +328,8 @@
 							<table class="normal_tb _fixed">
 								<tr>
 									<th width="40%">中文研究名稱</th>
-									<th>政府補助金額(千元)</th>
-									<th>計畫年度</th>
+									<th class="icon_sort">政府補助金額(千元)</th>
+									<th class="icon_sort">計畫年度</th>
 									<th class="txtc">處理狀態</th>
 									<th></th>
 								</tr>
@@ -338,7 +338,8 @@
 									<td>5332</td>
 									<td>110</td>
 									<td class="txtc">
-										<button class="normal_btn _progress">處理中</button>
+										<button name="openAlert" data-alertid="each_develop" data-alertclass="_progress _noback"
+											class="normal_btn _progress">處理中</button>
 									</td>
 									<td class="txtc">
 										<button class="normal_btn _collect" name="openAlert"
@@ -478,20 +479,24 @@
 			</div>
 		</div>
 		<!-- 商化意願彈窗 -->
-		<div id="each_develop" class="alert _summary" style="display:none">
+		<div id="each_develop" class="alert _progress" style="display: none">
 			<div class="alert_box">
 				<button name="alert_close" class="alert_close" data-alertid="each_develop"></button>
-				<div class="alert_title">
+				<button id="alert_back_summary" class="alert_back show_develop_progress">返回</button>
+				<div class="alert_title show_develop_all">
 					有商化意願－<span class="summary_txt">「帶領實驗室投入創業(自行創業)」</span>之專利技術
 				</div>
+				<div class="alert_title show_develop_progress">
+					「提升光通量的光聲複合系統」<br>商化意願處理中人員
+				</div>
 				<div class="alert_info">
-					<table class="alert_table">
+					<table class="alert_table show_develop_all">
 						<tr>
 							<th>專利號碼</th>
 							<th>專利名稱</th>
-							<th>公告日</th>
-							<th class="txtc">被引用數</th>
-							<th>提出意願時間</th>
+							<th class="icon_sort">公告日</th>
+							<th class="txtc icon_sort">被引用數</th>
+							<th class="icon_sort">提出意願時間</th>
 							<th class="txtc">處理狀態</th>
 							<th></th>
 						</tr>
@@ -515,7 +520,7 @@
 							<td class="txtc">0</td>
 							<td>2023/02/20</td>
 							<td class="txtc">
-								<button class="normal_btn _progress">處理中</button>
+								<button id="alert_progress" class="normal_btn _progress">處理中</button>
 							</td>
 							<td lass="txtc">
 								<button class="normal_btn _collect">加入收藏</button>
@@ -533,6 +538,23 @@
 							<td lass="txtc">
 								<button class="normal_btn _collect">加入收藏</button>
 							</td>
+						</tr>
+					</table>
+					<table class="alert_table show_develop_progress">
+						<tr>
+							<th>姓名</th>
+							<th>單位</th>
+							<th>時間</th>
+						</tr>
+						<tr>
+							<td>陳建國</td>
+							<td>台灣大學</td>
+							<td>2023/03/21</td>
+						</tr>
+						<tr>
+							<td>黃瑋明</td>
+							<td>中央大學</td>
+							<td>2023/03/21</td>
 						</tr>
 					</table>
 				</div>
@@ -630,8 +652,8 @@
 					<table class="alert_table _fixed">
 						<tr>
 							<th width="40%">中文研究名稱</th>
-							<th>政府補助金額(千元)</th>
-							<th>計畫年度</th>
+							<th class="icon_sort">政府補助金額(千元)</th>
+							<th class="icon_sort">計畫年度</th>
 							<th class="txtc">處理狀態</th>
 							<th></th>
 						</tr>
@@ -783,7 +805,7 @@
 				</div>
 				<div class="alert_info show_edit">
 					<div class="collect_succ_pic">
-						<img src="./images/icon_folder.svg" alt="">
+						<img src="./images/icon_folder_ok.svg" alt="">
 					</div>
 					<div class="collect_succ">
 						您已成功將<span class="mark_blue">「功能性超音波成像導引漩渦式聲鉗於血栓溶解」</span>加入至 <br>

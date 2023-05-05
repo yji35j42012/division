@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="123px" height="106px" viewBox="0 0 123 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_folder_ok</title>
+    <defs>
+        <path d="M13.75,19.375 L86.25,19.375 C89.5833333,19.375 91.25,21.0416667 91.25,24.375 L91.25,69.375 C91.25,72.7083333 89.5833333,74.375 86.25,74.375 L13.75,74.375 C10.4166667,74.375 8.75,72.7083333 8.75,69.375 L8.75,24.375 C8.75,21.0416667 10.4166667,19.375 13.75,19.375 Z" id="path-1"></path>
+        <filter x="-9.1%" y="-13.6%" width="118.2%" height="127.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.396798514 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M17.4848485,28.375 L82.5151515,28.375 C85.5050505,28.375 87,30.0416667 87,33.375 L87,78.375 C87,81.7083333 85.5050505,83.375 82.5151515,83.375 L17.4848485,83.375 C14.4949495,83.375 13,81.7083333 13,78.375 L13,33.375 C13,30.0416667 14.4949495,28.375 17.4848485,28.375 Z" id="path-3"></path>
+        <filter x="-10.1%" y="-13.6%" width="120.3%" height="127.3%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.396798514 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="dummy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.6.5_加入收藏成功" transform="translate(-658.000000, -294.000000)" fill-rule="nonzero">
+            <g id="modal" transform="translate(370.000000, 224.000000)">
+                <g id="icon_folder_ok" transform="translate(288.000000, 70.000000)">
+                    <g id="文件类型-标准图-文件夹">
+                        <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="100" height="100"></rect>
+                        <path d="M0,12.5 C0,9.73857625 2.23857625,7.5 5,7.5 L39.203125,7.5 C41.20332,7.5 43.011017,8.69215013 43.7988281,10.5306641 L46.25,16.25 L95,16.25 C97.7614237,16.25 100,18.4885763 100,21.25 L100,73.75 C100,76.5114237 97.7614237,78.75 95,78.75 L5,78.75 C2.23857625,78.75 0,76.5114237 0,73.75 L0,12.5 Z" id="路径" fill="#1D18CF"></path>
+                        <g id="路径">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                        </g>
+                        <g id="路径备份">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                            <use fill="#FFFFFF" xlink:href="#path-3"></use>
+                        </g>
+                        <path d="M5,37.5 L95,37.5 C98.3333333,37.5 100,39.0277778 100,42.0833333 L100,87.9166667 C100,90.9722222 98.3333333,92.5 95,92.5 L5,92.5 C1.66666667,92.5 0,90.9722222 0,87.9166667 L0,42.0833333 C0,39.0277778 1.66666667,37.5 5,37.5 Z" id="路径" fill="#556FF6"></path>
+                    </g>
+                    <g id="对号" transform="translate(67.000000, 50.000000)">
+                        <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="56" height="56"></rect>
+                        <path d="M28.5,4 C14.969,4 4,14.969 4,28.5 C4,42.031 14.969,53 28.5,53 C42.031,53 53,42.031 53,28.5 C53,14.969 42.031,4 28.5,4 Z" id="形状" fill="#5BDD72"></path>
+                        <path d="M44.9748793,21.0965501 L27.4958,38.9321317 C27.4888549,38.93933 27.482402,38.9468632 27.4754022,38.9540058 C26.7918836,39.6514654 25.895965,40 25.0000465,40 C24.1041826,40 23.2082641,39.6514654 22.5246908,38.9540058 C22.517691,38.9468632 22.511238,38.93933 22.5042929,38.9321317 L12.0251139,28.2391083 C10.6582954,26.8444122 10.6582954,24.5832345 12.0251139,23.1885384 C13.3918777,21.7938981 15.6079131,21.7938981 16.9747316,23.1885384 L25.0001012,31.3776488 L40.0253162,16.0459802 C41.3921348,14.6513399 43.6081154,14.6513399 44.974934,16.0459802 C46.3416978,17.4406763 46.3416978,19.7019098 44.9748793,21.0965501 Z" id="路径" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

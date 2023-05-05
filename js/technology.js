@@ -51,25 +51,14 @@ function checkOverTxtHadnler() {
 
 		element.innerText = content;
 	}
-
-	// moreBtn = document.querySelectorAll("[name='more_btn']");
-	// console.log("moreBtn", moreBtn);
-	// if (moreBtn.length >= 0) {
-	// 	for (let i = 0; i < moreBtn.length; i++) {
-	// 		const element = moreBtn[i];
-	// 		element.onclick = function() {
-	// 			document.querySelector("#alert_summary").style.display = "";
-	// 			// let show = "showmore" + element.getAttribute("data-showNum");
-	// 			// let showInfo = document.querySelector(`[name = ${show}]`);
-	// 			// console.log("showInfo", showInfo.innerHTML);
-	// 		};
-	// 	}
-	// }
 }
 
 if (checkOverTxt) {
 	checkOverTxtHadnler();
 }
+// window.onresize = function() {
+// 	checkOverTxtHadnler();
+// };
 
 var filter_select = document.querySelectorAll("[name='filter_select']");
 var filter_select_txt = document.querySelectorAll("[name='filter_select_txt']");
@@ -258,24 +247,10 @@ function icon_minusHandler() {
 	}
 }
 
-// var clild_tab = document.querySelectorAll("#clild_tab1 > li");
-
-// for (let i = 0; i < clild_tab.length; i++) {
-// 	const element = clild_tab[i];
-// 	element.onclick = function(params) {
-// 		if (i == 1) {
-// 			clild_tab[0].classList.remove("on");
-// 			element.classList.add("on");
-// 		} else {
-// 			clild_tab[1].classList.remove("on");
-// 			element.classList.add("on");
-// 		}
-// 	};
-// }
-
 // 彈窗系列
 var openAlert = document.querySelectorAll("[name='openAlert']");
 var closeAlert = document.querySelectorAll("[name='alert_close']");
+// var openAlertClass = document.querySelectorAll("[name=openAlertClass]")
 //
 if (openAlert) {
 	for (let i = 0; i < openAlert.length; i++) {
@@ -286,6 +261,12 @@ if (openAlert) {
 				"#" + element.getAttribute("data-alertid")
 			);
 			showAlert.style.display = "";
+			if (element.getAttribute("data-alertclass")) {
+				showAlert.setAttribute(
+					"class",
+					`alert ${element.getAttribute("data-alertclass")}`
+				);
+			}
 		};
 	}
 }
@@ -340,12 +321,30 @@ if (claarAllFolder) {
 	};
 }
 
-
+// 加入收藏
 var alert_collectBtn = document.querySelector("#alert_collectBtn");
 var alert_collect = document.querySelector("#alert_collect");
-if(alert_collectBtn){
-	alert_collectBtn.onclick = function () {
+if (alert_collectBtn) {
+	alert_collectBtn.onclick = function() {
 		alert_collect.classList.remove("_collect");
 		alert_collect.classList.add("_collectEdit");
-	}
+	};
+}
+
+// 商化意願處理中
+
+var alert_progress = document.querySelector("#alert_progress");
+var each_develop = document.querySelector("#each_develop");
+if (alert_progress) {
+	alert_progress.onclick = function() {
+		each_develop.classList.remove("_summary");
+		each_develop.classList.add("_progress");
+	};
+}
+var alert_back_summary = document.querySelector("#alert_back_summary");
+if (alert_back_summary) {
+	alert_back_summary.onclick = function() {
+		each_develop.classList.remove("_progress");
+		each_develop.classList.add("_summary");
+	};
 }
