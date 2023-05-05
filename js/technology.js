@@ -339,3 +339,13 @@ if (claarAllFolder) {
 		}
 	};
 }
+
+
+var alert_collectBtn = document.querySelector("#alert_collectBtn");
+var alert_collect = document.querySelector("#alert_collect");
+if(alert_collectBtn){
+	alert_collectBtn.onclick = function () {
+		alert_collect.classList.remove("_collect");
+		alert_collect.classList.add("_collectEdit");
+	}
+}

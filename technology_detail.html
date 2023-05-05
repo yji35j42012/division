@@ -341,7 +341,8 @@
 										<button class="normal_btn _progress">處理中</button>
 									</td>
 									<td class="txtc">
-										<button class="normal_btn _collect" name="openAlert" data-alertid="alert_collect">加入收藏</button>
+										<button class="normal_btn _collect" name="openAlert"
+											data-alertid="alert_collect">加入收藏</button>
 									</td>
 								</tr>
 								<tr>
@@ -749,11 +750,12 @@
 			</div>
 		</div>
 		<!-- 加入收藏 -->
-		<div id="alert_collect" class="alert _collect" style="display:none ">
+		<div id="alert_collect" class="alert _collect" style="display: none">
 			<div class="alert_box">
 				<button name="alert_close" class="alert_close" data-alertid="alert_collect"></button>
-				<div class="alert_title">加入收藏</div>
-				<div class="alert_info">
+				<div class="alert_title show_add">加入收藏</div>
+				<div class="alert_title show_edit">加入收藏成功</div>
+				<div class="alert_info show_add">
 					<div class="collect_title" data-msg="*可複選多個收藏夾">
 						選擇收藏夾
 						<button class="normal_btn _collectfolder">新増收藏夾</button>
@@ -779,9 +781,23 @@
 						</li>
 					</ul>
 				</div>
+				<div class="alert_info show_edit">
+					<div class="collect_succ_pic">
+						<img src="./images/icon_folder.svg" alt="">
+					</div>
+					<div class="collect_succ">
+						您已成功將<span class="mark_blue">「功能性超音波成像導引漩渦式聲鉗於血栓溶解」</span>加入至 <br>
+						<span class="mark_blue">「超音波治療 」</span>、<span class="mark_blue">「帶氧微氣泡」</span>、<span
+							class="mark_blue">「無創治療」</span>
+						，可由潛力技術文件管理中查閱編輯
+					</div>
+
+				</div>
 				<div class="alert_func">
-					<button id="claarAllFolder" class="normal_btn _clear">清除</button>
-					<button class="normal_btn _collectcheck">收藏</button>
+					<button id="claarAllFolder" class="normal_btn _clear show_add">清除</button>
+					<button id="alert_collectBtn" class="normal_btn _collectcheck show_add">收藏</button>
+					<button name="alert_close" data-alertid="alert_collect"
+						class="normal_btn _collectcheck show_edit">確定</button>
 				</div>
 			</div>
 		</div>

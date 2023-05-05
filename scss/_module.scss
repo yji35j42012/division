@@ -19,6 +19,9 @@ th.txtc,
 td.txtc {
 	text-align: center;
 }
+.mark_blue {
+	color: #556ff6;
+}
 // collect
 .normal_btn {
 	min-width: 136px;
@@ -1365,6 +1368,10 @@ td.txtc {
 		._include & {
 			padding: 27px 0 40px;
 		}
+		._collectEdit & {
+			max-width: 700px;
+			padding: 20px 20px 30px;
+		}
 	}
 	// .alert_title
 	&_title {
@@ -1396,6 +1403,18 @@ td.txtc {
 				content: attr(data-msg);
 				font-size: 14px;
 				color: #8990a5;
+			}
+		}
+		.collect_succ {
+			font-size: 16px;
+			line-height: 1.88;
+			color: #212529;
+			text-align: center;
+			// .collect_succ_pic
+			&_pic {
+				width: 100px;
+				height: 100px;
+				margin: 20px auto 30px;
 			}
 		}
 	}
@@ -1550,6 +1569,9 @@ td.txtc {
 		@include d_f(flex, space-around, center);
 		width: 100%;
 		margin-top: 90px;
+		._collectEdit & {
+			margin-top: 30px;
+		}
 	}
 	.folderGroup {
 		@include d_f(flex);
@@ -1607,6 +1629,19 @@ td.txtc {
 				font-weight: bold;
 				color: #556ff6;
 			}
+		}
+	}
+
+	&._collect {
+		display: flex;
+		.show_edit {
+			display: none;
+		}
+	}
+	&._collectEdit {
+		display: flex;
+		.show_add {
+			display: none;
 		}
 	}
 }

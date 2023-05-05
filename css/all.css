@@ -36,6 +36,10 @@ td.txtc {
   text-align: center;
 }
 
+.mark_blue {
+  color: #556ff6;
+}
+
 .normal_btn {
   min-width: 136px;
   height: 35px;
@@ -2086,6 +2090,11 @@ input:checked + .filter_check_span:before {
   padding: 27px 0 40px;
 }
 
+._collectEdit .alert_box {
+  max-width: 700px;
+  padding: 20px 20px 30px;
+}
+
 .alert_title {
   font-size: 20px;
   font-weight: bold;
@@ -2129,6 +2138,19 @@ input:checked + .filter_check_span:before {
   content: attr(data-msg);
   font-size: 14px;
   color: #8990a5;
+}
+
+.alert_info .collect_succ {
+  font-size: 16px;
+  line-height: 1.88;
+  color: #212529;
+  text-align: center;
+}
+
+.alert_info .collect_succ_pic {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto 30px;
 }
 
 .alert_search {
@@ -2357,6 +2379,10 @@ input:checked + .filter_check_span:before {
   margin-top: 90px;
 }
 
+._collectEdit .alert_func {
+  margin-top: 30px;
+}
+
 .alert .folderGroup {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2442,6 +2468,26 @@ input:checked + .filter_check_span:before {
   font-size: 16px;
   font-weight: bold;
   color: #556ff6;
+}
+
+.alert._collect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.alert._collect .show_edit {
+  display: none;
+}
+
+.alert._collectEdit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.alert._collectEdit .show_add {
+  display: none;
 }
 
 .fz20px {
