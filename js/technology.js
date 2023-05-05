@@ -250,8 +250,7 @@ function icon_minusHandler() {
 // 彈窗系列
 var openAlert = document.querySelectorAll("[name='openAlert']");
 var closeAlert = document.querySelectorAll("[name='alert_close']");
-// var openAlertClass = document.querySelectorAll("[name=openAlertClass]")
-//
+
 if (openAlert) {
 	for (let i = 0; i < openAlert.length; i++) {
 		const element = openAlert[i];
