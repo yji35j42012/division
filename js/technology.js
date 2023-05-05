@@ -220,21 +220,24 @@ if (addFilter) {
 		filter_select_txt = document.querySelectorAll(
 			"[name='filter_select_txt']"
 		);
-		console.log("~~~", document.querySelectorAll("#" + clild_tab + ">li"));
 		// clild_tab
 		for (
 			let i = 0;
 			i < document.querySelectorAll("#" + clild_tab + ">li").length;
 			i++
 		) {
-			const element = document.querySelectorAll("#" + clild_tab + ">li")[i];
+			const element = document.querySelectorAll("#" + clild_tab + ">li")[
+				i
+			];
 			element.onclick = function() {
 				if (i == 1) {
-					document.querySelectorAll("#" + clild_tab + ">li")[0]
+					document
+						.querySelectorAll("#" + clild_tab + ">li")[0]
 						.classList.remove("on");
 					element.classList.add("on");
 				} else {
-					document.querySelectorAll("#" + clild_tab + ">li")[1]
+					document
+						.querySelectorAll("#" + clild_tab + ">li")[1]
 						.classList.remove("on");
 					element.classList.add("on");
 				}
