@@ -1392,6 +1392,7 @@ input:checked + .filter_check_span:before {
 }
 
 .filter_select_ul {
+  z-index: 2;
   position: absolute;
   top: calc(100% + 5px);
   display: none;

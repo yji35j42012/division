@@ -2,7 +2,7 @@ var technology_detail = document.querySelectorAll("[name=technology_detail]");
 var moreBtn = null;
 for (let i = 0; i < technology_detail.length; i++) {
 	const element = technology_detail[i];
-	element.onclick = function () {
+	element.onclick = function() {
 		location.href = "./technology_detail.html";
 	};
 }
@@ -71,22 +71,39 @@ if (checkOverTxt) {
 	checkOverTxtHadnler();
 }
 
-var filter_select = document.querySelector("#filter_select");
+var filter_select = document.querySelectorAll("[name='filter_select']");
 var filter_select_txt = document.querySelector("#filter_select_txt");
 var filter_select_item = document.querySelectorAll("#filter_select_ul > li");
-function selectHandler() {
-	filter_select.classList.contains("on")
-		? filter_select.classList.remove("on")
-		: filter_select.classList.add("on");
+var filter_count = null;
+
+function setfilter_select() {
+	for (let i = 0; i < filter_select.length; i++) {
+		const element = filter_select[i];
+		element.onclick = function() {
+			console.log("filter_select");
+			if (filter_count == null) {
+				element.classList.add("on");
+				filter_count = i;
+			} else if (filter_count == i) {
+				element.classList.remove("on");
+				filter_count = null;
+			} else {
+				filter_select[i].classList.remove("on");
+				element.classList.add("on");
+				filter_count = i;
+			}
+		};
+	}
 }
 if (filter_select) {
-	filter_select.addEventListener("click", selectHandler);
+	setfilter_select();
+	// filter_select.addEventListener("click", selectHandler);
 }
 
 if (filter_select_item) {
 	for (let i = 0; i < filter_select_item.length; i++) {
 		const element = filter_select_item[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			filter_select_txt.innerHTML = element.innerHTML;
 		};
 	}
@@ -97,7 +114,7 @@ var nodata = document.querySelector("#nodata");
 var data = document.querySelector("#data");
 
 if (filter_search) {
-	filter_search.onclick = function (params) {
+	filter_search.onclick = function(params) {
 		if (nodata.style.display == "none") {
 			nodata.style.display = "";
 			data.style.display = "none";
@@ -115,7 +132,7 @@ var filter_inpGroup_items = document.querySelectorAll(
 );
 var icon_minus = null;
 if (addFilter) {
-	addFilter.onclick = function () {
+	addFilter.onclick = function() {
 		console.log("add");
 		let idIndex = "filter_inpBox" + filter_inpGroup_items.length;
 		const div = document.createElement("div");
@@ -158,7 +175,7 @@ if (addFilter) {
 		divChild3.append(divChild3_1);
 
 		const divChild4 = document.createElement("label");
-		divChild4.setAttribute("id", "filter_select");
+		divChild4.setAttribute("name", "filter_select");
 		divChild4.setAttribute("class", "filter_select");
 		const divChild4_1 = document.createElement("span");
 		divChild4_1.setAttribute(
@@ -197,13 +214,15 @@ if (addFilter) {
 		);
 		icon_minus = document.querySelectorAll("[name=icon_minus]");
 		icon_minusHandler();
+		filter_select = document.querySelectorAll("[name='filter_select']");
+		setfilter_select();
 	};
 }
 
 function icon_minusHandler() {
 	for (let i = 0; i < icon_minus.length; i++) {
 		const element = icon_minus[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			let removeDiv = document.querySelector(
 				"#filter_inpBox" + element.getAttribute("data-num")
 			);
@@ -219,7 +238,7 @@ var closeAlert = document.querySelectorAll("[name='alert_close']");
 if (openAlert) {
 	for (let i = 0; i < openAlert.length; i++) {
 		const element = openAlert[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			event.stopPropagation();
 			let showAlert = document.querySelector(
 				"#" + element.getAttribute("data-alertid")
@@ -231,7 +250,7 @@ if (openAlert) {
 if (closeAlert) {
 	for (let i = 0; i < closeAlert.length; i++) {
 		const element = closeAlert[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			let closeAlert = document.querySelector(
 				"#" + element.getAttribute("data-alertid")
 			);
@@ -249,7 +268,7 @@ var resume_count = 0;
 if (resume_item) {
 	for (let i = 0; i < resume_item.length; i++) {
 		const element = resume_item[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			resume_item[resume_count].classList.remove("on");
 			element.classList.add("on");
 			resume_info[resume_count].style.display = "none";
@@ -259,25 +278,22 @@ if (resume_item) {
 	}
 }
 
-
-
-
-var folderGroup = document.querySelectorAll("#folderGroup .folderGroup_item")
-var claarAllFolder = document.querySelector("#claarAllFolder")
+var folderGroup = document.querySelectorAll("#folderGroup .folderGroup_item");
+var claarAllFolder = document.querySelector("#claarAllFolder");
 
 if (folderGroup) {
 	for (let i = 0; i < folderGroup.length; i++) {
 		const element = folderGroup[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			element.classList.toggle("on");
-		}
+		};
 	}
 }
 if (claarAllFolder) {
-	claarAllFolder.onclick = function () {
+	claarAllFolder.onclick = function() {
 		for (let i = 0; i < folderGroup.length; i++) {
 			const element = folderGroup[i];
 			element.classList.remove("on");
 		}
-	}
+	};
 }
