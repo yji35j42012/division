@@ -56,7 +56,7 @@
 							細胞和分子生物學 、內科學；超音波學；胸腔醫學；重症醫學；國人肺癌的基因體及轉譯醫學研究、癌症基因體學；癌轉移之分子調控機制；癌之生物標誌及個人化醫療</li>
 						<li class="technology_item_list _btnBox" data-title="商化意願：">
 							<button class="normal_btn _list" data-num="3" name="openAlert" data-alertid="each_develop"
-								data-alertclass="_summary">帶領實驗室投入創業(自行創業)</button>
+								data-alertclass="_summary" data-info="帶領實驗室投入創業(自行創業)">帶領實驗室投入創業(自行創業)</button>
 							<button class="normal_btn _list" data-num="2">技術由他人運用創業</button>
 							<button class="normal_btn _list" data-num="2">需要創業專家共同投入創業</button>
 							<button class="normal_btn _list" data-num="2">解決廠商技術瓶頸</button>
@@ -124,7 +124,7 @@
 										data-alertid="alert_summary">more</button>
 								</div>
 								<div class="same_list_weight" data-txt="權重：">121.91</div>
-								<button class="normal_btn _company">相關企業</button>
+								<button name="openAlert" data-alertid="patent_inside" class="normal_btn _company">相關企業</button>
 								<button class="normal_btn _company">TDF 報告</button>
 								<ul class="same_list_patent">
 									<li data-txt="台灣專利">3</li>
@@ -338,8 +338,7 @@
 									<td>5332</td>
 									<td>110</td>
 									<td class="txtc">
-										<button name="openAlert" data-alertid="each_develop"
-											data-alertclass="_progress _noback"
+										<button name="openAlert" data-alertid="subsidy_program"
 											class="normal_btn _progress">處理中</button>
 									</td>
 									<td class="txtc">
@@ -467,9 +466,10 @@
 
 			<div class="fixFooter">
 				<button class="normal_btn _addinterview">建立約訪</button>
-				<button class="normal_btn _addfile">建立技術摘要文件</button>
+				<button class="normal_btn _addfile" name="chanePage" data-page="technology_create.html">建立技術摘要文件</button>
 			</div>
 		</div>
+
 
 		<!-- 摘要彈窗 -->
 		<div name="alert" id="alert_summary" class="alert" style="display: none">
@@ -508,19 +508,6 @@
 							<th></th>
 						</tr>
 						<tr>
-							<td>I741355</td>
-							<td>提升光通量的光聲複合系統</td>
-							<td>2021/10/01</td>
-							<td class="txtc">0</td>
-							<td>2023/02/20</td>
-							<td class="txtc">
-								<button class="normal_btn _unprocessed">未處理</button>
-							</td>
-							<td lass="txtc">
-								<button class="normal_btn _collect">加入收藏</button>
-							</td>
-						</tr>
-						<tr>
 							<td>I720319</td>
 							<td>超音波感應蛋白質以及利用超音波刺激細胞的方法</td>
 							<td>2021/03/01</td>
@@ -543,6 +530,19 @@
 							<td class="txtc">
 								<button name="openAlert" data-alertid="each_develop" data-alertclass="_processed"
 									class="normal_btn _processed">已處理</button>
+							</td>
+							<td lass="txtc">
+								<button class="normal_btn _collect">加入收藏</button>
+							</td>
+						</tr>
+						<tr>
+							<td>I741355</td>
+							<td>提升光通量的光聲複合系統</td>
+							<td>2021/10/01</td>
+							<td class="txtc">0</td>
+							<td>2023/02/20</td>
+							<td class="txtc">
+								<button class="normal_btn _unprocessed">未處理</button>
 							</td>
 							<td lass="txtc">
 								<button class="normal_btn _collect">加入收藏</button>
@@ -652,6 +652,88 @@
 				</div>
 			</div>
 		</div>
+		<!-- A61K包含政府補助計畫 -->
+		<div name="alert" id="government_a61k" class="alert _government" style="display:none">
+			<div class="alert_box">
+				<button name="alert_close" class="alert_close" data-alertid="government_a61k"></button>
+
+				<div class="alert_info">
+					<ul class="alert_government">
+						<li class="alert_government_item fz20px" data-title="中文研究名稱：">
+							醫學工程學門研究發展規劃與推動計畫
+						</li>
+						<li class="alert_government_item fz20px" data-title="英文研究名稱：">
+							Biomedical engineering program general research development and execution planning
+						</li>
+						<li class="alert_government_item _name fz20px" data-title="發明人資料：">
+							葉秩光
+						</li>
+					</ul>
+					<ul class="alert_government _flex_wrap flex_child">
+						<li class="alert_government_item" data-title="IPC：">
+							A61B 6/00、A61B 6/00、G16H 40/63、A61K 38/29、G01N 21/64、A61L 27/52、A61M 5/142、G01N 21/64、A61F
+							2/44、A61N 5/06、A61B 5/243
+						</li>
+						<li class="alert_government_item _helf" data-title="計畫系統編號：">
+							PB11001-0032
+						</li>
+						<li class="alert_government_item _helf" data-title="計畫編號：">
+							MOST108-2217-E007-002-MY3
+						</li>
+						<li class="alert_government_item _helf" data-title="主管機關：">
+							科技部
+						</li>
+						<li class="alert_government_item _helf" data-title="執行機構：">
+							國立清華大學生醫工程與環境科學系
+						</li>
+						<li class="alert_government_item _helf" data-title="研究經費：">
+							5731仟元
+						</li>
+						<li class="alert_government_item _helf" data-title="研究性質：">
+							基礎研究
+						</li>
+						<li class="alert_government_item _helf" data-title="研究方式：">
+							學術補助
+						</li>
+						<li class="alert_government_item _helf" data-title="研究期間：">
+							110/01～110/12
+						</li>
+						<li class="alert_government_item _helf" data-title="計畫年度：">
+							110
+						</li>
+						<li class="alert_government_item _helf" data-title="研究領域：">
+							資訊科學/軟體
+						</li>
+						<li class="alert_government_item _helf" data-title="研究人員：">
+							葉秩光
+						</li>
+						<li class="alert_government_item _helf" data-title="Base Seq：">
+							44304
+						</li>
+					</ul>
+					<ul class="alert_government _flex_wrap flex_child">
+						<li class="alert_government_item" data-title="中文關鍵字：">
+							醫學工程；醫療器材；生醫發展創新
+						</li>
+						<li class="alert_government_item" data-title="英文關鍵字：">
+							Biomedical Engineering； Medical Device； Biomedical Development Innovation
+						</li>
+					</ul>
+					<ul class="alert_government _flex_wrap flex_child">
+						<li class="alert_government_item" data-title="中文摘要：">
+							本計畫規劃目的在於承續以往醫工先進的研究基礎與科技部持續的支持所建立之有利發展環境下，進一步掌握此醫工學門成長契機，提供醫工領域的所有學界研究人員及學生積極有效的支援研究與推動產學之間的合作。在研究創新、產業服務上積極互動並貢獻產業、臨床醫工研究上積極投入，以造福國人等目標以回饋國家與社會。為因應世界發展趨勢和有效運用國內、外醫工研究資源，本計畫將推動多項工作，以便能順利推動醫工學門內的各項研究計畫及活動，提升醫工研究學術成果，並擴大醫工研究成果於醫療科技產業的整合應用。
+						</li>
+						<li class="alert_government_item" data-title="英文摘要：">
+							無
+						</li>
+						<li class="alert_government_item _link" data-title="GRB 連結：">
+							<a
+								href="http://grbsearch.stpi.narl.org.tw/search/planDetail2?id=13691035">http://grbsearch.stpi.narl.org.tw/search/planDetail2?id=13868416</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<!-- 包含政府補助計畫 -->
 		<div name="alert" id="government_include" class="alert _include" style="display:none">
 			<div class="alert_box">
@@ -666,7 +748,7 @@
 							<th class="txtc">處理狀態</th>
 							<th></th>
 						</tr>
-						<tr>
+						<tr name="openAlert" data-alertid="government_a61k">
 							<td class="overTxtHidden">醫學工程學門研究發展規劃與推動計畫</td>
 							<td>5731</td>
 							<td>110</td>
@@ -834,9 +916,192 @@
 				</div>
 			</div>
 		</div>
+		<!-- 補助計畫 -->
+		<div name="alert" id="subsidy_program" class="alert" style="display: none">
+			<div class="alert_box">
+				<button name="alert_close" class="alert_close" data-alertid="subsidy_program"></button>
+				<div class="alert_title">
+					「功能性超音波成像導引漩渦式聲鉗於血栓溶解」
+					<br>商化意願處理中人員
+				</div>
+				<div class="alert_info">
+					<table class="alert_table show_develop_progress show_develop_processed">
+						<tr>
+							<th>姓名</th>
+							<th>單位</th>
+							<th>時間</th>
+						</tr>
+						<tr>
+							<td>陳建國</td>
+							<td>台灣大學</td>
+							<td>2023/03/21</td>
+						</tr>
+						<tr>
+							<td>黃瑋明</td>
+							<td>中央大學</td>
+							<td>2023/03/21</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
 
-
-
+		<!-- 國內專利 -->
+		<div name="alert" id="patent_inside" class="alert _patent_inside _unt20" style="display: none">
+			<div class="alert_box">
+				<button name="alert_close" class="alert_close" data-alertid="patent_inside"></button>
+				<ul class="tab">
+					<li name="alert_tab" class="tab_item on">相關專利號之國內公司</li>
+					<li name="alert_tab" class="tab_item">國內Top20 Assignees</li>
+				</ul>
+				<div class="alert_title show_add show_unt20">國內目前已公告相關專利號之國內公司(共 5470 篇專利)</div>
+				<div class="alert_title show_add show_t20">國內Top20 Assignees</div>
+				<label class="alert_search show_unt20">
+					<i class="icon _search">
+						<img src="./images/icon_search_normal.svg" alt="">
+					</i>
+					<input type="text" placeholder="請輸入企業名、專利名稱">
+				</label>
+				<div class="alert_info show_unt20">
+					<table class="alert_table ">
+						<tr>
+							<th width="12%" class="icon_sort">公開/公告日</th>
+							<th width="35%">申請人</th>
+							<th width="20%">專利名稱</th>
+							<th width="8%">專利申請號</th>
+							<th width="25%">IPC</th>
+						</tr>
+						<tr>
+							<td>2021/12/21</td>
+							<td>國璽幹細胞應用技術股份有限公司 GWO XI STEM CELL APPLIED TECHNOLOGY CO., LTD.</td>
+							<td>無菌隔離操作裝置</td>
+							<td>M621381</td>
+							<td>B01L 1/04<#>A61K 48/00<#>A61L 2/24</td>
+						</tr>
+						<tr>
+							<td>2021/12/21</td>
+							<td>林建宏</td>
+							<td>氣霧免疫用之溫敏型佐劑及其製作方法</td>
+							<td>I750929</td>
+							<td>A61K 39/39<#>A01N 63/40<#>A01P 1/00<#>A61K 47/10<#>A61K 47/36</td>
+						</tr>
+						<tr>
+							<td>2021/12/21</td>
+							<td>財團法人國家衛生研究院 NATIONAL HEALTH RESEARCH INSTITUTES<#>泰緯生命科技股份有限公司 TAIVEX THERAPEUTICS
+									CORPORATION</td>
+							<td>噻唑化合物作為蛋白質激酶抑制劑</td>
+							<td>I750905</td>
+							<td>C07D 417/14<#>A61K 31/506<#>A61P 35/00</td>
+						</tr>
+						<tr>
+							<td>2021/12/21</td>
+							<td>昊運股份有限公司 ALPHALA CO., LTD.</td>
+							<td>嘧啶醯胺化合物及其用途</td>
+							<td>I750855</td>
+							<td>C07D 487/04<#>A61K 31/519<#>A61P 35/00</td>
+						</tr>
+						<tr>
+							<td>2021/12/21</td>
+							<td>葡萄王生技股份有限公司 GRAPE KING BIO LTD.</td>
+							<td>短乳桿菌GKJOY、含其之組合物及改善憂鬱症與促進神經功能之用途</td>
+							<td>I750788</td>
+							<td>C12N 1/20<#>A23L 33/135<#>A61K 35/747<#>A61P 25/00<#>A61P 25/20<#>A61P 25/22<#>C12R
+														1/225</td>
+						</tr>
+						<tr>
+							<td>2021/12/21</td>
+							<td>豐華生物科技股份有限公司 GLAC BIOTECH CO., LTD.</td>
+							<td>皮膚外用組成物及其用於製備改善皮膚疾病及皮膚發炎之組成物的用途</td>
+							<td>I750716</td>
+							<td>A61K 35/744<#>A61P 17/02</td>
+						</tr>
+						<tr>
+							<td>2021/12/21</td>
+							<td>慈濟學校財團法人慈濟大學 TZU CHI UNIVERSITY</td>
+							<td>預防及/或治療壓力誘發疾病之方法</td>
+							<td>I750705</td>
+							<td>A61K 31/343<#>A61P 1/00<#>A61P 37/06</td>
+						</tr>
+						<tr>
+							<td>2021/12/21</td>
+							<td>遠東科技大學 FAR EAST UNIVERSITY</td>
+							<td>酪梨洗髮精及其製造方法</td>
+							<td>I750681</td>
+							<td>A61K 8/9789<#>A61Q 5/02</td>
+						</tr>
+						<tr>
+							<td>2021/12/21</td>
+							<td>遠東科技大學 FAR EAST UNIVERSITY</td>
+							<td>酪梨洗髮精及其製造方法</td>
+							<td>I750680</td>
+							<td>A61K 8/9789</td>
+						</tr>
+						<tr>
+							<td>2021/12/21</td>
+							<td>財團法人農業科技研究院 AGRICULTURAL TECHNOLOGY RESEARCH INSTITUTE</td>
+							<td>防治家禽滑膜黴漿菌感染的組合物</td>
+							<td>I750500</td>
+							<td>A61K 38/16<#>A61K 45/06<#>A61K 47/02<#>A61K 47/18<#>A61K 47/44</td>
+						</tr>
+					</table>
+				</div>
+				<div class="alert_info show_t20">
+					<table class="alert_table ">
+						<tr>
+							<th width="80%">申請人</th>
+							<th width="20%">專利數量</th>
+						</tr>
+						<tr>
+							<td>赫孚孟拉羅股份公司 F. HOFFMANN-LA ROCHE AG</td>
+							<td>408</td>
+						</tr>
+						<tr>
+							<td>諾華公司 NOVARTIS AG</td>
+							<td>338</td>
+						</tr>
+						<tr>
+							<td>花王股份有限公司 KAO CORPORATION</td>
+							<td>292</td>
+						</tr>
+						<tr>
+							<td>美國禮來大藥廠</td>
+							<td>282</td>
+						</tr>
+						<tr>
+							<td>美國棕欖公司 COLGATE-PALMOLIVE COMPANY</td>
+							<td>260</td>
+						</tr>
+						<tr>
+							<td>健生藥品公司 JANSSEN PHARMACEUTICA N.V.</td>
+							<td>237</td>
+						</tr>
+						<tr>
+							<td>資生堂股份有限公司 SHISEIDO COMPANY, LTD.</td>
+							<td>230</td>
+						</tr>
+						<tr>
+							<td>美國禮來大藥廠 ELI LILLY AND COMPANY</td>
+							<td>229</td>
+						</tr>
+						<tr>
+							<td>赫斯脫化工廠股份有限公司</td>
+							<td>219</td>
+						</tr>
+						<tr>
+							<td>輝瑞股份有限公司 PFIZER INC.</td>
+							<td>208</td>
+						</tr>
+					</table>
+				</div>
+				<ul class="page">
+					<li class="page_item _prev">«</li>
+					<li class="page_item on">1</li>
+					<li class="page_item">2</li>
+					<li class="page_item">3</li>
+					<li class="page_item _next">»</li>
+				</ul>
+			</div>
+		</div>
 		<div id="gototop" class="gototop">
 			<i class="icon _gototop">
 				<img src="./images/icon_back_top.svg" alt="">

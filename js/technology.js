@@ -358,3 +358,42 @@ if (alert_collectBtn) {
 // 		each_develop.classList.add("_summary");
 // 	};
 // }
+
+
+// alert_tab
+var patent_inside = document.querySelector("#patent_inside");
+var alert_tab = document.querySelectorAll("[name='alert_tab']");
+var alert_tab_count = 0
+if (alert_tab) {
+	for (let i = 0; i < alert_tab.length; i++) {
+		const element = alert_tab[i];
+		element.onclick = function () {
+			alert_tab[alert_tab_count].classList.remove("on");
+			element.classList.add("on");
+			alert_tab_count = i
+			if (i == 0) {
+				patent_inside.classList.remove("_t20")
+				patent_inside.classList.add("_unt20")
+			} else if (i == 1) {
+				patent_inside.classList.remove("_unt20")
+				patent_inside.classList.add("_t20")
+			}
+		}
+	}
+}
+// alert_tab
+
+
+// js導向
+
+var chanePage = document.querySelectorAll("[name='chanePage']");
+
+if (chanePage) {
+	for (let i = 0; i < chanePage.length; i++) {
+		const element = chanePage[i];
+		element.onclick = function () {
+			let goPage = element.getAttribute("data-page")
+			location.href = goPage;
+		}
+	}
+}
