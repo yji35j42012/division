@@ -2,7 +2,7 @@ var technology_detail = document.querySelectorAll("[name=technology_detail]");
 var moreBtn = null;
 for (let i = 0; i < technology_detail.length; i++) {
 	const element = technology_detail[i];
-	element.onclick = function () {
+	element.onclick = function() {
 		location.href = "./technology_detail.html";
 	};
 }
@@ -71,7 +71,7 @@ var filter_count = null;
 function setfilter_select() {
 	for (let i = 0; i < filter_select.length; i++) {
 		const element = filter_select[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			console.log("filter_select");
 			if (filter_count == null) {
 				element.classList.add("on");
@@ -93,7 +93,7 @@ if (filter_select) {
 function setfilter_item() {
 	for (let i = 0; i < filter_select_item.length; i++) {
 		const element = filter_select_item[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			filter_select_txt[filter_count].innerHTML = element.innerHTML;
 		};
 	}
@@ -107,7 +107,7 @@ var nodata = document.querySelector("#nodata");
 var data = document.querySelector("#data");
 
 if (filter_search) {
-	filter_search.onclick = function (params) {
+	filter_search.onclick = function(params) {
 		if (nodata.style.display == "none") {
 			nodata.style.display = "";
 			data.style.display = "none";
@@ -125,7 +125,7 @@ var filter_inpGroup_items = document.querySelectorAll(
 );
 var icon_minus = null;
 if (addFilter) {
-	addFilter.onclick = function () {
+	addFilter.onclick = function() {
 		let idIndex = "filter_inpBox" + filter_inpGroup_items.length;
 		var clild_tab = "clild_tab" + filter_inpGroup_items.length;
 		const div = document.createElement("div");
@@ -218,7 +218,7 @@ if (addFilter) {
 			const element = document.querySelectorAll("#" + clild_tab + ">li")[
 				i
 			];
-			element.onclick = function () {
+			element.onclick = function() {
 				if (i == 1) {
 					document
 						.querySelectorAll("#" + clild_tab + ">li")[0]
@@ -238,7 +238,7 @@ if (addFilter) {
 function icon_minusHandler() {
 	for (let i = 0; i < icon_minus.length; i++) {
 		const element = icon_minus[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			let removeDiv = document.querySelector(
 				"#filter_inpBox" + element.getAttribute("data-num")
 			);
@@ -255,9 +255,9 @@ var alert_back = document.querySelector("#alert_back");
 if (openAlert) {
 	for (let i = 0; i < openAlert.length; i++) {
 		const element = openAlert[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			event.stopPropagation();
-			closeAlertHandler()
+			closeAlertHandler();
 			let showAlert = document.querySelector(
 				"#" + element.getAttribute("data-alertid")
 			);
@@ -270,7 +270,10 @@ if (openAlert) {
 			}
 			if (element.getAttribute("data-alertback")) {
 				// document.querySelector("#" + element.getAttribute("data-alertback")).style.display = 'none';
-				alert_back.setAttribute("data-alertid", element.getAttribute("data-alertback"))
+				alert_back.setAttribute(
+					"data-alertid",
+					element.getAttribute("data-alertback")
+				);
 			}
 		};
 	}
@@ -278,8 +281,8 @@ if (openAlert) {
 if (closeAlert) {
 	for (let i = 0; i < closeAlert.length; i++) {
 		const element = closeAlert[i];
-		element.onclick = function () {
-			closeAlertHandler()
+		element.onclick = function() {
+			closeAlertHandler();
 		};
 	}
 }
@@ -301,7 +304,7 @@ var resume_count = 0;
 if (resume_item) {
 	for (let i = 0; i < resume_item.length; i++) {
 		const element = resume_item[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			resume_item[resume_count].classList.remove("on");
 			element.classList.add("on");
 			resume_info[resume_count].style.display = "none";
@@ -317,13 +320,13 @@ var claarAllFolder = document.querySelector("#claarAllFolder");
 if (folderGroup) {
 	for (let i = 0; i < folderGroup.length; i++) {
 		const element = folderGroup[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			element.classList.toggle("on");
 		};
 	}
 }
 if (claarAllFolder) {
-	claarAllFolder.onclick = function () {
+	claarAllFolder.onclick = function() {
 		for (let i = 0; i < folderGroup.length; i++) {
 			const element = folderGroup[i];
 			element.classList.remove("on");
@@ -335,7 +338,7 @@ if (claarAllFolder) {
 var alert_collectBtn = document.querySelector("#alert_collectBtn");
 var alert_collect = document.querySelector("#alert_collect");
 if (alert_collectBtn) {
-	alert_collectBtn.onclick = function () {
+	alert_collectBtn.onclick = function() {
 		alert_collect.classList.remove("_collect");
 		alert_collect.classList.add("_collectEdit");
 	};
@@ -359,30 +362,28 @@ if (alert_collectBtn) {
 // 	};
 // }
 
-
 // alert_tab
 var patent_inside = document.querySelector("#patent_inside");
 var alert_tab = document.querySelectorAll("[name='alert_tab']");
-var alert_tab_count = 0
+var alert_tab_count = 0;
 if (alert_tab) {
 	for (let i = 0; i < alert_tab.length; i++) {
 		const element = alert_tab[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			alert_tab[alert_tab_count].classList.remove("on");
 			element.classList.add("on");
-			alert_tab_count = i
+			alert_tab_count = i;
 			if (i == 0) {
-				patent_inside.classList.remove("_t20")
-				patent_inside.classList.add("_unt20")
+				patent_inside.classList.remove("_t20");
+				patent_inside.classList.add("_unt20");
 			} else if (i == 1) {
-				patent_inside.classList.remove("_unt20")
-				patent_inside.classList.add("_t20")
+				patent_inside.classList.remove("_unt20");
+				patent_inside.classList.add("_t20");
 			}
-		}
+		};
 	}
 }
 // alert_tab
-
 
 // js導向
 
@@ -391,9 +392,53 @@ var chanePage = document.querySelectorAll("[name='chanePage']");
 if (chanePage) {
 	for (let i = 0; i < chanePage.length; i++) {
 		const element = chanePage[i];
-		element.onclick = function () {
-			let goPage = element.getAttribute("data-page")
-			location.href = goPage;
+		element.onclick = function() {
+			let goPage = element.getAttribute("data-page");
+			if (goPage == "goback") {
+				history.go(-1);
+			} else {
+				location.href = goPage;
+			}
+		};
+	}
+}
+
+// resume 頁籤
+var chose_item = document.querySelectorAll("[name='chose_item']");
+var otherTab_info = document.querySelectorAll("[name='otherTab_info']");
+
+var chose_count = 2;
+if (resume_item) {
+	for (let i = 0; i < chose_item.length; i++) {
+		const element = chose_item[i];
+		element.onclick = function() {
+			chose_item[chose_count].classList.remove("on");
+			element.classList.add("on");
+			otherTab_info[chose_count].style.display = "none";
+			otherTab_info[i].style.display = "";
+			chose_count = i;
+		};
+	}
+}
+
+var textarea = document.querySelectorAll("[name='textarea']");
+if (textarea) {
+	for (let i = 0; i < textarea.length; i++) {
+		const element = textarea[i];
+		let txt = element.innerHTML;
+		var newtxt = "";
+		for (let i = 0; i < txt.split(" ").length; i++) {
+			if (txt.split(" ")[i] !== "") {
+				let tab = txt.split(" ")[i].split('\t')
+				for (let j = 0; j < txt.split(" ")[i].split('\t').length; j++) {
+					if (txt.split(" ")[i].split('\t')[j] !== '\t') {
+						newtxt += txt.split(" ")[i].split('\t')[j];
+					}
+
+				}
+
+			}
 		}
+		element.innerHTML = newtxt;
 	}
 }

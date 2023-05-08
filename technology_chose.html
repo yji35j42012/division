@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <title>科展系統-搜尋</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <nav id="navContent" class="nav"></nav>
+
+        <div id="content" class="content _hasFixFooter _min1120px">
+            <div class="container _flex">
+                <div class="header">
+                    <h1>建立技術摘要文件</h1>
+                    <div class="header_info">
+                        <i class="icon _notification" data-num="12">
+                            <img src="./images/icon_notification_s.svg" alt="">
+                        </i>
+                        <div class="header_member">
+                            <i class="icon _member">
+                                <img src="./images/icon_user.svg" alt="">
+                            </i>
+                            <span class="header_member_name">Vincent Howard</span>
+                            <i class="icon _trangle_bottom">
+                                <img src="./images/icon_user_arrow.svg" alt="">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb_item">科產系統</li>
+                    <li class="breadcrumb_item">搜尋技術與發明人</li>
+                    <li class="breadcrumb_item">葉秩光</li>
+                    <li class="breadcrumb_item">建立潛立技術摘要文件</li>
+                </ul>
+                <ul class="step">
+                    <li class="step_item ok">技術文件標題</li>
+                    <li class="step_item on">選擇技術擁有者相關技術</li>
+                    <li class="step_item">編輯專利摘要</li>
+                    <li class="step_item">我的意見及備註、檔案上傳</li>
+                    <li class="step_item">完成技術摘要文件、發送文件</li>
+                </ul>
+                <h1>選擇技術擁有者相關技術</h1>
+                <div class="chose_inpBox">
+                    <input class="normal_inp" type="text" placeholder="請輸入標題">
+                    <button class="normal_btn _chosefolder">從收藏夾選擇</button>
+                </div>
+
+                <ul class="otherTab _chose">
+                    <li class="otherTab_item _detail" name="chose_item" data-txt="已勾選" data-num="0">全部台灣專利</li>
+                    <li class="otherTab_item _detail" name="chose_item" data-txt="已勾選" data-num="0">全部學術文獻</li>
+                    <li class="otherTab_item _detail on" name="chose_item" data-txt="已勾選" data-num="3">全部政府補助計畫</li>
+                    <li class="otherTab_item _detail" name="chose_item" data-txt="已勾選" data-num="0">全部全球專利</li>
+                </ul>
+                <div name="otherTab_info" class="otherTab_info" style="display: none">全部台灣專利</div>
+                <div name="otherTab_info" class="otherTab_info" style="display: none">全部學術文獻</div>
+                <div name="otherTab_info" class="otherTab_info">
+                    <table class="normal_tb _fixed">
+                        <tbody>
+                            <tr>
+                                <th width="40%">中文研究名稱</th>
+                                <th class="icon_sort">政府補助金額(千元)</th>
+                                <th class="icon_sort">計畫年度</th>
+                                <th class="txtc">處理狀態</th>
+                                <th>
+                                    <label class="filter_check">
+                                        <input type="checkbox">
+                                        全選
+                                        <span class="filter_check_span"></span>
+                                    </label>
+                                </th>
+                            </tr>
+                            <tr name="openAlert" data-alertid="government">
+                                <td class="overTxtHidden">功能性超音波成像導引漩渦式聲鉗於血栓溶解</td>
+                                <td>5332</td>
+                                <td>110</td>
+                                <td class="txtc">
+                                    <button name="openAlert" data-alertid="subsidy_program"
+                                        class="normal_btn _progress">處理中</button>
+                                </td>
+                                <td>
+                                    <label class="filter_check on">
+                                        <input type="checkbox" checked>
+                                        已收藏
+                                        <span class="filter_check_span"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="overTxtHidden">聚焦式超音波結合奈米液滴與電生理-光學造影技術於癲癇治療-負...</td>
+                                <td>6021</td>
+                                <td>110</td>
+                                <td class="txtc">
+                                    <button class="normal_btn _unprocessed">未處理</button>
+                                </td>
+                                <td>
+                                    <label class="filter_check on">
+                                        <input type="checkbox" checked>
+                                        已收藏
+                                        <span class="filter_check_span"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="overTxtHidden">帶氧微氣泡結合漩渦式聲鉗改善腫瘤微環境</td>
+                                <td>4142</td>
+                                <td>110</td>
+                                <td class="txtc">
+                                    <button name="openAlert" data-alertid="each_develop"
+                                        data-alertclass="_processed _noback" class="normal_btn _processed ">已處理</button>
+                                </td>
+                                <td>
+                                    <label class="filter_check">
+                                        <input type="checkbox" checked>
+                                        已收藏
+                                        <span class="filter_check_span"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="overTxtHidden">醫學工程學門研究發展規劃與推動計畫</td>
+                                <td>5731</td>
+                                <td>110</td>
+                                <td class="txtc">
+                                    <button class="normal_btn _progress">處理中</button>
+                                </td>
+                                <td>
+                                    <label class="filter_check">
+                                        <input type="checkbox">
+                                        已收藏
+                                        <span class="filter_check_span"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="overTxtHidden">聚焦式超音波結合奈米液滴與電生理-光學造影技術於癲癇治療-負...</td>
+                                <td>6021</td>
+                                <td>109</td>
+                                <td class="txtc">
+                                    <button class="normal_btn _unprocessed">未處理</button>
+                                </td>
+                                <td>
+                                    <label class="filter_check">
+                                        <input type="checkbox">
+                                        已收藏
+                                        <span class="filter_check_span"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="overTxtHidden">醫學工程學門研究發展規劃與推動計畫</td>
+                                <td>5731</td>
+                                <td>109</td>
+                                <td class="txtc">
+                                    <button class="normal_btn _progress">處理中</button>
+                                </td>
+                                <td>
+                                    <label class="filter_check">
+                                        <input type="checkbox">
+                                        已收藏
+                                        <span class="filter_check_span"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="overTxtHidden">聚焦式超音波結合奈米液滴與電生理-光學造影技術於癲癇治療-負...</td>
+                                <td>6021</td>
+                                <td>110</td>
+                                <td class="txtc">
+                                    <button class="normal_btn _unprocessed">未處理</button>
+                                </td>
+                                <td>
+                                    <label class="filter_check">
+                                        <input type="checkbox">
+                                        已收藏
+                                        <span class="filter_check_span"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="overTxtHidden">帶氧微氣泡結合漩渦式聲鉗改善腫瘤微環境</td>
+                                <td>4142</td>
+                                <td>110</td>
+                                <td class="txtc">
+                                    <button class="normal_btn _processed">已處理</button>
+                                </td>
+                                <td>
+                                    <label class="filter_check">
+                                        <input type="checkbox">
+                                        已收藏
+                                        <span class="filter_check_span"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="overTxtHidden">醫學工程學門研究發展規劃與推動計畫</td>
+                                <td>5731</td>
+                                <td>110</td>
+                                <td class="txtc">
+                                    <button class="normal_btn _progress">處理中</button>
+                                </td>
+                                <td>
+                                    <label class="filter_check">
+                                        <input type="checkbox">
+                                        已收藏
+                                        <span class="filter_check_span"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="overTxtHidden">聚焦式超音波結合奈米液滴與電生理-光學造影技術於癲癇治療-負...</td>
+                                <td>6021</td>
+                                <td>109</td>
+                                <td class="txtc">
+                                    <button class="normal_btn _unprocessed">未處理</button>
+                                </td>
+                                <td>
+                                    <label class="filter_check">
+                                        <input type="checkbox">
+                                        已收藏
+                                        <span class="filter_check_span"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div name="otherTab_info" class="otherTab_info" style="display: none">全部全球專利</div>
+            </div>
+
+
+            <div class="fixFooter _create">
+                <button class="normal_btn _collectcheck" name="chanePage" data-page="goback">上一步</button>
+                <button class="normal_btn _clear" name="chanePage" data-page="goback">取消</button>
+                <button class="normal_btn _save">儲存</button>
+                <button class="normal_btn _collectcheck" name="chanePage"
+                    data-page="technology_editPatent.html">下一步</button>
+
+            </div>
+        </div>
+
+
+        <!-- 摘要彈窗 -->
+        <div name="alert" id="alert_summary" class="alert" style="display: none">
+            <div class="alert_box">
+                <button name="alert_close" class="alert_close" data-alertid="alert_summary"></button>
+                <div class="alert_title">A61K摘要內容</div>
+                <div class="alert_info">
+                    醫用，牙科用或梳妝用之配製品（製成特殊物理形態者見A61J；空氣除臭，消毒或滅菌，或者繃帶，敷料，吸收墊或外科用品之化學方面或材料之使用見A61L；化合物本身見C01，C07，C08，C12N；肥皂主目合物見C11D；微生物本身見C12N）
+                </div>
+            </div>
+        </div>
+        <div id="gototop" class="gototop">
+            <i class="icon _gototop">
+                <img src="./images/icon_back_top.svg" alt="">
+            </i>
+        </div>
+    </div>
+    <script src="./js/model.js"></script>
+    <script src="./js/technology.js"></script>
+
+</body>
+
+</html>

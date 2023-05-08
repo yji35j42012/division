@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="./css/font.css">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/all.min.css">
+	<title>科展系統-搜尋</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<nav id="navContent" class="nav"></nav>
+
+		<div id="content" class="content _hasFixFooter _min1120px">
+			<div class="container _flex">
+				<div class="header">
+					<h1>建立技術摘要文件</h1>
+					<div class="header_info">
+						<i class="icon _notification" data-num="12">
+							<img src="./images/icon_notification_s.svg" alt="">
+						</i>
+						<div class="header_member">
+							<i class="icon _member">
+								<img src="./images/icon_user.svg" alt="">
+							</i>
+							<span class="header_member_name">Vincent Howard</span>
+							<i class="icon _trangle_bottom">
+								<img src="./images/icon_user_arrow.svg" alt="">
+							</i>
+						</div>
+					</div>
+				</div>
+				<ul class="breadcrumb">
+					<li class="breadcrumb_item">科產系統</li>
+					<li class="breadcrumb_item">搜尋技術與發明人</li>
+					<li class="breadcrumb_item">葉秩光</li>
+					<li class="breadcrumb_item">建立潛立技術摘要文件</li>
+				</ul>
+				<ul class="step">
+					<li class="step_item ok">技術文件標題</li>
+					<li class="step_item ok">選擇技術擁有者相關技術</li>
+					<li class="step_item on">編輯專利摘要</li>
+					<li class="step_item">我的意見及備註、檔案上傳</li>
+					<li class="step_item">完成技術摘要文件、發送文件</li>
+				</ul>
+				<h1>編輯摘要內容</h1>
+				<ul class="otherTab _chose">
+					<li class="otherTab_item _detail" name="chose_item" data-txt="已勾選" data-num="0">全部台灣專利</li>
+					<li class="otherTab_item _detail" name="chose_item" data-txt="已勾選" data-num="0">全部學術文獻</li>
+					<li class="otherTab_item _detail on" name="chose_item" data-txt="已勾選" data-num="3">全部政府補助計畫</li>
+					<li class="otherTab_item _detail" name="chose_item" data-txt="已勾選" data-num="0">全部全球專利</li>
+				</ul>
+				<div name="otherTab_info" class="otherTab_info" style="display: none">全部台灣專利</div>
+				<div name="otherTab_info" class="otherTab_info" style="display: none">全部學術文獻</div>
+				<div name="otherTab_info" class="otherTab_info">
+					<table class="normal_tb _fixed">
+						<tbody>
+							<tr>
+								<th width="40%">中文研究名稱</th>
+								<th class="icon_sort">政府補助金額(千元)</th>
+								<th class="icon_sort">計畫年度</th>
+								<th class="txtc">計畫摘要</th>
+								<th>
+									<label class="filter_check">
+										<input type="checkbox">
+										全選
+										<span class="filter_check_span"></span>
+									</label>
+								</th>
+								<th width="10%">
+									<i class="icon _delete"></i>
+								</th>
+							</tr>
+							<tr name="openAlert" data-alertid="government">
+								<td class="overTxtHidden">功能性超音波成像導引漩渦式聲鉗於血栓溶解</td>
+								<td>5332</td>
+								<td>110</td>
+								<td class="txtc">
+									<button class="normal_btn _addfile">計畫摘要</button>
+								</td>
+								<td>
+									<label class="filter_check on">
+										<input type="checkbox" checked>
+										<span class="filter_check_span"></span>
+									</label>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="overTxtHidden">聚焦式超音波結合奈米液滴與電生理-光學造影技術於癲癇治療-負...</td>
+								<td>6021</td>
+								<td>110</td>
+								<td class="txtc">
+									<button class="normal_btn _addfile">計畫摘要</button>
+								</td>
+								<td>
+									<label class="filter_check on">
+										<input type="checkbox" checked>
+										<span class="filter_check_span"></span>
+									</label>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="overTxtHidden">帶氧微氣泡結合漩渦式聲鉗改善腫瘤微環境</td>
+								<td>4142</td>
+								<td>110</td>
+								<td class="txtc">
+									<button class="normal_btn _addfile">計畫摘要</button>
+								</td>
+								<td>
+									<label class="filter_check">
+										<input type="checkbox" checked>
+										<span class="filter_check_span"></span>
+									</label>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+					<h1 class="border">技術摘要</h1>
+					<div class="normal_textareaBox">
+						<textarea name="textarea" class="normal_textarea">
+                            計畫的核心技術包括：穿顱超音波成像與治療系統，異丙酚奈米液滴的再縮合作用，以及聚焦式超音波調控異丙酚奈米液滴的再縮合作用。透過這些技術，可以實現特定腦區的藥物局部釋放，並達到非侵入性且深層抑制腦神經不正常放電，從而治療癲癇。此外，漩渦式聲鉗結合超快速影像系統平台，可用於腫瘤區域聚集帶氧微氣泡並釋放氧氣，提升腫瘤氧合作用誘發血管正常化，調控腫瘤微環境以提升後續的治療成效。本發明提供的生物膜相變液滴和藥物載體，可用於藥物釋放和載體傳送，並且可透過超音波照射觸發汽化。這些技術將有助於未來癲癇和癌症治療的發展。
+                        </textarea>
+						<button class="normal_btn _addfile">復原</button>
+					</div>
+					<h1 class="border">原理機制</h1>
+					<div class="normal_textareaBox">
+						<textarea name="textarea" class="normal_textarea">
+                            1. 穿顱超音波成像與治療系統搭配異丙酚奈米液滴的再縮合作用：透過聚焦式超音波調控異丙酚奈米液滴的再縮合作用，釋放藥物於特定腦區，並達到非侵入性且深層抑制腦神經不正常放電的效果，治療癲癇。
+                            2. 漩渦式聲鉗結合超快速影像系統平台，於腫瘤區域聚集帶氧微氣泡並釋放氧氣：透過漩渦式聲鉗結合超快速影像系統平台，聚集帶氧微氣泡於腫瘤區域並釋放氧氣，進而提升腫瘤氧合作用誘發血管正常化，調控腫瘤微環境以提升治療成效。
+                            3. 生物膜相變液滴：透過超音波照射觸發汽化，將疏水性液體核心經由一生物膜包覆的方式形成生物膜相變液滴，可作為藥物載體使用。在藥物載體中，疏水性藥物內嵌於生物膜相變液滴之生物膜上。此類液滴的用途包括藥物釋放、生物檢測等。
+                        </textarea>
+						<button class="normal_btn _addfile">復原</button>
+					</div>
+					<h1 class="border">技術特性</h1>
+					<div class="normal_textareaBox">
+						<textarea name="textarea" class="normal_textarea">
+                            1.穿顱超音波成像與治療系統：非侵入性、深層抑制腦神經不正常放電、避免奈米液滴對腦部組織的損傷、有助於治療癲癇。
+                            2.漩渦式聲鉗結合超快速影像系統平台：能聚集帶氧微氣泡並釋放氧氣、提升腫瘤氧合作用誘發血管正常化、調控腫瘤微環境以提升後續的治療成效。
+                            3.生物膜相變液滴：能被超音波照射觸發汽化、具有高穩定性，可成為藥物載體使用。
+                            4.藥物局部釋放：避免全身性的副作用，提高治療效果。
+                            5.產品商品化：有助於推廣技術、提高技術的可行性、挑戰臨床運用的可能性。
+                        </textarea>
+						<button class="normal_btn _addfile">復原</button>
+					</div>
+					<h1 class="border">應用市場</h1>
+					<div class="normal_textareaBox">
+						<textarea name="textarea" class="normal_textarea">
+								1.穿顱超音波成像與治療系統搭配異丙酚奈米液滴的藥物局部釋放技術可應用於癲癇治療市場。
+								2.漩渦式聲鉗結合超快速影像系統平台釋放氧氣可應用於癌症治療市場。
+								3.帶氧微氣泡在臨床診斷與治療中具有多功能特性，可應用於多個市場，如腫瘤治療、心血管疾病診斷、神經學疾病治療等。
+                        </textarea>
+						<button class="normal_btn _addfile">復原</button>
+					</div>
+
+				</div>
+				<div name="otherTab_info" class="otherTab_info" style="display: none">全部全球專利</div>
+			</div>
+
+
+			<div class="fixFooter _create">
+				<button class="normal_btn _collectcheck" name="chanePage" data-page="goback">上一步</button>
+				<button class="normal_btn _clear" name="chanePage" data-page="goback">取消</button>
+				<button class="normal_btn _save">儲存</button>
+				<button class="normal_btn _collectcheck" name="chanePage"
+					data-page="technology_create.html">下一步</button>
+
+			</div>
+		</div>
+
+
+		<!-- 摘要彈窗 -->
+		<div name="alert" id="alert_summary" class="alert" style="display: none">
+			<div class="alert_box">
+				<button name="alert_close" class="alert_close" data-alertid="alert_summary"></button>
+				<div class="alert_title">A61K摘要內容</div>
+				<div class="alert_info">
+					醫用，牙科用或梳妝用之配製品（製成特殊物理形態者見A61J；空氣除臭，消毒或滅菌，或者繃帶，敷料，吸收墊或外科用品之化學方面或材料之使用見A61L；化合物本身見C01，C07，C08，C12N；肥皂主目合物見C11D；微生物本身見C12N）
+				</div>
+			</div>
+		</div>
+		<div id="gototop" class="gototop">
+			<i class="icon _gototop">
+				<img src="./images/icon_back_top.svg" alt="">
+			</i>
+		</div>
+	</div>
+	<script src="./js/model.js"></script>
+	<script src="./js/technology.js"></script>
+
+</body>
+
+</html>
