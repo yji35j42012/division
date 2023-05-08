@@ -429,16 +429,59 @@ if (textarea) {
 		var newtxt = "";
 		for (let i = 0; i < txt.split(" ").length; i++) {
 			if (txt.split(" ")[i] !== "") {
-				let tab = txt.split(" ")[i].split('\t')
-				for (let j = 0; j < txt.split(" ")[i].split('\t').length; j++) {
-					if (txt.split(" ")[i].split('\t')[j] !== '\t') {
-						newtxt += txt.split(" ")[i].split('\t')[j];
+				let tab = txt.split(" ")[i].split("\t");
+				for (let j = 0; j < tab.length; j++) {
+					if (tab[j] !== "\t") {
+						newtxt += tab[j];
 					}
-
 				}
-
 			}
 		}
 		element.innerHTML = newtxt;
 	}
+}
+
+var uploadDrop = document.querySelector("#uploadDrop");
+if (uploadDrop) {
+	function preventDefaults(e) {
+		e.preventDefault();
+		e.stopPropagation();
+	}
+	// 設置拖曳效果
+	function highlight() {
+		uploadDrop.classList.add("highlight");
+	}
+	function unhighlight() {
+		uploadDrop.classList.remove("highlight");
+	}
+	// 上傳檔案
+	function uploadFile(file) {
+		// const formData = new FormData();
+		// formData.append("file", file);
+
+		// // 使用 XMLHttpRequest 來上傳檔案
+		// const xhr = new XMLHttpRequest();
+		// xhr.open("POST", "/upload");
+		// xhr.send(formData);
+	}
+	// 監聽拖曳事件
+	["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
+		uploadDrop.addEventListener(eventName, preventDefaults, false);
+	});
+
+	["dragenter", "dragover"].forEach(eventName => {
+		uploadDrop.addEventListener(eventName, highlight, false);
+	});
+
+	["dragleave", "drop"].forEach(eventName => {
+		uploadDrop.addEventListener(eventName, unhighlight, false);
+	});
+
+	// 處理拖曳上傳
+	uploadDrop.addEventListener("drop", e => {
+		const files = e.dataTransfer.files;
+		for (let i = 0; i < files.length; i++) {
+			uploadFile(files[i]);
+		}
+	});
 }

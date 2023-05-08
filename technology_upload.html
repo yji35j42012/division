@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="./css/font.css">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/all.min.css">
+	<title>科展系統-搜尋</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<nav id="navContent" class="nav"></nav>
+
+		<div id="content" class="content _hasFixFooter _min1120px">
+			<div class="container _flex">
+				<div class="header">
+					<h1>建立技術摘要文件</h1>
+					<div class="header_info">
+						<i class="icon _notification" data-num="12">
+							<img src="./images/icon_notification_s.svg" alt="">
+						</i>
+						<div class="header_member">
+							<i class="icon _member">
+								<img src="./images/icon_user.svg" alt="">
+							</i>
+							<span class="header_member_name">Vincent Howard</span>
+							<i class="icon _trangle_bottom">
+								<img src="./images/icon_user_arrow.svg" alt="">
+							</i>
+						</div>
+					</div>
+				</div>
+				<ul class="breadcrumb">
+					<li class="breadcrumb_item">科產系統</li>
+					<li class="breadcrumb_item">搜尋技術與發明人</li>
+					<li class="breadcrumb_item">葉秩光</li>
+					<li class="breadcrumb_item">建立潛立技術摘要文件</li>
+				</ul>
+				<ul class="step">
+					<li class="step_item ok">技術文件標題</li>
+					<li class="step_item ok">選擇技術擁有者相關技術</li>
+					<li class="step_item ok">編輯專利摘要</li>
+					<li class="step_item on">我的意見及備註、檔案上傳</li>
+					<li class="step_item">完成技術摘要文件、發送文件</li>
+				</ul>
+				<h1>請填入意見及備註</h1>
+				<ul class="technology_item_detail _inp">
+					<li class="technology_item_list _full _juce">
+						<i class="icon _note" data-txt="隱藏意見在發送文件時，發送對象不會看到其內容。"></i>隱藏
+						<label class="normal_state">
+							<input type="checkbox">
+							<span class="normal_state_box"></span>
+						</label>
+					</li>
+					<li class="technology_item_list _full _alis" data-title="我的意見：">
+
+						<textarea class="normal_textarea" placeholder="請輸入竟見，至多500字"></textarea>
+					</li>
+					<li class="technology_item_list _full _juce">
+						<i class="icon _note" data-txt="隱藏意見在發送文件時，發送對象不會看到其內容。"></i>隱藏
+						<label class="normal_state">
+							<input type="checkbox">
+							<span class="normal_state_box"></span>
+						</label>
+					</li>
+					<li class="technology_item_list _full _alis" data-title="備註：">
+						<textarea class="normal_textarea" placeholder="請輸入備註，至多300字"></textarea>
+					</li>
+				</ul>
+				<div class="uploadBox">
+					<h1 class="border">檔案上傳</h1>
+					<div class="uploadBox_area" id="uploadDrop">
+						<i class="icon _uploadImg"></i>
+						<div class="uploadBox_area_txt">選擇一個文件或拖放到這裡</div>
+						<div class="uploadBox_area_note">檔案大小不超過 3MB</div>
+						<label class="normal_btn _addfile">
+							選擇檔案
+							<input type="file">
+						</label>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="fixFooter _create">
+				<button class="normal_btn _collectcheck" name="chanePage" data-page="goback">上一步</button>
+				<button class="normal_btn _clear" name="chanePage" data-page="goback">取消</button>
+				<button class="normal_btn _save">儲存</button>
+				<button class="normal_btn _collectcheck" name="chanePage"
+					data-page="technology_create.html">下一步</button>
+
+			</div>
+		</div>
+
+
+		<!-- 摘要彈窗 -->
+		<div name="alert" id="alert_summary" class="alert" style="display: none">
+			<div class="alert_box">
+				<button name="alert_close" class="alert_close" data-alertid="alert_summary"></button>
+				<div class="alert_title">摘要內容</div>
+				<div class="alert_info">
+					本計畫規劃目的在於承續以往醫工先進的研究基礎與科技部持續的支持所建立之有利發展環境下，進一步掌握此醫工學門成長契機，提供醫工領域的所有學界研究人員及學生積極有效的支援研究與推動產學之間的合作。在研究創新、產業服務上積極互動並貢獻產業、臨床醫工研究上積極投入，以造福國人等目標以回饋國家與社會。為因應世界發展趨勢和有效運用國內、外醫工研究資源，本計畫將推動多項工作，以便能順利推動醫工學門內的各項研究計畫及活動，提升醫工研究學術成果，並擴大醫工研究成果於醫療科技產業的整合應用。
+				</div>
+				<div class="alert_func _mt40">
+					<button name="alert_close" class="normal_btn _close" data-alertid="alert_summary">關閉</button>
+				</div>
+			</div>
+		</div>
+		<div id="gototop" class="gototop">
+			<i class="icon _gototop">
+				<img src="./images/icon_back_top.svg" alt="">
+			</i>
+		</div>
+	</div>
+	<script src="./js/model.js"></script>
+	<script src="./js/technology.js"></script>
+
+</body>
+
+</html>
