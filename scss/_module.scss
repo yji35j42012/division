@@ -2163,7 +2163,6 @@ td.txtc {
 			display: none;
 		}
 	}
-
 	.tab {
 		justify-content: center;
 		margin-bottom: 30px;
@@ -2526,6 +2525,7 @@ td.txtc {
 	}
 	// .fileInfo_item
 	&_item {
+		position: relative;
 		@include d_f(flex, none, center);
 		width: calc(100% / 3 - 10px);
 		max-width: 374px;
@@ -2585,6 +2585,19 @@ td.txtc {
 				color: #556ff6;
 			}
 		}
+
+		&._notice:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 24px;
+			height: 24px;
+			border-radius: 100px;
+			transform: translate(-50%, -50%);
+			background: url("../images/icon_notice_w.svg") no-repeat center/13px
+				13px #e00a0a;
+		}
 	}
 }
 
@@ -2624,8 +2637,6 @@ td.txtc {
 			margin: auto;
 			background: url(../images/icon_select_arrow.svg) no-repeat
 				center/cover;
-			-webkit-filter: invert(72%) sepia(25%) saturate(5982%)
-				hue-rotate(199deg) brightness(110%) contrast(94%);
 			filter: invert(38%) sepia(42%) saturate(3751%) hue-rotate(219deg)
 				brightness(100%) contrast(93%);
 		}

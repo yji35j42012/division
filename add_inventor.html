@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="./css/font.css">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/all.min.css">
+	<title>科展系統-搜尋</title>
+</head>
+
+<body>
+	<div class="addInventor">
+		<div class="addInventor_head">科產系統平台</div>
+		<div class="addInventor_content">
+			<ul class="addInventor_group">
+				<li class="addInventor_item">
+					<div class="addInventor_item_name">葉秩光</div>
+					<div>
+						<div class="addInventor_item_list" data-title="現職：">清華大學生醫工程與環境科學系(所)/清華大學核子工程與科學研究所</div>
+						<div class="addInventor_item_list" data-title="所屬服務單位：">清華大學</div>
+						<div class="addInventor_item_list" data-title="職級：">特聘教授/特聘教授</div>
+					</div>
+				</li>
+				<li class="addInventor_item" data-title="合作專長：">
+					細胞和分子生物學 、內科學；超音波學；胸腔醫學；重症醫學；國人肺癌的基因體及轉譯醫學研究、癌症基因體學；癌轉移之分子調控機制；癌之生物標誌及個人化醫療
+				</li>
+			</ul>
+
+			<ul class="addInventor_group">
+				<li class="addInventor_item _title">簡歷介紹</li>
+				<li class="addInventor_item _note">請填入相關介紹，能夠幫助科產經理或企業有更多對於您的資訊</li>
+				<li class="addInventor_item _alic _min80" data-title="標題：">
+					<input type="text" class="normal_inp" placeholder="請輸入標題，如個人簡歷、得獎項目...等">
+				</li>
+				<li class="addInventor_item _min80" data-title="介紹內容：">
+					<textarea class="normal_textarea" placeholder="請輸入針對標題的相關內容"></textarea>
+				</li>
+			</ul>
+
+			<div class="addInventor_box">
+				<div class="addInventor_choseTxt">請選擇有意願商化之技術專利</div>
+				<label class="alert_search">
+					<i class="icon _search">
+						<img src="./images/icon_search_normal.svg" alt="">
+					</i>
+					<input type="text" placeholder="請輸入關鍵字">
+				</label>
+				<ul class="otherTab">
+					<li class="otherTab_item" name="resume_item">全部台灣專利</li>
+					<li class="otherTab_item" name="resume_item">全部學術文獻</li>
+					<li class="otherTab_item on" name="resume_item">全部政府補助計畫</li>
+					<li class="otherTab_item" name="resume_item">全部全球專利</li>
+				</ul>
+				<div class="addInventor_tbBox">
+					<table class="normal_tb">
+						<tr>
+							<th>中文研究名稱</th>
+							<th class="icon_sort">政府補助金額(千元)</th>
+							<th class="icon_sort">計畫年度</th>
+							<th>商化意願別</th>
+						</tr>
+						<tr>
+							<td>功能性超音波成像導引漩渦式聲鉗於血栓溶解</td>
+							<td>5332</td>
+							<td>110</td>
+							<td>
+								<label class="addInventor_select" name="addInventor_select">
+									<span class="addInventor_select_txt">請選擇商化意願別</span>
+									<ul class="addInventor_select_ul">
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												帶領實驗室投入創業(自行創業)
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術由他人運用創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業專家共同投入創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業諮詢/輔導
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要廠商協助創新技術進行
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												解決廠商技術瓶頸
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												與廠商共同研提合作計畫
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術移轉他人
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												其他
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+									</ul>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>聚焦式超音波結合奈米液滴與電生理-光學造影技術於癲癇治療-負...</td>
+							<td>6021</td>
+							<td>110</td>
+							<td>
+								<label class="addInventor_select" name="addInventor_select">
+									<span class="addInventor_select_txt">請選擇商化意願別</span>
+									<ul class="addInventor_select_ul">
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												帶領實驗室投入創業(自行創業)
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術由他人運用創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業專家共同投入創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業諮詢/輔導
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要廠商協助創新技術進行
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												解決廠商技術瓶頸
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												與廠商共同研提合作計畫
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術移轉他人
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												其他
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+									</ul>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>帶氧微氣泡結合漩渦式聲鉗改善腫瘤微環境</td>
+							<td>4142</td>
+							<td>110</td>
+							<td>
+								<label class="addInventor_select" name="addInventor_select">
+									<span class="addInventor_select_txt">請選擇商化意願別</span>
+									<ul class="addInventor_select_ul">
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												帶領實驗室投入創業(自行創業)
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術由他人運用創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業專家共同投入創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業諮詢/輔導
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要廠商協助創新技術進行
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												解決廠商技術瓶頸
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												與廠商共同研提合作計畫
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術移轉他人
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												其他
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+									</ul>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>醫學工程學門研究發展規劃與推動計畫</td>
+							<td>5731</td>
+							<td>110</td>
+							<td>
+								<label class="addInventor_select" name="addInventor_select">
+									<span class="addInventor_select_txt">請選擇商化意願別</span>
+									<ul class="addInventor_select_ul">
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												帶領實驗室投入創業(自行創業)
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術由他人運用創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業專家共同投入創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業諮詢/輔導
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要廠商協助創新技術進行
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												解決廠商技術瓶頸
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												與廠商共同研提合作計畫
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術移轉他人
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												其他
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+									</ul>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>聚焦式超音波結合奈米液滴與電生理-光學造影技術於癲癇治療-負...</td>
+							<td>6021</td>
+							<td>109</td>
+							<td>
+								<label class="addInventor_select" name="addInventor_select">
+									<span class="addInventor_select_txt">請選擇商化意願別</span>
+									<ul class="addInventor_select_ul">
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												帶領實驗室投入創業(自行創業)
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術由他人運用創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業專家共同投入創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業諮詢/輔導
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要廠商協助創新技術進行
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												解決廠商技術瓶頸
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												與廠商共同研提合作計畫
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術移轉他人
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												其他
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+									</ul>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>醫學工程學門研究發展規劃與推動計畫</td>
+							<td>5731</td>
+							<td>109</td>
+							<td>
+								<label class="addInventor_select" name="addInventor_select">
+									<span class="addInventor_select_txt">請選擇商化意願別</span>
+									<ul class="addInventor_select_ul">
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												帶領實驗室投入創業(自行創業)
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術由他人運用創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業專家共同投入創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業諮詢/輔導
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要廠商協助創新技術進行
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												解決廠商技術瓶頸
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												與廠商共同研提合作計畫
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術移轉他人
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												其他
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+									</ul>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>帶氧微氣泡結合漩渦式聲鉗改善腫瘤微環境</td>
+							<td>4142</td>
+							<td>110</td>
+							<td>
+								<label class="addInventor_select" name="addInventor_select">
+									<span class="addInventor_select_txt">請選擇商化意願別</span>
+									<ul class="addInventor_select_ul">
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												帶領實驗室投入創業(自行創業)
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術由他人運用創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業專家共同投入創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業諮詢/輔導
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要廠商協助創新技術進行
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												解決廠商技術瓶頸
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												與廠商共同研提合作計畫
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術移轉他人
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												其他
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+									</ul>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>醫學工程學門研究發展規劃與推動計畫</td>
+							<td>5731</td>
+							<td>110</td>
+							<td>
+								<label class="addInventor_select" name="addInventor_select">
+									<span class="addInventor_select_txt">請選擇商化意願別</span>
+									<ul class="addInventor_select_ul">
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												帶領實驗室投入創業(自行創業)
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術由他人運用創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業專家共同投入創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業諮詢/輔導
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要廠商協助創新技術進行
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												解決廠商技術瓶頸
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												與廠商共同研提合作計畫
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術移轉他人
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												其他
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+									</ul>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>帶氧微氣泡結合漩渦式聲鉗改善腫瘤微環境</td>
+							<td>4142</td>
+							<td>110</td>
+							<td>
+								<label class="addInventor_select" name="addInventor_select">
+									<span class="addInventor_select_txt">請選擇商化意願別</span>
+									<ul class="addInventor_select_ul">
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												帶領實驗室投入創業(自行創業)
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術由他人運用創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業專家共同投入創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業諮詢/輔導
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要廠商協助創新技術進行
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												解決廠商技術瓶頸
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												與廠商共同研提合作計畫
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術移轉他人
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												其他
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+									</ul>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>聚焦式超音波結合奈米液滴與電生理-光學造影技術於癲癇治療-負...</td>
+							<td>6021</td>
+							<td>109</td>
+							<td>
+								<label class="addInventor_select" name="addInventor_select">
+									<span class="addInventor_select_txt">請選擇商化意願別</span>
+									<ul class="addInventor_select_ul">
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												帶領實驗室投入創業(自行創業)
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術由他人運用創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業專家共同投入創業
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要創業諮詢/輔導
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												需要廠商協助創新技術進行
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												解決廠商技術瓶頸
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												與廠商共同研提合作計畫
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												技術移轉他人
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+										<li class="addInventor_select_li _inventor">
+											<label class="filter_check " name="addInventor_check">
+												<input type="checkbox">
+												其他
+												<span class="filter_check_span"></span>
+											</label>
+										</li>
+									</ul>
+								</label>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<ul class="page _file">
+				<li class="page_item _prev">«</li>
+				<li class="page_item on">1</li>
+				<li class="page_item">2</li>
+				<li class="page_item">3</li>
+				<li class="page_item _next">»</li>
+			</ul>
+
+			<button class="normal_btn _save">完成送出</button>
+		</div>
+
+		<div id="gototop" class="gototop">
+			<i class="icon _gototop">
+				<img src="./images/icon_back_top.svg" alt="">
+			</i>
+		</div>
+	</div>
+
+	<script src="./js/add_inventor.js"></script>
+</body>
+
+</html>
