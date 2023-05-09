@@ -19,7 +19,7 @@
 		height: calc(100% - 60px);
 		flex-direction: column;
 		padding: 38px 20px 63px;
-		._save{
+		._save {
 			flex: none;
 			min-width: 120px;
 			height: 42px;
@@ -139,6 +139,7 @@
 
 		// addInventor_select_ul
 		&_ul {
+			z-index: 1;
 			position: absolute;
 			top: calc(100% + 5px);
 			left: 0;
@@ -168,9 +169,17 @@
 				margin-top: 10px;
 			}
 		}
+		// .addInventor_select_txt
+		&_txt {
+			td &._inventor {
+				@include d_f(flex, flex-start, center);
+				width: 100%;
+				height: 100%;
+			}
+		}
 	}
 	// .addInventor_tbBox
-	&_tbBox{
+	&_tbBox {
 		margin-top: 20px;
 	}
 }
