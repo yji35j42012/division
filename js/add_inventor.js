@@ -32,7 +32,7 @@ if (addInventor_select) {
 				element.classList.remove("on");
 				addInventor_count = null;
 			} else {
-				addInventor_select[addInventor_count].remove("on");
+				addInventor_select[addInventor_count].classList.remove("on");
 				element.classList.add("on");
 				addInventor_count = i;
 			}
