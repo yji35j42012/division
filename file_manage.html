@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="./css/font.css">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/all.min.css">
+	<title>科展系統-搜尋</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<nav id="navContent" class="nav"></nav>
+
+		<div id="content" class="content _min1120px">
+			<div class="container">
+				<div class="header">
+					<h1>建立技術摘要文件</h1>
+					<div class="header_info">
+						<i class="icon _notification" data-num="12">
+							<img src="./images/icon_notification_s.svg" alt="">
+						</i>
+						<div class="header_member">
+							<i class="icon _member">
+								<img src="./images/icon_user.svg" alt="">
+							</i>
+							<span class="header_member_name">Vincent Howard</span>
+							<i class="icon _trangle_bottom">
+								<img src="./images/icon_user_arrow.svg" alt="">
+							</i>
+						</div>
+					</div>
+				</div>
+				<ul class="breadcrumb">
+					<li class="breadcrumb_item">科產系統</li>
+					<li class="breadcrumb_item">技術摘要文件管理</li>
+					<li class="breadcrumb_item">收藏夾</li>
+				</ul>
+
+				<ul id="fileTab" class="fileTab">
+					<li class="fileTab_item _folder on">
+						收藏夾
+						<span class="fileTab_item_count">5</span>
+					</li>
+					<li class="fileTab_item _file" data-count="4">
+						技術摘要文件
+						<span class="fileTab_item_count">4</span>
+					</li>
+				</ul>
+
+				<div class="fileInfo" name="fileInfo">
+					<div class="fileInfo_func">
+						<label class="alert_search">
+							<i class="icon _search">
+								<img src="./images/icon_search_normal.svg" alt="">
+							</i>
+							<input type="text" placeholder="請輸入關鍵字">
+						</label>
+						<button class="normal_btn _collectfolder">新増收藏夾</button>
+					</div>
+					<div class="fileInfo_box">
+						<label class="filter_check">
+							<input type="checkbox">
+							全選
+							<span class="filter_check_span"></span>
+						</label>
+						<i class="icon _delete"></i>
+						<ul class="fileInfo_group">
+							<li class="fileInfo_item _folder">
+								<span class="fileInfo_item_name" data-txt="超音波治療">葉秩光</span>
+								<span class="fileInfo_item_num" data-count="3">
+									<label class="filter_check">
+										<input type="checkbox">
+										<span class="filter_check_span"></span>
+									</label>
+								</span>
+							</li>
+							<li class="fileInfo_item _folder">
+								<span class="fileInfo_item_name" data-txt="帶氧微氣泡">葉秩光</span>
+								<span class="fileInfo_item_num" data-count="5">
+									<label class="filter_check">
+										<input type="checkbox">
+										<span class="filter_check_span"></span>
+									</label>
+								</span>
+							</li>
+							<li class="fileInfo_item _folder">
+								<span class="fileInfo_item_name" data-txt="無創治療">葉秩光</span>
+								<span class="fileInfo_item_num" data-count="2">
+									<label class="filter_check">
+										<input type="checkbox">
+										<span class="filter_check_span"></span>
+									</label>
+								</span>
+							</li>
+							<li class="fileInfo_item _folder">
+								<span class="fileInfo_item_name" data-txt="聚焦式超音波">劉浩澧</span>
+								<span class="fileInfo_item_num" data-count="2">
+									<label class="filter_check">
+										<input type="checkbox">
+										<span class="filter_check_span"></span>
+									</label>
+								</span>
+							</li>
+							<li class="fileInfo_item _folder">
+								<span class="fileInfo_item_name" data-txt="血腦屏障">劉浩澧</span>
+								<span class="fileInfo_item_num" data-count="2">
+									<label class="filter_check">
+										<input type="checkbox">
+										<span class="filter_check_span"></span>
+									</label>
+								</span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="fileInfo" name="fileInfo" style="display: none">
+					<div class="fileInfo_func">
+						<label class="alert_search">
+							<i class="icon _search">
+								<img src="./images/icon_search_normal.svg" alt="">
+							</i>
+							<input type="text" placeholder="請輸入關鍵字">
+						</label>
+						<button class="normal_btn _addfile">建立技術摘要文件</button>
+					</div>
+					<div class="fileInfo_box">
+						<ul id="stateTab" class="stateTab">
+							<li class="stateTab_item on">全部</li>
+							<li class="stateTab_item">已完成</li>
+							<li class="stateTab_item">儲存中</li>
+						</ul>
+						<label class="filter_check">
+							<input type="checkbox">
+							全選
+							<span class="filter_check_span"></span>
+						</label>
+						<i class="icon _delete"></i>
+						<ul class="fileInfo_group">
+							<li class="fileInfo_item _file">
+								<span class="fileInfo_item_name" data-txt="超音波治療">葉秩光</span>
+								<span class="fileInfo_item_num" >
+									<label class="filter_check">
+										<input type="checkbox">
+										<span class="filter_check_span"></span>
+									</label>
+								</span>
+							</li>
+							<li class="fileInfo_item _file">
+								<span class="fileInfo_item_name" data-txt="帶氧微氣泡">葉秩光</span>
+								<span class="fileInfo_item_num" >
+									<label class="filter_check">
+										<input type="checkbox">
+										<span class="filter_check_span"></span>
+									</label>
+								</span>
+							</li>
+							<li class="fileInfo_item _file">
+								<span class="fileInfo_item_name" data-txt="無創治療">葉秩光</span>
+								<span class="fileInfo_item_num" >
+									<label class="filter_check">
+										<input type="checkbox">
+										<span class="filter_check_span"></span>
+									</label>
+								</span>
+							</li>
+							<li class="fileInfo_item _file">
+								<span class="fileInfo_item_name" data-txt="聚焦式超音波">劉浩澧</span>
+								<span class="fileInfo_item_num" >
+									<label class="filter_check">
+										<input type="checkbox">
+										<span class="filter_check_span"></span>
+									</label>
+								</span>
+							</li>
+							<li class="fileInfo_item _file">
+								<span class="fileInfo_item_name" data-txt="血腦屏障">劉浩澧</span>
+								<span class="fileInfo_item_num" >
+									<label class="filter_check">
+										<input type="checkbox">
+										<span class="filter_check_span"></span>
+									</label>
+								</span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+
+				<ul class="page _file">
+					<li class="page_item _prev">«</li>
+					<li class="page_item on">1</li>
+					<li class="page_item">2</li>
+					<li class="page_item">3</li>
+					<li class="page_item _next">»</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div id="gototop" class="gototop">
+			<i class="icon _gototop">
+				<img src="./images/icon_back_top.svg" alt="">
+			</i>
+		</div>
+	</div>
+	<script src="./js/model.js"></script>
+	<script src="./js/technology.js"></script>
+
+</body>
+
+</html>
