@@ -597,6 +597,7 @@ td.txtc {
 	padding-bottom: 66px;
 	&._hasFixFooter {
 		padding-bottom: 105px;
+		height: calc(100% - 105px);
 	}
 }
 .header {

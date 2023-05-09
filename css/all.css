@@ -934,6 +934,7 @@ input:checked + .normal_state_box::before {
 
 .content._hasFixFooter {
   padding-bottom: 105px;
+  height: calc(100% - 105px);
 }
 
 .header {
