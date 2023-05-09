@@ -369,21 +369,14 @@ td.txtc {
 	}
 	&._addfile {
 		@include d_f(inline-flex, center, center);
-		min-width: 182px;
-		height: 42px;
-		margin-left: 20px;
+		min-width: 136px;
+		height: 34px;
+		// margin-left: 20px;
 		font-size: 16px;
 		color: #556ff6;
 		border-radius: 6px;
 		border: solid 1px #556ff6;
-		&::before {
-			content: "";
-			display: block;
-			width: 24px;
-			height: 24px;
-			margin-right: 10px;
-			background: url("../images/icon_file.svg") no-repeat center/contain;
-		}
+
 		@include hoverHandler {
 			background-color: #e3ecfd;
 			color: #182b4d;
@@ -1317,6 +1310,9 @@ td.txtc {
 			}
 			.normal_btn + .normal_btn {
 				margin-top: 14px;
+			}
+			._addfile {
+				margin-left: 0;
 			}
 		}
 		// .technology_item_name
@@ -2480,6 +2476,20 @@ td.txtc {
 	// .fileInfo_func
 	&_func {
 		@include d_f(flex, none, center);
+		._addfile {
+			min-width: 182px;
+			height: 42px;
+			margin-left: 20px;
+			&::before {
+				content: "";
+				display: block;
+				width: 24px;
+				height: 24px;
+				margin-right: 10px;
+				background: url("../images/icon_file.svg") no-repeat
+					center/contain;
+			}
+		}
 	}
 	.alert_search {
 		width: 100%;

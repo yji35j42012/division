@@ -601,22 +601,12 @@ input:checked + .normal_state_box::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 182px;
-  height: 42px;
-  margin-left: 20px;
+  min-width: 136px;
+  height: 34px;
   font-size: 16px;
   color: #556ff6;
   border-radius: 6px;
   border: solid 1px #556ff6;
-}
-
-.normal_btn._addfile::before {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-  background: url("../images/icon_file.svg") no-repeat center/contain;
 }
 
 @media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
@@ -2051,6 +2041,10 @@ input:checked + .filter_check_span:before {
 
 .technology_item_info .normal_btn + .normal_btn {
   margin-top: 14px;
+}
+
+.technology_item_info ._addfile {
+  margin-left: 0;
 }
 
 .technology_item_name {
@@ -3680,6 +3674,21 @@ input:checked + .filter_check_span:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.fileInfo_func ._addfile {
+  min-width: 182px;
+  height: 42px;
+  margin-left: 20px;
+}
+
+.fileInfo_func ._addfile::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background: url("../images/icon_file.svg") no-repeat center/contain;
 }
 
 .fileInfo .alert_search {
