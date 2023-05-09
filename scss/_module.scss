@@ -2384,6 +2384,7 @@ td.txtc {
 	}
 	// .sendBox_info
 	&_info {
+		padding-bottom: 30px;
 		& + & {
 			margin-top: 20px;
 			border-top: 1px solid #dce0eb;
@@ -2394,8 +2395,6 @@ td.txtc {
 			padding-top: 40px;
 			border-top: 1px solid #dce0eb;
 		}
-		// 	@include d_f(flex,none,center);
-		// 	flex-direction: column;
 	}
 }
 

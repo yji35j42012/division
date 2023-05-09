@@ -3539,6 +3539,10 @@ input:checked + .filter_check_span:before {
   margin: 30px auto 0;
 }
 
+.sendBox_info {
+  padding-bottom: 30px;
+}
+
 .sendBox_info + .sendBox_info {
   margin-top: 20px;
   border-top: 1px solid #dce0eb;
