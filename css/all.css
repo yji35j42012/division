@@ -124,7 +124,7 @@ input:checked + .normal_state_box::before {
   color: #a9b0c7;
 }
 
-._send .normal_inp {
+._full .normal_inp {
   width: 100%;
   max-width: 100%;
 }
@@ -147,7 +147,6 @@ input:checked + .normal_state_box::before {
   white-space: pre-line;
   word-wrap: break-word;
   word-break: break-all;
-  resize: none;
 }
 
 .normal_textareaBox ._addfile {
@@ -165,6 +164,23 @@ input:checked + .normal_state_box::before {
   background-color: #fff;
   font-size: 16px;
   line-height: 24px;
+  resize: none;
+}
+
+.normal_textarea::-webkit-input-placeholder {
+  color: #a9b0c7;
+}
+
+.normal_textarea:-ms-input-placeholder {
+  color: #a9b0c7;
+}
+
+.normal_textarea::-ms-input-placeholder {
+  color: #a9b0c7;
+}
+
+.normal_textarea::placeholder {
+  color: #a9b0c7;
 }
 
 .normal_btn {
@@ -1432,6 +1448,20 @@ input:checked + .normal_state_box::before {
   background: url("../images/icon_file_ok.svg") no-repeat center/contain;
 }
 
+.icon._sendFinish {
+  width: 120px;
+  height: 120px;
+  background: url("../images/icon_emailsend.svg") no-repeat center/contain;
+  margin: 20px auto 0;
+}
+
+.icon._saveFile {
+  width: 120px;
+  height: 120px;
+  background: url("../images/icon_file_save.svg") no-repeat center/contain;
+  margin: 20px auto 0;
+}
+
 .icon svg {
   width: 100%;
   height: 100%;
@@ -2040,6 +2070,7 @@ input:checked + .filter_check_span:before {
 }
 
 .technology_item_detail._send {
+  width: 100%;
   padding: 0;
 }
 
@@ -2147,7 +2178,7 @@ input:checked + .filter_check_span:before {
   padding-top: 0;
 }
 
-._send .technology_item_list:nth-child(1)::before {
+.technology_item_list._name::before {
   color: #212529;
 }
 
@@ -2158,6 +2189,17 @@ input:checked + .filter_check_span:before {
 ._send .technology_item_list,
 ._send .technology_item_list + .technology_item_list {
   margin-top: 36px;
+}
+
+.technology_item_list._email {
+  width: 100%;
+  max-width: calc(100% - 360px - 60px);
+  margin-left: 60px;
+}
+
+.technology_item_list._mailName {
+  width: 100%;
+  max-width: 360px;
 }
 
 .technology_technical {
@@ -2566,7 +2608,8 @@ input:checked + .filter_check_span:before {
           justify-content: flex-start;
 }
 
-.fixFooter._create ._save {
+.fixFooter._create ._clear:not(._all) + ._save,
+.fixFooter._create ._clear + ._all {
   margin-left: auto;
 }
 
@@ -2635,6 +2678,14 @@ input:checked + .filter_check_span:before {
   max-width: 1330px;
   padding-left: 0;
   padding-right: 0;
+}
+
+._editPatent .alert_box {
+  padding-bottom: 30px;
+}
+
+._saveFile .alert_box {
+  max-width: 700px;
 }
 
 .alert_title {
@@ -2995,6 +3046,15 @@ input:checked + .filter_check_span:before {
   margin-top: 40px;
 }
 
+.alert_func._mt70 {
+  margin-top: 70px;
+}
+
+.alert_func ._close {
+  min-width: 120px;
+  height: 42px;
+}
+
 .alert .folderGroup {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3142,6 +3202,18 @@ input:checked + .filter_check_span:before {
 
 .alert._t20 .show_unt20 {
   display: none;
+}
+
+.alert_sendFinishTxt, .alert_saveFileTxt {
+  margin-top: 20px;
+  line-height: 1.88;
+  font-size: 16px;
+  color: #212529;
+  text-align: center;
+}
+
+.alert_note {
+  color: #556ff6;
 }
 
 .fz20px {
@@ -3414,6 +3486,31 @@ input:checked + .filter_check_span:before {
 .sendBox .normal_btn {
   width: 120px;
   height: 42px;
+  margin: 30px 0 0;
+}
+
+.sendBox ._collectcheck,
+.sendBox ._addfile {
   margin: 30px auto 0;
+}
+
+.sendBox_info + .sendBox_info {
+  margin-top: 20px;
+  border-top: 1px solid #dce0eb;
+}
+
+._collectcheck + .sendBox_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #dce0eb;
 }
 /*# sourceMappingURL=all.css.map */

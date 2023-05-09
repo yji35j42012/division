@@ -68,11 +68,9 @@
 
 
             <div class="fixFooter _create">
-                <button class="normal_btn _clear" name="chanePage"
-                data-page="goback">放棄建立</button>
-                <button class="normal_btn _save">儲存</button>
-                <button class="normal_btn _collectcheck" name="chanePage"
-                    data-page="technology_chose.html">下一步</button>
+                <button class="normal_btn _clear" name="chanePage" data-page="goback">放棄建立</button>
+                <button class="normal_btn _save" name="openAlert" data-alertid="alert_saveFile">儲存</button>
+                <button class="normal_btn _collectcheck" name="chanePage" data-page="technology_chose.html">下一步</button>
 
             </div>
         </div>
@@ -92,6 +90,24 @@
             <i class="icon _gototop">
                 <img src="./images/icon_back_top.svg" alt="">
             </i>
+        </div>
+        <!-- 加入收藏 -->
+        <div name="alert" id="alert_saveFile" class="alert _saveFile" style="display: none">
+            <div class="alert_box">
+                <button name="alert_close" class="alert_close" data-alertid="alert_saveFile"></button>
+                <div class="alert_title">儲存技術摘要文件</div>
+                <div class="alert_info">
+                    <i class="icon _saveFile"></i>
+                    <div class="alert_saveFileTxt">
+                        將儲存現階段內容，儲存後可繼續編輯， <br>
+                        之後也可在<span class="alert_note">「技術摘要文件管理」</span>中編輯
+                    </div>
+                </div>
+                <div class="alert_func _mt40">
+                    <button name="alert_close" class="normal_btn _clear" data-alertid="alert_saveFile">取消</button>
+                    <button class="normal_btn _collectcheck">儲存</button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="./js/model.js"></script>

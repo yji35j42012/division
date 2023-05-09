@@ -98,8 +98,7 @@ td.txtc {
 	&::placeholder {
 		color: #a9b0c7;
 	}
-
-	._send &{
+	._full & {
 		width: 100%;
 		max-width: 100%;
 	}
@@ -111,7 +110,7 @@ td.txtc {
 	white-space: pre-line;
 	word-wrap: break-word;
 	word-break: break-all;
-	resize: none;
+
 	._addfile {
 		min-width: 84px;
 		margin-top: 15px;
@@ -121,13 +120,16 @@ td.txtc {
 .normal_textarea {
 	width: 100%;
 	height: 160px;
-
 	padding: 14px;
 	border-radius: 10px;
 	border: solid 1px #e0e2e8;
 	background-color: #fff;
 	font-size: 16px;
 	line-height: 24px;
+	resize: none;
+	&::placeholder {
+		color: #a9b0c7;
+	}
 }
 .normal_btn {
 	min-width: 136px;
@@ -948,6 +950,18 @@ td.txtc {
 		margin: 20px auto 0;
 		background: url("../images/icon_file_ok.svg") no-repeat center/contain;
 	}
+	&._sendFinish {
+		width: 120px;
+		height: 120px;
+		background: url("../images/icon_emailsend.svg") no-repeat center/contain;
+		margin: 20px auto 0;
+	}
+	&._saveFile {
+		width: 120px;
+		height: 120px;
+		background: url("../images/icon_file_save.svg") no-repeat center/contain;
+		margin: 20px auto 0;
+	}
 	svg {
 		width: 100%;
 		height: 100%;
@@ -1326,7 +1340,8 @@ td.txtc {
 				padding-right: 20px;
 			}
 			&._send {
-		padding: 0;
+				width: 100%;
+				padding: 0;
 			}
 		}
 		// .technology_item_list
@@ -1396,15 +1411,24 @@ td.txtc {
 			._send &:nth-child(3)::before {
 				padding-top: 0;
 			}
-			._send &:nth-child(1)::before{
+			&._name::before {
 				color: #212529;
 			}
 			._inp:not(._send) & + & {
 				margin-top: 20px;
 			}
 			._send &,
-			._send & +&{
+			._send & + & {
 				margin-top: 36px;
+			}
+			&._email {
+				width: 100%;
+				max-width: calc(100% - 360px - 60px);
+				margin-left: 60px;
+			}
+			&._mailName {
+				width: 100%;
+				max-width: 360px;
 			}
 		}
 	}
@@ -1698,7 +1722,8 @@ td.txtc {
 
 	&._create {
 		justify-content: flex-start;
-		._save {
+		._clear:not(._all) + ._save,
+		._clear + ._all {
 			margin-left: auto;
 		}
 	}
@@ -1752,6 +1777,12 @@ td.txtc {
 			max-width: 1330px;
 			padding-left: 0;
 			padding-right: 0;
+		}
+		._editPatent & {
+			padding-bottom: 30px;
+		}
+		._saveFile &{
+			max-width: 700px;
 		}
 	}
 	// .alert_title
@@ -2012,6 +2043,13 @@ td.txtc {
 		&._mt40 {
 			margin-top: 40px;
 		}
+		&._mt70 {
+			margin-top: 70px;
+		}
+		._close {
+			min-width: 120px;
+			height: 42px;
+		}
 	}
 	.folderGroup {
 		@include d_f(flex);
@@ -2119,6 +2157,19 @@ td.txtc {
 		.show_unt20 {
 			display: none;
 		}
+	}
+
+	&_sendFinishTxt,
+	&_saveFileTxt {
+		margin-top: 20px;
+		line-height: 1.88;
+		font-size: 16px;
+		color: #212529;
+		text-align: center;
+	}
+	// .alert_note
+	&_note {
+		color: #556ff6;
 	}
 }
 
@@ -2314,9 +2365,28 @@ td.txtc {
 		padding-top: 30px;
 		border-top: 1px solid #dce0eb;
 	}
-	.normal_btn{
+	.normal_btn {
 		width: 120px;
 		height: 42px;
+		margin: 30px 0 0;
+	}
+	._collectcheck,
+	._addfile {
 		margin: 30px auto 0;
+	}
+	// .sendBox_info
+	&_info {
+		& + & {
+			margin-top: 20px;
+			border-top: 1px solid #dce0eb;
+		}
+		._collectcheck + & {
+			@include d_f(flex, center);
+			margin-top: 40px;
+			padding-top: 40px;
+			border-top: 1px solid #dce0eb;
+		}
+		// 	@include d_f(flex,none,center);
+		// 	flex-direction: column;
 	}
 }

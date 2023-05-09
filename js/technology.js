@@ -2,7 +2,7 @@ var technology_detail = document.querySelectorAll("[name=technology_detail]");
 var moreBtn = null;
 for (let i = 0; i < technology_detail.length; i++) {
 	const element = technology_detail[i];
-	element.onclick = function() {
+	element.onclick = function () {
 		location.href = "./technology_detail.html";
 	};
 }
@@ -71,7 +71,7 @@ var filter_count = null;
 function setfilter_select() {
 	for (let i = 0; i < filter_select.length; i++) {
 		const element = filter_select[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			console.log("filter_select");
 			if (filter_count == null) {
 				element.classList.add("on");
@@ -93,7 +93,7 @@ if (filter_select) {
 function setfilter_item() {
 	for (let i = 0; i < filter_select_item.length; i++) {
 		const element = filter_select_item[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			filter_select_txt[filter_count].innerHTML = element.innerHTML;
 		};
 	}
@@ -107,7 +107,7 @@ var nodata = document.querySelector("#nodata");
 var data = document.querySelector("#data");
 
 if (filter_search) {
-	filter_search.onclick = function(params) {
+	filter_search.onclick = function (params) {
 		if (nodata.style.display == "none") {
 			nodata.style.display = "";
 			data.style.display = "none";
@@ -125,7 +125,7 @@ var filter_inpGroup_items = document.querySelectorAll(
 );
 var icon_minus = null;
 if (addFilter) {
-	addFilter.onclick = function() {
+	addFilter.onclick = function () {
 		let idIndex = "filter_inpBox" + filter_inpGroup_items.length;
 		var clild_tab = "clild_tab" + filter_inpGroup_items.length;
 		const div = document.createElement("div");
@@ -218,7 +218,7 @@ if (addFilter) {
 			const element = document.querySelectorAll("#" + clild_tab + ">li")[
 				i
 			];
-			element.onclick = function() {
+			element.onclick = function () {
 				if (i == 1) {
 					document
 						.querySelectorAll("#" + clild_tab + ">li")[0]
@@ -238,7 +238,7 @@ if (addFilter) {
 function icon_minusHandler() {
 	for (let i = 0; i < icon_minus.length; i++) {
 		const element = icon_minus[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			let removeDiv = document.querySelector(
 				"#filter_inpBox" + element.getAttribute("data-num")
 			);
@@ -255,7 +255,7 @@ var alert_back = document.querySelector("#alert_back");
 if (openAlert) {
 	for (let i = 0; i < openAlert.length; i++) {
 		const element = openAlert[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			event.stopPropagation();
 			closeAlertHandler();
 			let showAlert = document.querySelector(
@@ -281,7 +281,7 @@ if (openAlert) {
 if (closeAlert) {
 	for (let i = 0; i < closeAlert.length; i++) {
 		const element = closeAlert[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			closeAlertHandler();
 		};
 	}
@@ -304,7 +304,7 @@ var resume_count = 0;
 if (resume_item) {
 	for (let i = 0; i < resume_item.length; i++) {
 		const element = resume_item[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			resume_item[resume_count].classList.remove("on");
 			element.classList.add("on");
 			resume_info[resume_count].style.display = "none";
@@ -320,13 +320,13 @@ var claarAllFolder = document.querySelector("#claarAllFolder");
 if (folderGroup) {
 	for (let i = 0; i < folderGroup.length; i++) {
 		const element = folderGroup[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			element.classList.toggle("on");
 		};
 	}
 }
 if (claarAllFolder) {
-	claarAllFolder.onclick = function() {
+	claarAllFolder.onclick = function () {
 		for (let i = 0; i < folderGroup.length; i++) {
 			const element = folderGroup[i];
 			element.classList.remove("on");
@@ -338,7 +338,7 @@ if (claarAllFolder) {
 var alert_collectBtn = document.querySelector("#alert_collectBtn");
 var alert_collect = document.querySelector("#alert_collect");
 if (alert_collectBtn) {
-	alert_collectBtn.onclick = function() {
+	alert_collectBtn.onclick = function () {
 		alert_collect.classList.remove("_collect");
 		alert_collect.classList.add("_collectEdit");
 	};
@@ -369,7 +369,7 @@ var alert_tab_count = 0;
 if (alert_tab) {
 	for (let i = 0; i < alert_tab.length; i++) {
 		const element = alert_tab[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			alert_tab[alert_tab_count].classList.remove("on");
 			element.classList.add("on");
 			alert_tab_count = i;
@@ -392,7 +392,7 @@ var chanePage = document.querySelectorAll("[name='chanePage']");
 if (chanePage) {
 	for (let i = 0; i < chanePage.length; i++) {
 		const element = chanePage[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			let goPage = element.getAttribute("data-page");
 			if (goPage == "goback") {
 				history.go(-1);
@@ -411,7 +411,7 @@ var chose_count = 2;
 if (resume_item) {
 	for (let i = 0; i < chose_item.length; i++) {
 		const element = chose_item[i];
-		element.onclick = function() {
+		element.onclick = function () {
 			chose_item[chose_count].classList.remove("on");
 			element.classList.add("on");
 			otherTab_info[chose_count].style.display = "none";
@@ -484,4 +484,63 @@ if (uploadDrop) {
 			uploadFile(files[i]);
 		}
 	});
+}
+
+
+// 新增收件人
+
+var addOtherSend = document.querySelector("#addOtherSend");
+var sendBox = document.querySelector("#sendBox");
+var sendBefore = document.querySelector("#sendBefore");
+if (addOtherSend) {
+	addOtherSend.onclick = function () {
+		var newDiv = document.createElement('div');
+		newDiv.setAttribute("class", 'sendBox_info _user')
+
+		var ul = document.createElement('ul');
+		ul.setAttribute("class", 'technology_item_detail _inp _send')
+
+		var li1 = document.createElement('li');
+		li1.setAttribute("class", 'technology_item_list _alic _mailName')
+		li1.setAttribute("data-title", '收件人名稱：')
+		li1.setAttribute("data-title", '收件人名稱：')
+		var li1_1 = document.createElement('input');
+		li1_1.setAttribute("class", 'normal_inp')
+		li1_1.setAttribute("type", 'text')
+		li1_1.setAttribute("placeholder", '請輸入收件人名稱')
+		li1.appendChild(li1_1);
+
+		var li2 = document.createElement('li');
+		li2.setAttribute("class", 'technology_item_list _alic _email')
+		li2.setAttribute("data-title", 'email：')
+		var li2_1 = document.createElement('input');
+		li2_1.setAttribute("class", 'normal_inp')
+		li2_1.setAttribute("type", 'text')
+		li2_1.setAttribute("placeholder", '請輸入 email')
+		li2.appendChild(li2_1);
+
+		var li3 = document.createElement('li');
+		li3.setAttribute("class", 'technology_item_list _full _alic')
+		li3.setAttribute("data-title", '信件標題：')
+		var li3_1 = document.createElement('input');
+		li3_1.setAttribute("class", 'normal_inp')
+		li3_1.setAttribute("type", 'text')
+		li3_1.setAttribute("placeholder", '請輸入信件標題')
+		li3.appendChild(li3_1);
+
+		var li4 = document.createElement('li');
+		li4.setAttribute("class", 'technology_item_list _full _alis')
+		li4.setAttribute("data-title", '信件內容：')
+		var li4_1 = document.createElement('textarea');
+		li4_1.setAttribute("class", 'normal_textarea')
+		li4_1.setAttribute("placeholder", '請輸入信件內容')
+		li4.appendChild(li4_1);
+
+		ul.appendChild(li1)
+		ul.appendChild(li2)
+		ul.appendChild(li3)
+		ul.appendChild(li4)
+		newDiv.appendChild(ul);
+		sendBox.insertBefore(newDiv, sendBefore)
+	}
 }

@@ -17,7 +17,7 @@
 	<div class="wrap">
 		<nav id="navContent" class="nav"></nav>
 
-		<div id="content" class="content _hasFixFooter _min1120px">
+		<div id="content" class="content _min1120px">
 			<div class="container _flex">
 				<div class="header">
 					<h1>建立技術摘要文件</h1>
@@ -55,21 +55,15 @@
 					之後可至技術摘要文件管理中查閱編輯
 				</div>
 			</div>
-			<div class="fixFooter _create">
-				<button class="normal_btn _collectcheck" name="chanePage" data-page="goback">上一步</button>
-				<button class="normal_btn _clear" name="chanePage" data-page="goback">取消</button>
-				<button class="normal_btn _save">儲存</button>
-				<button class="normal_btn _collectcheck" name="chanePage"
-					data-page="technology_create.html">下一步</button>
-			</div>
-			<div class="sendBox">
+
+			<div id="sendBox" class="sendBox">
 				<div class="sendBox_head">
 					<h1>你可以將此文件發送給技術擁有者或其他專家</h1>
-					<button class="normal_btn _createSend">新増其他收件人</button>
+					<button id="addOtherSend" class="normal_btn _createSend">新増其他收件人</button>
 				</div>
 				<div class="sendBox_info">
 					<ul class="technology_item_detail _inp _send">
-						<li class="technology_item_list _alic" data-title="技術擁有者：">葉秩光</li>
+						<li class="technology_item_list _alic _name" data-title="技術擁有者：">葉秩光</li>
 						<li class="technology_item_list _alic" data-title="email：">Yeh_Chih_Kuang.gmail.com</li>
 						<li class="technology_item_list _full _alic" data-title="信件標題：">
 							<input type="text" class="normal_inp" placeholder="請輸入信件標題">
@@ -79,7 +73,32 @@
 						</li>
 					</ul>
 				</div>
-				<button class="normal_btn _collectcheck">確認發送</button>
+				<!-- <div class="sendBox_info _user ">
+					<ul class="technology_item_detail _inp _send">
+						<li class="technology_item_list _alic _mailName" data-title="收件人名稱：">
+							<input type="text" class="normal_inp" placeholder="請輸入收件人名稱">
+						</li>
+						<li class="technology_item_list _alic _email" data-title="email：">
+							<input type="text"
+								class="normal_inp" placeholder="請輸入 email"></li>
+						
+
+						<li class="technology_item_list _full _alic" data-title="信件標題：">
+							<input type="text" class="normal_inp" placeholder="請輸入信件標題">
+						</li>
+						<li class="technology_item_list _full _alis" data-title="信件內容：">
+							<textarea class="normal_textarea" placeholder="請輸入信件內容"></textarea>
+						</li>
+					</ul>
+				</div> -->
+
+
+
+				<button id="sendBefore" class="normal_btn _collectcheck" name="openAlert"
+					data-alertid="send_finish">確認發送</button>
+				<div class="sendBox_info">
+					<button class="normal_btn _addfile">搜尋其他技術專利</button>
+				</div>
 			</div>
 
 		</div>
@@ -98,6 +117,26 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- 發送完成彈窗 -->
+		<div name="alert" id="send_finish" class="alert" style="display: none">
+			<div class="alert_box">
+				<button name="alert_close" class="alert_close" data-alertid="send_finish"></button>
+				<div class="alert_title">技術摘要文件發送完成</div>
+				<div class="alert_info">
+					<i class="icon _sendFinish"></i>
+					<div class="alert_sendFinishTxt">
+						您以成功將技術摘要文件發送
+					</div>
+				</div>
+				<div class="alert_func _mt70">
+					<button name="alert_close" class="normal_btn _close" data-alertid="send_finish">關閉</button>
+				</div>
+			</div>
+		</div>
+
+
+
 		<div id="gototop" class="gototop">
 			<i class="icon _gototop">
 				<img src="./images/icon_back_top.svg" alt="">
