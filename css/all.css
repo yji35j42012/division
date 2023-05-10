@@ -609,18 +609,6 @@ input:checked + .normal_state_box::before {
   border: solid 1px #556ff6;
 }
 
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
-  .normal_btn._addfile:hover {
-    background-color: #e3ecfd;
-    color: #182b4d;
-  }
-}
-
-.normal_btn._addfile:active {
-  background-color: #e3ecfd;
-  color: #182b4d;
-}
-
 ._create .normal_btn {
   min-width: 120px;
   height: 42px;
@@ -3685,6 +3673,18 @@ input:checked + .filter_check_span:before {
   min-width: 182px;
   height: 42px;
   margin-left: 20px;
+}
+
+@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+  .fileInfo_func ._addfile:hover {
+    background-color: #e3ecfd;
+    color: #182b4d;
+  }
+}
+
+.fileInfo_func ._addfile:active {
+  background-color: #e3ecfd;
+  color: #182b4d;
 }
 
 .fileInfo_func ._addfile::before {

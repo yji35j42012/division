@@ -376,11 +376,6 @@ td.txtc {
 		color: #556ff6;
 		border-radius: 6px;
 		border: solid 1px #556ff6;
-
-		@include hoverHandler {
-			background-color: #e3ecfd;
-			color: #182b4d;
-		}
 	}
 	._create & {
 		min-width: 120px;
@@ -1090,7 +1085,6 @@ td.txtc {
 				}
 			}
 		}
-
 		input {
 			display: none;
 			position: absolute;
@@ -2398,7 +2392,6 @@ td.txtc {
 		}
 	}
 }
-
 .fileTab {
 	@include d_f(flex);
 	margin-top: 30px;
@@ -2464,7 +2457,6 @@ td.txtc {
 		}
 	}
 }
-
 .fileInfo {
 	@include d_f(flex);
 	flex-direction: column;
@@ -2480,6 +2472,10 @@ td.txtc {
 			min-width: 182px;
 			height: 42px;
 			margin-left: 20px;
+			@include hoverHandler {
+				background-color: #e3ecfd;
+				color: #182b4d;
+			}
 			&::before {
 				content: "";
 				display: block;
@@ -2610,7 +2606,6 @@ td.txtc {
 		}
 	}
 }
-
 .stateTab {
 	@include d_f(flex);
 	// .stateTab_item
