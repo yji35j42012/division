@@ -457,6 +457,9 @@ td.txtc {
 	&._file {
 		padding-bottom: 50px;
 	}
+	._hasFixFooter &{
+		padding-bottom: 100px;
+	}
 	// .page_item
 	&_item {
 		position: relative;
@@ -592,7 +595,8 @@ td.txtc {
 	padding-bottom: 66px;
 	&._hasFixFooter {
 		padding-bottom: 105px;
-		height: calc(100% - 105px);
+		// height: calc(100% - 105px);
+		height: 100%;
 	}
 }
 .header {

@@ -713,6 +713,10 @@ input:checked + .normal_state_box::before {
   padding-bottom: 50px;
 }
 
+._hasFixFooter .page {
+  padding-bottom: 100px;
+}
+
 .page_item {
   position: relative;
   display: -webkit-box;
@@ -922,7 +926,7 @@ input:checked + .normal_state_box::before {
 
 .content._hasFixFooter {
   padding-bottom: 105px;
-  height: calc(100% - 105px);
+  height: 100%;
 }
 
 .header {
